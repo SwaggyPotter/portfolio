@@ -1,0 +1,54 @@
+.main-me-container {
+
+    .me-container {
+        button {
+            background-color: aqua;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .curve {
+            position: absolute;
+            left: 0;
+            top: 440px;
+            width: 100%;
+        }
+    }
+
+    .background {
+        background-image: url('/assets/img/background-profile-pic.svg');
+        width: 100%;
+    }
+
+    .name-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    .button-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .spin90deg {
+        rotate: -90deg;
+    }
+
+    .letsTalk-Container {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        .blueLine {
+            position: absolute;
+            left: 0;
+            top: 13px;
+        }
+    }
+}
