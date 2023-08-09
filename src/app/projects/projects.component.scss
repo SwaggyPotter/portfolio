@@ -1,0 +1,81 @@
+.portfolio-container {
+    width: 100%;
+    color: white;
+
+    .headline-container {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .join-project-container {
+        img {
+            width: 100%;
+        }
+
+        h3 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            button {
+                padding: 10px;
+            }
+        }
+    }
+
+    .polo-loco-container {
+        img {
+            width: 100%;
+        }
+
+        h3 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            button {
+                padding: 10px;
+            }
+        }
+    }
+
+    .Pokedex-container {
+        img {
+            width: 100%;
+        }
+
+        h3 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            button {
+                padding: 10px;
+            }
+        }
+    }
+}
