@@ -15,13 +15,14 @@ form {
     }
 }
 
-.text-container{
+.text-container {
     margin-left: 50px;
 }
 
 .form-container {
     display: flex;
     color: white;
+
 }
 
 .normalInput {
@@ -40,4 +41,35 @@ form {
     border: solid blue 2px;
     background-color: #141D2F;
     border-radius: 20px;
+}
+
+@media screen and (min-width:280px) and (max-width: 700px) {
+    form {
+        margin-top: 100px;
+    }
+
+    .form-container {
+        display: flex;
+        color: white;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .normalInput {
+        width: 80%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: solid blue 2px;
+        border-radius: 10px;
+        color: white;
+        background-color: #141D2F;
+    }
+
+    #messageInput {
+        height: 200px;
+        width: 83%;
+        border: solid blue 2px;
+        background-color: #141D2F;
+        border-radius: 20px;
+    }
 }

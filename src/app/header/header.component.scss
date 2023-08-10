@@ -23,12 +23,8 @@ header {
 }
 
 
-@media screen and (min-width: 401px) and (max-width: 600px) {
 
-}
-
-
-@media screen and (min-width: 279px) and (max-width: 400px) {
+@media screen and (min-width: 279px) and (max-width: 700px) {
 
     header {
         width: 100%;
@@ -66,7 +62,7 @@ header {
 
             .info-Box {
                 background-color: gray;
-                position: absolute;
+                position: fixed;
                 top: 100px;
                 bottom: 0;
                 left: 0;
@@ -75,6 +71,7 @@ header {
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
+                z-index: 2;
             }
 
             .info-Box-hidden {

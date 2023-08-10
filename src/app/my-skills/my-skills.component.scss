@@ -2,6 +2,19 @@
     margin-top: 20vw;
     display: flex;
     flex-direction: row-reverse;
+
+    .button-desktop {
+        display: flex;
+        background-color: aqua;
+        border-radius: 10px;
+        padding: 10px 10px;
+        color: white;
+        border-style: none;
+    }
+
+    .button-mobile {
+        display: none;
+    }
 }
 
 .skills-container {
@@ -43,11 +56,31 @@
         }
     }
 
-    button {
-        background-color: aqua;
-        border-radius: 10px;
-        padding: 10px 10px;
-        color: white;
-        border-style: none;
+
+}
+
+@media screen and (min-width:280px) and (max-width: 700px) {
+    .skill-section {
+        margin-top: 20vw;
+        display: flex;
+        flex-direction: column;
+
+        .button-mobile {
+            display: flex;
+            background-color: aqua;
+            border-radius: 10px;
+            padding: 10px 10px;
+            color: white;
+            border-style: none;
+        }
+
+        .button-desktop {
+            display: none;
+        }
+    }
+
+    .btn-text-container {
+        text-align: right;
+        padding-right: 50px;
     }
 }
