@@ -4,6 +4,14 @@
         position: relative;
     }
 
+    .blueBackground{
+        position: absolute;
+        left: 0px;
+        top: 100px;
+        z-index: -1;
+        width: 50vw;
+    }
+
     .name-container {
         position: absolute;
         top: 10%;

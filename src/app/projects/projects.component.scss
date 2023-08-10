@@ -1,6 +1,21 @@
 .portfolio-container {
     width: 100%;
     color: white;
+    position: relative;
+
+    .blueBackground {
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 800px;
+    }
+
+    .second-blue-background {
+        position: absolute;
+        z-index: -1;
+        right: 0;
+       
+    }
 
     .live-test-btn {
         background-color: blue;

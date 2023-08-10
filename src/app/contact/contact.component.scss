@@ -1,6 +1,7 @@
 .contact-container {
     color: white;
     margin-top: 150px;
+    position: relative;
 
     .headline {
         display: flex;
@@ -11,6 +12,8 @@
             margin-left: 30px;
         }
     }
+
+    
 
     .text-container {
         padding: 10px;

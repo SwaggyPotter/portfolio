@@ -2,6 +2,13 @@
     margin-top: 20vw;
     display: flex;
     flex-direction: row-reverse;
+    position: relative;
+
+    .blueBackground{
+        position: absolute;
+        z-index: -1;
+        left: 0;
+    }
 
     .button-desktop {
         display: flex;
@@ -22,6 +29,7 @@
 
     img {
         margin-left: 50px;
+        margin-right: 50px;
         width: 80px;
         height: 150px;
     }
@@ -88,6 +96,23 @@
             display: none;
         }
     }
+
+    .skills-container {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+        img {
+            width: 50px;
+            height: 80px;
+        }
+
+        .skills-wrapper {
+            width: 100%;
+        }
+    }
+
 
     .btn-text-container {
         text-align: right;
