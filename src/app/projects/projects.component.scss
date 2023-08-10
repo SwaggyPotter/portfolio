@@ -2,12 +2,46 @@
     width: 100%;
     color: white;
 
+    .live-test-btn {
+        background-color: blue;
+        border-style: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        color: white;
+    }
+
+    .github-btn {
+        background-color: #141D2F;
+        border: #1CDAE6 solid 2px;
+        border-radius: 10px;
+        padding: 10px 20px;
+        color: white;
+    }
+
     .headline-container {
         display: flex;
         flex-direction: row-reverse;
+        justify-content: center;
+        width: 100%;
+        margin-top: 150px;
+
+        h1 {
+            padding: 20px;
+            font-size: 50px;
+        }
+    }
+
+    .underHeadline-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -50px;
     }
 
     .join-project-container {
+        margin-top: 150px;
+
         img {
             width: 100%;
         }
@@ -17,6 +51,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            color: blue;
+        }
+
+        h4 {
+            color: deepskyblue;
         }
 
         .button-container {
@@ -24,14 +63,12 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-
-            button {
-                padding: 10px;
-            }
         }
     }
 
     .polo-loco-container {
+        margin-top: 150px;
+
         img {
             width: 100%;
         }
@@ -41,6 +78,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            color: blue;
+        }
+
+        h4 {
+            color: deepskyblue;
         }
 
         .button-container {
@@ -48,14 +90,12 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-
-            button {
-                padding: 10px;
-            }
         }
     }
 
     .Pokedex-container {
+        margin-top: 150px;
+
         img {
             width: 100%;
         }
@@ -65,6 +105,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            color: blue;
+        }
+
+        h4 {
+            color: deepskyblue;
         }
 
         .button-container {
@@ -72,10 +117,114 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
+        }
+    }
+}
 
-            button {
-                padding: 10px;
+@media screen and (min-width: 700px) {
+    .join-project-container {
+        display: flex;
+        margin-top: 150px;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 50vw !important;
+        }
+
+        h3 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: blue;
+        }
+
+        h4 {
+            color: deepskyblue;
+        }
+
+        .button-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+
+    .polo-loco-container {
+        display: flex;
+        margin-top: 150px;
+        justify-content: center;
+        align-items: center;
+
+        .content-text {
+            margin-left: 50px;
+            width: 50vw;
+            display: flex;
+            flex-direction: column;
+
+            p {
+                text-align: right;
             }
+        }
+
+        img {
+            width: 30vw !important;
+        }
+
+        h3 {
+            width: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: unset !important;
+            color: blue;
+        }
+
+        h4 {
+            display: flex;
+            color: deepskyblue;
+            flex-direction: row-reverse;
+            justify-content: unset !important;
+        }
+
+        .button-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+
+    .Pokedex-container {
+        display: flex;
+        margin-top: 150px;
+        justify-content: center;
+        align-items: center;
+
+
+        img {
+            width: 40vw !important;
+        }
+
+
+        h3 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: blue;
+        }
+
+        h4 {
+            color: deepskyblue;
+        }
+
+        .button-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
         }
     }
 }
