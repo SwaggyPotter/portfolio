@@ -1,10 +1,16 @@
 .contact-container {
     color: white;
-
+    margin-top: 150px;
     .headline {
         display: flex;
         width: 100%;
+        h1{
+            font-size: 70px;
+            margin-left: 30px;
+        }
     }
 
-    .text-container {padding: 10px;}
+    .text-container {
+        padding: 10px;
+    }
 }

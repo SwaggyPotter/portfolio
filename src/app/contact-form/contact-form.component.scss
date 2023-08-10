@@ -4,4 +4,40 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    button {
+        background-color: #1CDAE6;
+        margin-top: 20px;
+        padding: 20px 40px;
+        border-style: none;
+        border-radius: 10px;
+        color: white;
+    }
+}
+
+.text-container{
+    margin-left: 50px;
+}
+
+.form-container {
+    display: flex;
+    color: white;
+}
+
+.normalInput {
+    width: 500px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: solid blue 2px;
+    border-radius: 10px;
+    color: white;
+    background-color: #141D2F;
+}
+
+#messageInput {
+    height: 200px;
+    width: 515px;
+    border: solid blue 2px;
+    background-color: #141D2F;
+    border-radius: 20px;
 }
