@@ -72,6 +72,16 @@
             padding: 10px 10px;
             color: white;
             border-style: none;
+            width: 100px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mobile-button-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .button-desktop {
