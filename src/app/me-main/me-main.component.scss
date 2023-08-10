@@ -55,7 +55,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 50px;
+        margin-top: -15vw;
 
         .blueLine {
             position: absolute;
@@ -95,13 +95,68 @@
             align-items: center;
             margin-top: 0;
         }
+
+        .letsTalk-Container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+
+            .blueLine {
+                position: absolute;
+                left: 0;
+                top: 13px;
+            }
+        }
     }
 
     @media screen and (min-width: 280px) and (max-width: 400px) {
         .background {
-            background-image: url('/assets/img/background-profile-pic.svg');
             width: 100%;
+            margin-top: 0;
+            background-repeat: no-repeat;
+            background-size: 50%;
+            background-position-y: 250px;
+            content: url('/assets/img/new-profile-picture-mobile.svg');
+        }
+
+        .me-container {
+            position: relative;
+            display: flex;
+            flex-direction: column
+        }
+
+        .name-container {
+            position: relative;
+            top: unset;
+            right: unset;
+            font-size: 5vw;
+            width: 100%;
+            margin-top: -20vw;
+        }
+
+        .text-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0;
+        }
+
+        .letsTalk-Container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin-top: 50px;
+
+            .blueLine {
+                position: absolute;
+                left: 0;
+                top: 13px;
+            }
         }
     }
 }

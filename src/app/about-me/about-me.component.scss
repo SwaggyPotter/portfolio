@@ -1,19 +1,61 @@
 .about-me-container {
     color: white;
-    margin-top: 50px;
-    padding: 10px;
+    margin-top: 15vw;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 
     .text-container {
-        width: 100%;
-
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        padding-left: 50px;
 
         div {
             display: flex;
+
+            img {
+                margin-right: 20px;
+            }
         }
     }
 
 
     h1 {
-        padding: 10px;
+        padding-left: 50px;
+        font-size: 50px;
+    }
+}
+
+.img-container-selfi {
+    img {
+        width: 50vw;
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 700px) {
+    .img-container-selfi {
+        display: none;
+
+        img {
+            width: unset;
+
+        }
+    }
+
+    .text-container {
+        width: 100% !important;
+        display: unset !important;
+        flex-direction: unset !important;
+        padding-left: 50px;
+
+        div {
+            display: flex;
+
+            img {
+                margin-right: 20px;
+            }
+        }
     }
 }
