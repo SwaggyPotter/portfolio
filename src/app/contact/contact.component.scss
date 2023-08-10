@@ -1,10 +1,12 @@
 .contact-container {
     color: white;
     margin-top: 150px;
+
     .headline {
         display: flex;
         width: 100%;
-        h1{
+
+        h1 {
             font-size: 70px;
             margin-left: 30px;
         }
@@ -12,5 +14,12 @@
 
     .text-container {
         padding: 10px;
+    }
+}
+
+@media screen and (min-width:280px) and (max-width:700px) {
+    h1 {
+        font-size: 40px !important;
+        margin-left: 30px;
     }
 }
