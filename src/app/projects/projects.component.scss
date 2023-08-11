@@ -11,9 +11,6 @@
         width: 30vw;
     }
 
-   
-
-
     .second-blue-background {
         position: absolute;
         z-index: -1;
@@ -61,6 +58,10 @@
     .join-project-container {
         margin-top: 150px;
 
+        .content-text {
+            text-align: center;
+        }
+
         img {
             width: 100%;
         }
@@ -87,6 +88,12 @@
 
     .polo-loco-container {
         margin-top: 150px;
+        display: flex;
+        flex-direction: column-reverse;
+
+        .content-text {
+            text-align: center;
+        }
 
         img {
             width: 100%;
@@ -114,6 +121,10 @@
 
     .Pokedex-container {
         margin-top: 150px;
+
+        .content-text {
+            text-align: center;
+        }
 
         img {
             width: 100%;
@@ -145,13 +156,14 @@
         display: flex;
         margin-top: 150px;
         justify-content: center;
-        align-items: center;
+
+        .content-text {
+            text-align: left !important;
+        }
 
         img {
             width: 50vw !important;
         }
-
-
 
         h3 {
             width: 100%;
@@ -175,6 +187,7 @@
 
     .polo-loco-container {
         display: flex;
+        flex-direction: row !important;
         margin-top: 150px;
         justify-content: center;
         align-items: center;
@@ -223,6 +236,9 @@
         justify-content: center;
         align-items: center;
 
+        .content-text {
+            text-align: left !important;
+        }
 
         img {
             width: 40vw !important;
