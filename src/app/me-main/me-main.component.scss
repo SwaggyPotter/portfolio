@@ -4,7 +4,7 @@
         position: relative;
     }
 
-    .blueBackground{
+    .blueBackground {
         position: absolute;
         left: 0px;
         top: 100px;
@@ -82,6 +82,14 @@
             content: url('/assets/img/new-profile-picture-mobile.svg');
         }
 
+        .blueBackground {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            width: 100%;
+        }
+
         .me-container {
             position: relative;
             display: flex;
@@ -128,6 +136,14 @@
             background-size: 50%;
             background-position-y: 250px;
             content: url('/assets/img/new-profile-picture-mobile.svg');
+        }
+
+        .blueBackground {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            width: 100%;
         }
 
         .me-container {

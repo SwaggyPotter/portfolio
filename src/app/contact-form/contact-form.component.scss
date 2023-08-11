@@ -15,7 +15,6 @@ form {
     }
 }
 
-
 .text-container {
     margin-left: 50px;
 }
@@ -23,9 +22,9 @@ form {
 .form-container {
     display: flex;
     color: white;
-    height: 500px;
     background-image: url("/assets/img/blueBackground-footer.svg");
     background-repeat: no-repeat;
+    padding-bottom: 20px;
 }
 
 .normalInput {
