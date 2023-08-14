@@ -1,5 +1,10 @@
 .main-me-container {
 
+    .icon-margin {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
     .me-container {
         position: relative;
     }
@@ -59,16 +64,21 @@
 
     .letsTalk-Container {
         position: relative;
-        width: 100%;
         display: flex;
-        justify-content: center;
         align-items: center;
         margin-top: -15vw;
+        padding-left: 150px;
+        color: white;
+        width: unset;
+
+        p {
+            margin-left: 45px;
+        }
 
         .blueLine {
             position: absolute;
             left: 0;
-            top: 13px;
+            top: 28.5px;
         }
     }
 
@@ -114,11 +124,16 @@
 
         .letsTalk-Container {
             position: relative;
-            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             margin-top: 50px;
+            width: 100%;
+            padding-left: unset;
+
+            p {
+                display: none;
+            }
 
             .blueLine {
                 position: absolute;
@@ -136,6 +151,11 @@
             background-size: 50%;
             background-position-y: 250px;
             content: url('/assets/img/new-profile-picture-mobile.svg');
+        }
+
+        .icon-margin {
+            margin-left: 5px;
+            margin-right: 5px;
         }
 
         .blueBackground {
@@ -175,6 +195,11 @@
             justify-content: center;
             align-items: center;
             margin-top: 50px;
+            padding-left: unset;
+            
+            p {
+                display: none;
+            }
 
             .blueLine {
                 position: absolute;
