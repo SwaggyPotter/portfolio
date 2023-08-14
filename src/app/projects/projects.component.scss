@@ -37,26 +37,36 @@
     .headline-container {
         display: flex;
         flex-direction: row-reverse;
-        justify-content: center;
+        justify-content: unset;
         width: 100%;
         margin-top: 150px;
 
+        .long-line-width {
+            width: unset;
+            content: url('/assets/img/short-longline.svg');
+        }
+
         h1 {
             padding: 20px;
-            font-size: 20px;
+            font-size: 45px;
         }
     }
 
+
     .underHeadline-container {
-        width: 100%;
+        width: unset;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: -50px;
+        text-align: center;
+        margin-top: -10px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .join-project-container {
         margin-top: 150px;
+        padding: 15px;
 
         .content-text {
             text-align: center;
@@ -90,6 +100,7 @@
         margin-top: 150px;
         display: flex;
         flex-direction: column-reverse;
+        padding: 15px;
 
         .content-text {
             text-align: center;
@@ -121,6 +132,7 @@
 
     .Pokedex-container {
         margin-top: 150px;
+        padding: 15px;
 
         .content-text {
             text-align: center;
@@ -149,13 +161,53 @@
             align-items: center;
         }
     }
+
+    @media screen and (max-width: 370px) {
+        .headline-container {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: unset;
+            width: 100%;
+            margin-top: 150px;
+
+            .long-line-width {
+                width: unset;
+                content: url('/assets/img/short-longline.svg');
+            }
+
+            h1 {
+                padding: 20px;
+                font-size: 25px;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 700px) {
+
+    .headline-container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: unset;
+        width: 100%;
+        margin-top: 150px;
+
+        .long-line-width {
+            width: 35% !important;
+            content: url('/assets/img/long-line.svg') !important;
+        }
+
+        h1 {
+            padding: 20px;
+            font-size: 65px !important;
+        }
+    }
+
     .join-project-container {
         display: flex;
         margin-top: 150px;
         justify-content: center;
+        padding-right: 50px;
 
         .content-text {
             text-align: left !important;
@@ -235,6 +287,7 @@
         margin-top: 150px;
         justify-content: center;
         align-items: center;
+        padding-right: 50px;
 
         .content-text {
             text-align: left !important;
