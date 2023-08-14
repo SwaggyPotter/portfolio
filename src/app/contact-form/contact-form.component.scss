@@ -17,6 +17,7 @@ form {
 
 .text-container {
     margin-left: 50px;
+    margin-right: 50px;
 }
 
 .form-container {
@@ -24,7 +25,10 @@ form {
     color: white;
     background-image: url("/assets/img/blueBackground-footer.svg");
     background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: 100px;
     padding-bottom: 20px;
+    margin-right: 50px;
 }
 
 .normalInput {
@@ -53,12 +57,16 @@ form {
     .form-container {
         display: flex;
         color: white;
-        flex-direction: column;
-        width: 100%;
+        background-image: url("/assets/img/blueBackground-footer.svg");
+        background-repeat: no-repeat;
+        background-position-x: left;
+        background-position-y: 100px;
+        padding-bottom: 20px;
+        margin-right: unset;
     }
 
     .normalInput {
-        width: 80%;
+        width: 100%;
         padding: 10px;
         margin-bottom: 20px;
         border: solid blue 2px;
@@ -68,10 +76,51 @@ form {
     }
 
     #messageInput {
-        height: 200px;
-        width: 83%;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
         border: solid blue 2px;
+        border-radius: 10px;
+        color: white;
         background-color: #141D2F;
-        border-radius: 20px;
+    }
+}
+
+
+
+@media screen and (max-width:870px) {
+    .form-container {
+        display: flex;
+        color: white;
+        flex-direction: column;
+        padding-left: 50px;
+        padding-right: 50px;
+        background-image: url("/assets/img/blueBackground-footer.svg");
+        background-position-y: 40vh;
+    }
+
+    .text-container {
+        margin-left: unset !important;
+        margin-right: unset !important;
+    }
+
+    .normalInput {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: solid blue 2px;
+        border-radius: 10px;
+        color: white;
+        background-color: #141D2F;
+    }
+
+    #messageInput {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: solid blue 2px;
+        border-radius: 10px;
+        color: white;
+        background-color: #141D2F;
     }
 }
