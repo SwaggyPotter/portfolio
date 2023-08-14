@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JOIN - Contacts</title>
+    <meta name="description" content="Groupwork - JOIN - Contacts">
+    <link rel="icon" type="image/x-icon" href="assets\img\logo-join.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/inner-page.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/contact-guest.css">
+    <link rel="stylesheet" href="css/contacts-extension.css">
+
+    <link rel="stylesheet" href="css\handy-sidebar.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/board-add-task-template.css">
+    <link rel="stylesheet" href="css/contact-guest-add-task.css">
+    <link rel="stylesheet" href="css\contact-guest-responsiv.css">
+    <script src="js/mini_backend.js"></script>
+    <!-- Insert dedicated JS script -->
+    <script src="js/main.js"></script>
+    <!--Javascript by Jörg Betz-->
+    <script src="js/add-task.js"></script>
+    <script src="js/add-task-extension.js"></script>
+    <script src="js/board.js"></script>
+    <script src="assets/templates/htmlTemplateAdd_Task.js"></script>
+    <!--Javascript by Jörg Betz-->
+</head>
+
+<body class="contacts-page" onload="initBackend(); ">
+    <header class="header">
+        <div class="container">
+            <div class="center">
+                <div class="inner">
+                    <a href="summary.html" title="Summary"><img src="assets/img/logo-join-small.svg" width="47"
+                            height="58" alt="JOIN"></a>
+                    <div class="right-bar">
+                        <p>Kanban Project Management Tool</p>
+                        <a href="help.html" title="Need help?" class="help"><img src="assets/img/help.svg" width="31"
+                                height="31" alt="Help"></a>
+                        <div class="user-info">
+                            <span class="user-img" id="user-img" onclick="showLogOffBox();">
+                                <img src="assets/img/dummy.png" width="37" height="37" alt="">
+                            </span>
+                            <div class="more-details" id="more-details">
+                                <ul>
+                                    <li><a href="index.html">Log out</a></li>
+                                    <li><a href="legal_notice.html">Legal Notice</a></li>
+                                    <li><a href="help.html">Help</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main id="main" class="main">
+        <div class="container">
+            <div class="center">
+                <div class="inner reverse paddingTop">
+
+                    <div id="contact-content">
+                        <!--contact cards-->
+                        <div id="show-contacts-quest" class="email-card-guest">
+                        </div>
+                        <!--contact cards-->
+
+                        <!--Detail informations-->
+                        <div class="overflow-container">
+                            <div id="detail-information-screen">
+                            </div>
+                        </div>
+                        <!--Detail informations-->
+                    </div>
+
+
+                    <!--Add a new contact button-->
+                    <button onclick="openAdd()" class="add-contact-button">New contact</button>
+                    <!--Add a new contact button-->
+
+                    <!--window for the contact edit-->
+                    <div id="edit-window">
+
+                    </div>
+                    <!--window for the contact edit-->
+
+
+                    <!--window for adding a new contact-->
+
+                    <form onsubmit="addNewContact(); return false" class="add-contact-window" id="add-window" action="">
+                        <div id="close-container">
+                            <p class="close-add-btn" onclick="closeAdd()" id="close-add-btn">
+                                <img src="assets/img/close-btn-edit.svg" alt="close-btn">
+                            </p>
+                        </div>
+                        <div class="edit-join-symbol-and-text">
+                            <img src="assets/img/logo-join-small.svg" alt="join symbol">
+                            <p>Add contact</p>
+                            <span class="task-text">Tasks are better with a team!</span>
+                        </div>
+                        <div class="embleme-and-input">
+                            <p class="embleme-add "><img src="assets/img/dummy.svg" alt=""></p>
+                            <div class="input-container"><input id="addNameInput" required
+                                    placeholder="First - and Lastname" type="text"><img
+                                    src="assets/img/contact-dummy-name.svg" alt=""></div>
+                            <div class="input-container">
+                                <input id="addEmailInput" required placeholder="Email" type="email"><img
+                                    src="assets/img/email-contacts.svg" alt="">
+                            </div>
+                            <div class="input-container"><input id="addTelephoneInput" required placeholder="Phone"
+                                    type="number"><img src="assets/img/telephone-contacts.svg" alt=""></div>
+
+                            <div class="btn-designe-add-contact">
+                                <p onclick="closeAdd()" id="cancel-btn">Cancel<img src="assets/img/Vector.svg"
+                                        alt="close button"></p>
+                                <button class="save-edit-btn" id="save-add-btn">Create contact
+                                    <img src="assets/img/hook.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!--window for adding a new contact-->
+
+
+                    <!--window for adding a task-->
+                    <!--Add task form written by Jörg Betz-->
+                    <!--Add task form written by Jörg Betz-->
+                    <div id="add-task-to-contact-container">
+                        <div id="add-taks-content-guest">
+                            <span onclick="closeAddTaskContact(); clearAddTaskForm()" id="close-btn-add-task"><img
+                                    src="assets/img/close-btn-add-taskt.svg" alt=""></span>
+                            <form onsubmit="addTaskWithTimeOut(); showAddPopUp();return false;">
+                                <div class="execute-buttons">
+                                    <h1 style="color: black;">Add Task</h1>
+                                    <button id="task-add-btn" class="addTaskBTN">Create<img src="assets/img/check.svg"
+                                            alt="check"></button>
+                                </div>
+                                <div class="title">
+                                    <input type="text" placeholder="Enter a title" id="task-title" required>
+                                </div>
+                                <div class="select-contacts-to-assign" id="select-contacts-to-assign">
+                                    <span>Select contacts to assign</span>
+                                    <img src="assets/img/dropdown.svg"
+                                        onclick="openContactsToAssign(); renderListAssignedTo()">
+                                </div>
+                                <div id="list-assigned-to" class="dropdown-check-list d-none" tabindex="100">
+                                    <ul class="items" id="checkbox-list-assigned-to">
+                                        <!-- htmlTemplateListAssignedTo -->
+                                    </ul>
+                                </div>
+                                <div class="due-date">
+                                    <span>Due date</span>
+                                    <div class="date-picker" id="date-picker">
+                                        <input type="date" id="due-date" name="trip-start" value=""
+                                            onfocus="this.showPicker()" required>
+                                        <img src="assets/img/calendar.svg">
+                                    </div>
+                                </div>
+                                <div class="category-add-task">
+                                    <span>Category</span>
+                                    <div class="select-category" id="select-contacts-to-assign">
+                                        <span>Select task category</span>
+                                        <img src="assets/img/dropdown.svg"
+                                            onclick="openTaskCategory(); renderListTaskCategory()">
+                                    </div>
+                                    <div id="list-task-category" class="dropdown-check-list d-none" tabindex="100">
+                                        <ul class="items" id="category-row">
+                                            <!-- htmlTemplateCategory() -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="priority" id="task-priority">
+                                    <button id="urgent-btn" type="button" onclick="setPriority('urgent')">Urgent <img
+                                            id="urgent-btn-img" src="assets/img/urgent.svg" alt="urgent"></button>
+                                    <button id="medium-btn" type="button" onclick="setPriority('medium')">Medium <img
+                                            id="medium-btn-img" src="assets/img/medium.svg" alt="medium"></button>
+                                    <button id="low-btn" type="button" onclick="setPriority('low')">Low <img
+                                            id="low-btn-img" src="assets/img/low.svg" alt="low"></button>
+                                </div>
+                                <div class="description">
+                                    <span>Description</span>
+                                    <textarea name="description" placeholder="Enter a description" id="task-description"
+                                        cols="55" rows="5" required></textarea>
+                                </div>
+                                <div class="subtasks">
+                                    <span>Subtasks</span>
+                                    <div class="input-subtasks">
+                                        <input type="text" placeholder="add new subtask" id="task-subtask">
+                                        <img src="assets/img/plus.svg" alt="add" onclick="renderSubtasks()">
+                                    </div>
+                                </div>
+                                <div class="checkbox-subtasks" id="ckeckbox-subtasks">
+                                    <!-- htmlTemplateSubtasks -->
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <!--Add task form written by Jörg Betz-->
+                    <!--window for adding a task-->
+
+
+                    <div class="sidebar">
+                        <div class="wrapper">
+                            <ul class="navigation" id="main-navigation">
+                                <li><a href="summary.html" title="Summary"><span class="m-img"><img
+                                                src="assets/img/menu-summary.svg" width="22" height="22"
+                                                alt="Summary"></span><span>Summary</span></a></li>
+                                <li><a href="board.html" title="Board"><span class="m-img"><img
+                                                src="assets/img/menu-board.svg" width="22" height="26"
+                                                alt="Board"></span><span>Board</span></a></li>
+                                <li><a href="add_task.html" title="Add Task"><span class="m-img"><img
+                                                src="assets/img/menu-task.svg" width="30" height="30"
+                                                alt="Task"></span><span>Add Task</span></a></li>
+                                <li><a href="contacts.html" title="Contacts" class="active-menu"><span
+                                            class="m-img"><img src="assets/img/menu-contact.svg" width="20" height="22"
+                                                alt="Contact"></span><span>Contacts</span></a></li>
+                            </ul>
+                            <ul class="navigation" id="secondary-navigation">
+                                <li><a href="legal_notice.html" title="Legal notice"><span class="m-img"><img
+                                                src="assets/img/menu-legal.svg" width="18" height="18"
+                                                alt="Legal notice"></span><span>Legal notice</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div id="warning-full-name">
+                        <div class="message-full-name">
+                            <div class="warning-content">
+                                <img onclick="closeWarningContact()" id="closeBTN-warning" src="assets/img/close.svg"
+                                    alt="close button">
+                                <p>Please enter first and last name</p>
+                                <p>Like: Max Mustermann</p>
+                                <p onclick="closeWarningContact()" class="agree-btn-contact">Ok i understand</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="popup-container">
+                    <div id="position-container-popup">
+                        <img id="popup-pic" class="popupClassAnimation" src="assets/img/taskt-added-to-board.svg"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="assets/templates/contact_Template.js"></script>
+    <script src="js/contact_guest_extension.js"></script>
+    <script src="js/contact_guest.js"></script>
+</body>
+
+</html>

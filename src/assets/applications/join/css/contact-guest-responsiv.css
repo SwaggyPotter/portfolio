@@ -1,0 +1,417 @@
+@media screen and (max-width:1340px) {
+    #detail-information-screen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        height: 100%;
+        position: fixed;
+        right: -100vw;
+        z-index: 1;
+        width: 100%;
+        transition: 125ms;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .name-and-embleme-container {
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+        margin-bottom: 0;
+    }
+
+    #close-detail-arrow {
+        position: fixed;
+        right: 60px;
+        top: 125px;
+        cursor: pointer;
+        display: block;
+    }
+
+    #contact-information-info-container p {
+        margin-top: 10px;
+    }
+
+    .edit-pic {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:1140px) {
+    .sidebar {
+        width: 100%;
+    }
+
+    #contact-information-info-container p {
+        margin-top: 10px;
+    }
+}
+
+
+@media screen and (min-width:801px) and (max-width:1100px) {
+    #add-window {
+        position: absolute;
+        width: 70vw;
+        left: -70vw;
+        top: 0;
+        bottom: 0;
+        background-color: #4589FF;
+        z-index: 2;
+        border-radius: 0;
+        overflow: hidden;
+        transition: 525ms;
+    }
+
+    #edit-window {
+        position: absolute;
+        left: -70vw;
+        top: 0;
+        bottom: 0;
+        width: 70vw;
+        background-color: #005DFF;
+        z-index: 2;
+        border-radius: 0;
+        overflow: hidden;
+        transition: 525ms;
+    }
+}
+
+
+
+@media screen and (min-width:521px) and (max-width:800px) {
+    #add-window {
+        position: absolute;
+        left: -100vw;
+        top: 0;
+        bottom: 0;
+        width: 100vw;
+        background-color: #4589FF;
+        z-index: 2;
+        border-radius: 0;
+        overflow: hidden;
+        transition: 525ms;
+    }
+
+    #edit-window {
+        position: absolute;
+        left: -100vw;
+        top: 0;
+        bottom: 0;
+        width: 100vw;
+        background-color: #005DFF;
+        z-index: 2;
+        border-radius: 0;
+        overflow: hidden;
+        transition: 525ms;
+    }
+
+    .reverse {
+        justify-content: center;
+    }
+
+    #contact-content {
+        display: flex;
+        height: 90vh;
+        overflow-y: scroll;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .add-contact-button {
+        position: absolute;
+        right: 48px;
+        top: 130px;
+        bottom: unset;
+        padding: 18px 10px 18px 10px;
+        width: 197px;
+        border-radius: 10px;
+        border: none;
+        background-color: #4589FF;
+        color: white;
+        font-size: 23px;
+        cursor: pointer;
+    }
+
+    .add-contact-button:hover {
+        position: absolute;
+        right: 48px;
+        top: 130px;
+        bottom: unset;
+        padding: 18px 10px 18px 10px;
+        width: 197px;
+        border-radius: 10px;
+        border: none;
+        background-color: #005eff;
+        color: white;
+        font-size: 23px;
+        cursor: pointer;
+    }
+
+
+}
+
+@media screen and (max-width:600px) {
+    #add-task-to-contact-container {
+        position: absolute;
+        height: 100vh;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #ffffff;
+        border: solid rgba(0, 0, 0, 0.171) 1px;
+        border-radius: 0;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        display: flex;
+        transition: 225ms;
+        z-index: 2;
+        display: flow-root;
+        overflow: scroll;
+        z-index: 1000;
+    }
+
+    .execute-buttons {
+        padding-top: 35px;
+    }
+
+    #close-btn-add-task {
+        position: absolute;
+        right: 0;
+        top: 120px;
+        right: 40px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width:520px) {
+    #add-window {
+        position: absolute;
+        left: -100vw;
+        top: 0;
+        bottom: 0;
+        width: 100vw;
+        background-color: #4589FF;
+        z-index: 2;
+        border-radius: 0;
+        overflow: hidden;
+        transition: 525ms;
+        padding-bottom: 76px;
+    }
+
+    #add-taks-content-guest {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    .embleme-edit {
+        display: flex;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid white;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        background-color: orange;
+        font-size: 47px;
+    }
+
+    #save-edit-btn {
+        padding: 18px 10px 18px 10px;
+        background-color: #4589FF;
+        width: 146px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        color: white;
+        margin-top: 20px;
+    }
+
+    .save-edit-btn {
+        padding: 18px 10px 18px 10px;
+        background-color: #4589FF;
+        width: 146px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        color: white;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    .detail-embleme {
+        display: flex;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid white;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        background-color: orange;
+        font-size: 33px;
+        margin-right: 10px;
+    }
+
+    .name-and-embleme-container {
+        display: flex;
+        align-items: center;
+        margin-top: 95px;
+        margin-bottom: 0;
+        margin-left: 35px;
+        width: 95%;
+    }
+
+    #contact-information-info-container {
+        margin-left: 20px;
+        margin-top: 30px;
+        width: 98%;
+    }
+
+
+    .contact-card-quest {
+        display: flex;
+        padding: 15px 25px 15px 25px;
+        align-items: center;
+        width: 270px;
+        border-radius: 10px;
+    }
+
+    #edit-window {
+        position: absolute;
+        left: -100vw;
+        top: 0;
+        bottom: 0;
+        width: 100vw;
+        background-color: #005DFF;
+        z-index: 2;
+        overflow: hidden;
+        transition: 525ms;
+        border-radius: 0;
+        padding-bottom: 76px;
+        height: 93%;
+    }
+
+    .embleme-and-input {
+        display: flex;
+        flex-direction: column;
+        justify-content: unset;
+        align-items: center;
+        background-color: white;
+        border: solid rgba(0, 0, 0, 0.103) 2px;
+        height: 69.6%;
+        padding: 0 10px;
+    }
+
+    #cancel-btn {
+        display: none;
+    }
+
+    #contact-content {
+        display: flex;
+        height: 90vh;
+        overflow-y: scroll;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .add-contact-button {
+        position: absolute;
+        right: 48px;
+        top: 130px;
+        bottom: unset;
+        padding: 18px 10px 18px 10px;
+        width: 197px;
+        border-radius: 10px;
+        border: none;
+        background-color: #4589FF;
+        color: white;
+        font-size: 23px;
+        cursor: pointer;
+    }
+
+    .add-contact-button:hover {
+        position: absolute;
+        right: 48px;
+        top: 130px;
+        bottom: unset;
+        padding: 18px 10px 18px 10px;
+        width: 197px;
+        border-radius: 10px;
+        border: none;
+        background-color: #005eff;
+        color: white;
+        font-size: 23px;
+        cursor: pointer;
+    }
+
+    #detail-information-screen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        height: 100%;
+        position: fixed;
+        right: -100vw;
+        z-index: 1;
+        width: 100%;
+        transition: 125ms;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .email-card-guest {
+        width: 453px;
+        padding: 100px 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-height: 529px) and (min-height: 370px) {
+    #contact-content {
+        display: flex;
+        height: 90vh;
+        overflow-y: scroll;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-height: 700px) and (min-height: 530px) {
+    #contact-content {
+        display: flex;
+        height: 580px;
+        overflow-y: scroll;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-height: 853px) and (min-height: 700px) {
+    #contact-content {
+        display: flex;
+        height: 90vh;
+        overflow-y: scroll;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-height: 925px) and (min-height: 854px) {
+    #contact-content {
+        display: flex;
+        height: 90vh;
+        overflow-y: scroll;
+        width: 100%;
+        justify-content: center;
+    }
+}

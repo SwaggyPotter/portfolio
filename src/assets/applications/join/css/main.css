@@ -1,0 +1,24 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+:focus {
+    outline: none;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400; /* 700 == BOLD */
+}
+
+.container > .center {
+    max-width: 1440px;
+    margin:0 auto;
+    padding: 50px;
+}
+@media(max-width: 640px) {
+    .container > .center {
+    padding: 20px;
+    }
+}

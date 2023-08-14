@@ -1,0 +1,287 @@
+body {
+    overflow: hidden;
+}
+
+#center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 89vh;
+    padding-top: 0vh;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+#summary-content {
+    overflow: scroll;
+    height: 90vh;
+}
+
+#greetingTime {
+    padding-top: 0vh;
+}
+
+.centern {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#time-and-tasks {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vh;
+}
+
+#time-and-tasks a {
+    text-decoration: none;
+}
+
+#tasks-and-status {
+    display: flex;
+    margin-top: 17.5px;
+
+}
+
+#tasks-and-status a {
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.task-text-size {
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.task-line-height {
+    line-height: 27.6px;
+}
+
+.task-color-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+#task-urgent-text {
+    font-size: 23px;
+    font-weight: 400;
+}
+
+#task-urgent-emblem-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#task-urgent-emblem-number img {
+    border-radius: 40px;
+    border: solid white 3px;
+}
+
+#taks-urgent {
+    display: flex;
+    background-color: #4589FF;
+    color: white;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 682px;
+    height: 191px;
+    margin: 17.5px;
+    border-radius: 30px;
+    padding: 28px 48px 28px 48px;
+    transition: 125ms;
+    border: solid rgba(255, 255, 255, 0.103) 1px;
+}
+
+#taks-urgent:hover {
+    display: flex;
+    background-color: white;
+    color: #4589FF;
+    transition: 125ms;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 682px;
+    height: 191px;
+    margin: 17.5px;
+    border-radius: 0px 30px 30px 30px;
+    padding: 28px 48px 28px 48px;
+    cursor: pointer;
+    border: solid rgba(0, 0, 0, 0.103) 1px;
+}
+
+#taks-urgent p {
+    padding: 0px;
+}
+
+#task-urgent-emblem-number {
+    margin-right: 40px;
+}
+
+.task-number-size {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.center-tasks {
+    display: flex;
+    align-items: center;
+}
+
+#tasks-to-to {
+    transition: 125ms;
+    display: flex;
+    background-color: #D2E3FF;
+    width: 200px;
+    height: 191px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 17.5px;
+    border-radius: 30px;
+    padding: 30px;
+    border: solid rgba(0, 0, 0, 0) 1px;
+}
+
+#tasks-to-to:hover {
+    transition: 125ms;
+    display: flex;
+    background-color: white;
+    width: 200px;
+    height: 191px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 17.5px;
+    border-radius: 0px 30px 30px 30px;
+    padding: 30px;
+    cursor: pointer;
+    border: solid rgba(0, 0, 0, 0.103) 1px;
+}
+
+#tasks-to-to:hover .task-number-size {
+    color: #4589FF;
+}
+
+#tasks-to-to:hover p {
+    color: #4589FF;
+}
+
+#tasks-to-to p {
+    padding: 0;
+}
+
+#deadline-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 33px;
+}
+
+#deadline-upcoming {
+    font-weight: 400;
+    font-size: 23px;
+}
+
+#hr-line-tasks-urgent {
+    height: 80%;
+}
+
+.task-container {
+    border: solid rgba(0, 0, 0, 0.048) 3px;
+    border-radius: 30px;
+    width: 204px;
+    height: 219px;
+    padding: 20px;
+    transition: 125ms;
+    color: #4589FF;
+}
+
+.task-container:hover {
+    border: solid rgba(0, 0, 0, 0) 3px;
+    border-radius: 0px 30px 30px 30px;
+    background-color: rgb(54, 54, 255);
+    width: 204px;
+    height: 219px;
+    padding: 20px;
+    cursor: pointer;
+    transition: 125ms;
+    color: white;
+}
+
+.task-container .task-number-size {
+    color: black;
+}
+
+.task-container:hover .task-number-size {
+    color: white;
+}
+
+.task-container p {
+    padding: 0;
+}
+
+.img-size {
+    width: 76px;
+    height: 76px;
+    margin-right: 20px;
+    margin-bottom: 7px;
+    border: solid white 3px;
+    border-radius: 40px;
+}
+
+#full-screen-greeting {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.gretting-smartphone-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gretting-smartphone-container h2 {
+    color: black;
+    font-weight: 100;
+}
+
+.greeting {
+    animation: goodMorningAnimation 3s ease-in-out;
+}
+
+@keyframes goodMorningAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

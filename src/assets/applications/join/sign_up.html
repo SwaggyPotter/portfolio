@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JOIN - Sign Up</title>
+    <meta name="description" content="Groupwork - JOIN - Sign Up">
+    <link rel="icon" type="image/x-icon" href="assets\img\logo-join.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/start-page.css">
+    <link rel="stylesheet" href="css/start-page-responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="start-page blue_bg sign_up_step" onload="initBackend();">
+    <div class="container">
+        <div class="center">
+            <div class="header">
+                <a href="index.html" title="Home" class="logo">
+                    <img src="assets/img/logo-join.svg" width="101" height="122" alt="Join">
+                </a>
+                <div class="sign-up-block">
+                    <p>Not a Join user?</p>
+                    <a href="sign_up.html" class="btn sign-up">Sign up</a>
+                </div>
+            </div>
+            <div class="pop-up-container">
+                <div class="pop-up">
+                    <div class="center">
+                        <h1><span>Sign up</span>
+                            <a href="index.html" class="back" title="Go Back"><img src="assets/img/arrow-back.svg" width="24" height="24" alt=""></a>
+                        </h1>
+                        <div id="success"></div>
+                        <div class="pop-up-content">
+                            <form onsubmit="register(); return false;" name="user_form">
+                                <div class="input name"><input type="text" id="signup-name" placeholder="Name" required></div>
+                                <div class="input email"><input type="email" id="signup-mail" placeholder="Email" required></div>
+                                <div class="input pw"><input type="password" id="signup-password" placeholder="Password" minlength="8" required></div>
+                                <div class="login-box flex">
+                                    <button id="login-button" class="cta">Sign up</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="js/mini_backend.js"></script>
+<script src="js/sign_up.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

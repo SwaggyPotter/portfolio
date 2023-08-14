@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JOIN - Login</title>
+    <meta name="description" content="Groupwork - JOIN - Login">
+    <link rel="icon" type="image/x-icon" href="assets\img\logo-join.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/start-page.css">
+    <link rel="stylesheet" href="css/start-page-responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="start-page index" onload="initBackend()">
+    <div class="intro" id="intro"></div>
+    <div class="container">
+        <div class="center">
+            <div class="header">
+                <a href="index.html" title="Home" class="logo">
+                    <img src="assets/img/logo-join.svg" width="101" height="122" alt="Join" id="main-logo" class="startEffect">
+                </a>
+                <div class="sign-up-block">
+                    <p>Not a Join user?</p>
+                    <a href="sign_up.html" class="btn sign-up">Sign up</a>
+                </div>
+            </div>
+            <div class="pop-up-container">
+                <div class="pop-up">
+                    <div class="center">
+                        <h1><span>Log in</span></h1>
+                        <div id="success"></div>
+                        <div class="pop-up-content">
+                            <form onsubmit="login(); return false;">
+                                <div class="input email"><input type="email" id="login-mail" placeholder="Email" required></div>
+                                <div class="input pw"><input type="password" id="login-password" placeholder="Password" minlength="8" required></div>
+                                <div class="recover-box flex">
+                                    <label for="remember" class="flex">
+                                        <input type="checkbox" id="remember"> <span>Remember me</span>
+                                    </label>
+                                    <a href="forgot_pw.html" title="Forgot my password">Forgot my password</a>
+                                </div>
+                                <div class="login-box flex">
+                                    <button id="login-button" class="cta">Log in</button>
+                                    <a href="summary.html" title="Guest log in" class="guestbutton">Guest log in</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sign-up-block" id="bottom-block">
+                <p>Not a Join user?</p>
+                <a href="sign_up.html" class="btn sign-up">Sign up</a>
+            </div>
+        </div>
+    </div>
+    <script src="js/mini_backend.js"></script>
+    <script src="js/sign_up.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

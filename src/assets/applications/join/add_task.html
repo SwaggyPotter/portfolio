@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JOIN - Add Task</title>
+    <meta name="description" content="Groupwork - JOIN - Add Task">
+    <link rel="icon" type="image/x-icon" href="assets\img\logo-join.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/add-task.css">
+    <link rel="stylesheet" href="css/add-task-responsiv.css">
+    <link rel="stylesheet" href="css/inner-page.css">
+    <script src="js/mini_backend.js"></script>
+    <script src="assets/templates/htmlTemplateAdd_Task.js"></script>
+    <script src="js/add-task.js"></script>
+    <script src="js/add-task-extension.js"></script>
+    <script src="js/add-task-new-category.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Insert dedicated JS script -->
+</head>
+
+<body class="task-page" onload="initAddTask(); includeHTML()">
+    <header class="header">
+        <div class="container">
+            <div class="center">
+                <div class="inner">
+                    <a href="summary.html" title="Summary"><img src="assets/img/logo-join-small.svg" width="47"
+                            height="58" alt="JOIN"></a>
+                    <div class="right-bar">
+                        <p>Kanban Project Management Tool</p>
+                        <a href="help.html" title="Need help?" class="help"><img src="assets/img/help.svg" width="31"
+                                height="31" alt="Help"></a>
+                        <div class="user-info">
+                            <span class="user-img" id="user-img" onclick="showLogOffBox();">
+                                <img src="assets/img/dummy.png" width="37" height="37" alt="">
+                            </span>
+                            <div class="more-details" id="more-details">
+                                <ul>
+                                    <li><a href="index.html">Log out</a></li>
+                                    <li><a href="legal_notice.html">Legal Notice</a></li>
+                                    <li><a href="help.html">Help</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main id="main" class="main">
+        <div class="container">
+            <div class="center">
+                <div class="inner reverse">
+                    <div class="content topPadding">
+                        <div class="wrapper bg1">
+                            <div class="contentCenter" w3-include-html="assets/templates/add_task_template.html"></div>
+                        </div>
+                    </div>
+                    <div class="sidebar">
+                        <div class="wrapper">
+                            <ul class="navigation" id="main-navigation">
+                                <li><a href="summary.html" title="Summary"><span class="m-img"><img
+                                                src="assets/img/menu-summary.svg" width="22" height="22"
+                                                alt="Summary"></span><span>Summary</span></a></li>
+                                <li><a href="board.html" title="Board"><span class="m-img"><img
+                                                src="assets/img/menu-board.svg" width="22" height="26"
+                                                alt="Board"></span><span>Board</span></a></li>
+                                <li><a href="add_task.html" title="Add Task" class="active-menu"><span
+                                            class="m-img"><img src="assets/img/menu-task.svg" width="30" height="30"
+                                                alt="Task"></span><span>Add Task</span></a></li>
+                                <li><a href="contacts.html" title="Contacts"><span class="m-img"><img
+                                                src="assets/img/menu-contact.svg" width="20" height="22"
+                                                alt="Contact"></span><span>Contacts</span></a></li>
+                            </ul>
+                            <ul class="navigation" id="secondary-navigation">
+                                <li><a href="legal_notice.html" title="Legal notice"><span class="m-img"><img
+                                                src="assets/img/menu-legal.svg" width="18" height="18"
+                                                alt="Legal notice"></span><span>Legal notice</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

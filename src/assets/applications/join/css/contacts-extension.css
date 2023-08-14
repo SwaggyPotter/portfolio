@@ -1,0 +1,107 @@
+.agree-btn-contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #42526E;
+    border-radius: 10px;
+    margin: 30px 0px;
+}
+
+.agree-btn-contact:hover {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #2f3b50;
+    color: white;
+    border-radius: 10px;
+    margin: 30px 0px;
+    cursor: pointer;
+}
+
+.warning-content {
+    width: 100%;
+    padding-top: 30px;
+}
+
+#closeBTN-warning {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
+
+#closeBTN-warning:hover {
+    cursor: pointer;
+}
+
+#edit-smartphone-button {
+    position: absolute;
+    right: 50px;
+    bottom: 250px;
+    z-index: 3;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 225ms;
+    height: 70px;
+    width: 70px;
+}
+
+#edit-smartphone-button:hover {
+    position: absolute;
+    right: 50px;
+    bottom: 250px;
+    z-index: 3;
+    cursor: pointer;
+    background-color: #4589ff;
+    border-radius: 5px;
+    height: 70px;
+    width: 70px;
+    transition: 225ms;
+}
+
+#popup-container {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: 2;
+}
+
+#position-container-popup {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#popup-pic {
+    position: absolute;
+    bottom: 130px;
+    left: 33vw;
+}
+
+.popupClassAnimation {
+    animation: tasktAddPopUp 2s ease-in-out;
+}
+
+@keyframes tasktAddPopUp {
+    0% {
+        bottom: 0;
+    }
+
+    20% {
+        bottom: 130px;
+    }
+
+    80% {
+        bottom: 130px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}

@@ -1,0 +1,428 @@
+@media screen and (max-width:1390px) {
+    #time-and-tasks {
+        display: inline;
+        justify-content: space-between;
+        width: unset;
+    }
+
+    #center-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: unset;
+        padding-top: 5vh;
+    }
+}
+
+@media screen and (min-width:1101px) and (max-width:1389px) {
+    #tasks-to-to {
+        transition: 125ms;
+        display: flex;
+        background-color: #D2E3FF;
+        height: 191px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 17.5px;
+        border-radius: 30px;
+        padding: 30px;
+        border: solid rgba(0, 0, 0, 0) 1px;
+        width: 88%;
+        margin-top: 43px;
+    }
+
+    #greetingTime {
+        padding-top: 5vh;
+    }  
+
+    #tasks-to-to:hover {
+        transition: 125ms;
+        display: flex;
+        background-color: white;
+        width: 200px;
+        height: 191px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 17.5px;
+        border-radius: 0px 30px 30px 30px;
+        padding: 30px;
+        cursor: pointer;
+        border: solid rgba(0, 0, 0, 0.103) 1px;
+        width: 88%;
+        margin-top: 43px;
+    }
+
+    #tasks-and-status {
+        display: flex;
+        width: 540px;
+        margin-top: 0;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    #tasks-and-status a {
+        text-decoration: none;
+        padding: 10px 10px;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    body {
+        overflow: auto;
+    }
+
+    #greeting {
+        display: none;
+    }
+
+    #summary-content {
+        overflow: auto;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #greeting {
+        display: none;
+    }
+  
+    #tasks-to-to {
+        transition: 125ms;
+        display: flex;
+        background-color: #D2E3FF;
+        height: 191px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 17.5px;
+        border-radius: 30px;
+        padding: 30px;
+        border: solid rgba(0, 0, 0, 0) 1px;
+        width: 83%;
+        margin-top: 33px;
+    }
+
+    #tasks-to-to:hover {
+        transition: 125ms;
+        display: flex;
+        background-color: white;
+        width: 200px;
+        height: 191px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 17.5px;
+        border-radius: 0px 30px 30px 30px;
+        padding: 30px;
+        cursor: pointer;
+        border: solid rgba(0, 0, 0, 0.103) 1px;
+        width: 83%;
+        margin-top: 33px;
+    }
+
+    #tasks-and-status {
+        display: flex;
+        width: 540px;
+        margin-top: 17.5px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    #tasks-and-status a {
+        text-decoration: none;
+        padding: 10px 10px;
+    }
+
+    #taks-urgent {
+        display: flex;
+        background-color: #4589FF;
+        color: white;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 450px;
+        height: 191px;
+        margin: 17.5px;
+        border-radius: 30px;
+        padding: 28px 48px 28px 48px;
+        transition: 125ms;
+        border: solid rgba(255, 255, 255, 0.103) 1px;
+    }
+
+    #taks-urgent:hover {
+        display: flex;
+        background-color: white;
+        color: #4589FF;
+        transition: 125ms;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 450px;
+        height: 191px;
+        margin: 17.5px;
+        border-radius: 0px 30px 30px 30px;
+        padding: 28px 48px 28px 48px;
+        cursor: pointer;
+        border: solid rgba(0, 0, 0, 0.103) 1px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #greeting {
+        display: none;
+    }
+
+    .reverse {
+        justify-content: center;
+    }
+
+    #tasks-and-status {
+        margin-bottom: 50px;
+    }
+
+    #tasks-and-status a {
+        text-decoration: none;
+        padding: 10px 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .img-size {
+        width: 64px;
+        height: 64px;
+        margin-right: 20px;
+        margin-bottom: 7px;
+        border: solid white 3px;
+        border-radius: 40px;
+    }
+
+    #deadline-upcoming {
+        font-size: 17px;
+    }
+
+    #greeting {
+        display: none;
+    }
+
+    #deadline-date {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        font-size: 23px;
+    }
+
+    #tasks-and-status a {
+        text-decoration: none;
+        padding: 10px 10px;
+    }
+
+    #taks-urgent {
+        display: flex;
+        background-color: #4589FF;
+        color: white;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 370px;
+        height: 150px;
+        margin: 17.5px;
+        border-radius: 30px;
+        padding: 26px 12px 26px 12px;
+        transition: 125ms;
+        border: solid rgba(255, 255, 255, 0.103) 1px;
+    }
+
+    #taks-urgent:hover {
+        display: flex;
+        background-color: white;
+        color: #4589FF;
+        transition: 125ms;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 370px;
+        height: 150px;
+        margin: 17.5px;
+        border-radius: 0px 30px 30px 30px;
+        padding: 26px 12px 26px 12px;
+        cursor: pointer;
+        border: solid rgba(0, 0, 0, 0.103) 1px;
+    }
+
+    #tasks-to-to {
+        transition: 125ms;
+        display: flex;
+        background-color: #D2E3FF;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 17.5px;
+        border-radius: 30px;
+        padding: 30px;
+        border: solid rgba(0, 0, 0, 0) 1px;
+        width: 78%;
+        margin-top: 33px;
+    }
+
+    #tasks-to-to:hover {
+        transition: 125ms;
+        display: flex;
+        background-color: white;
+        width: 200px;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 17.5px;
+        border-radius: 0px 30px 30px 30px;
+        padding: 30px;
+        cursor: pointer;
+        border: solid rgba(0, 0, 0, 0.103) 1px;
+        width: 78%;
+        margin-top: 33px;
+    }
+
+    .task-container {
+        border: solid rgba(0, 0, 0, 0.048) 3px;
+        border-radius: 30px;
+        width: 104px;
+        height: 119px;
+        padding: 37px;
+        transition: 125ms;
+        color: #4589FF;
+        margin-bottom: 10px;
+    }
+
+    .task-container:hover {
+        border: solid rgba(0, 0, 0, 0) 3px;
+        border-radius: 0px 30px 30px 30px;
+        background-color: rgb(54, 54, 255);
+        width: 104px;
+        height: 119px;
+        padding: 37px;
+        cursor: pointer;
+        transition: 125ms;
+        color: white;
+    }
+
+    #tasks-and-status {
+        display: flex;
+        width: 408px;
+        margin-top: 10px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #taks-urgent {
+        display: flex;
+        background-color: #4589FF;
+        color: white;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 286px;
+        height: 150px;
+        margin: 17.5px;
+        border-radius: 30px;
+        padding: 0 12px 0 12px;
+        transition: 125ms;
+        border: solid rgba(255, 255, 255, 0.103) 1px;
+    }
+
+    #task-urgent-emblem-number {
+        margin-right: 17px;
+    }
+
+    #taks-urgent:hover {
+        display: flex;
+        background-color: white;
+        color: #4589FF;
+        transition: 125ms;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 286px;
+        height: 150px;
+        margin: 17.5px;
+        border-radius: 0px 30px 30px 30px;
+        padding: 0 12px 0 12px;
+        cursor: pointer;
+        border: solid rgba(0, 0, 0, 0.103) 1px;
+    }
+
+    #tasks-to-to {
+        transition: 125ms;
+        display: flex;
+        background-color: #D2E3FF;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 17.5px;
+        border-radius: 30px;
+        padding: 10px;
+        border: solid rgba(0, 0, 0, 0) 1px;
+        width: 85%;
+        margin-top: 33px;
+    }
+
+    #tasks-to-to:hover {
+        transition: 125ms;
+        display: flex;
+        background-color: white;
+        width: 200px;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 17.5px;
+        border-radius: 0px 30px 30px 30px;
+        padding: 10px;
+        cursor: pointer;
+        border: solid rgba(0, 0, 0, 0.103) 1px;
+        width: 85%;
+        margin-top: 33px;
+    }
+
+    #tasks-and-status {
+        display: flex;
+        width: 340px;
+        margin-top: 10px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+
+    .task-container {
+        border: solid rgba(0, 0, 0, 0.048) 3px;
+        border-radius: 30px;
+        width: 104px;
+        height: 119px;
+        padding: 19px;
+        transition: 125ms;
+        color: #4589FF;
+        margin-bottom: 10px;
+    }
+
+    .task-container:hover {
+        border: solid rgba(0, 0, 0, 0) 3px;
+        border-radius: 0px 30px 30px 30px;
+        background-color: rgb(54, 54, 255);
+        width: 104px;
+        height: 119px;
+        padding: 19px;
+        cursor: pointer;
+        transition: 125ms;
+        color: white;
+    }
+}

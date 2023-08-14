@@ -1,0 +1,311 @@
+h1 {
+    text-align: center;
+    color: #000;
+    font-size: 48px;
+    line-height: 90%;
+    position: relative;
+}
+
+h1 span:after {
+    content:"";
+    display: block;
+    border-bottom: 3px solid #4589FF;
+    border-radius: 8px;
+    width: 150px;
+    margin: 24px auto 0 auto;
+}
+
+h1 a {
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+
+.intro {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left:0;
+    top: 0;
+    z-index: 998;
+    background:#4589FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bg-transparent 2000ms ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.start-page .logo img.startEffect {
+    animation: animate-logo ease-out 1000ms;
+}
+
+.start-page {
+    background: #fff;
+}
+
+.blue_bg {
+    background:#4589FF;
+}
+
+.start-page .header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    position: relative;
+    height: 126.5px;
+}
+
+.start-page .logo img {
+    width: 101px;
+    height: auto;
+}
+
+.blue_bg .logo img, .intro img {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(200%) contrast(100%);
+}
+
+.blue_bg .sign-up-block {
+    display: none;
+}
+
+.sign-up-block {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    font-size: 23px;
+    gap: 35px;
+    height: 48px;
+    line-height: 48px;
+}
+
+.sign-up {
+    background: #4589FF;
+    width: 112px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    padding: 0px 16px;
+}
+
+.pop-up-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 25px 0 0 0;
+}
+
+.forgot_pw .pop-up {
+    width:761px;
+    position: relative;
+}
+
+.forgot_pw .pop-up .center {
+    width: 506px;
+}
+
+.forgot_pw .pop-up-content .input {
+    margin: 35px auto;
+    width: 422px;
+}
+
+.new-password {
+    margin: 35px 0;
+}
+
+.confirm-password {
+    margin:0 0 35px 0;
+}
+
+.pop-up {
+    width: 652px;
+    background: #fff;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 30px;
+    height: 470px;
+}
+
+.pop-up .center {
+    width: 422px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.pop-up-content {
+    margin: 35px 0 0 0;
+}
+
+.pop-up-content p {
+    font-size: 23px;
+    text-align: center;
+    line-height: 140%;
+}
+
+.pop-up-content .input {
+    display: block;
+    position: relative;
+}
+
+.pop-up-content input {
+    width:100%;
+    padding:13px 21px;
+    box-sizing: border-box;
+    border:0;
+    border-bottom: 1px solid #D1D1D1;
+    font-size: 19px;
+    color: #000;
+}
+
+.pop-up-content .recover-box input {
+    width:auto;
+    background: linear-gradient(180deg, #F9F9F9 0%, #F0F0F0 100%);
+    border: 2px solid #4589FF;
+    border-radius: 3px;
+}
+
+#bottom-block {
+    display: none;
+}
+
+.pop-up-content ::-webkit-input-placeholder {
+    font-size: 19px;
+    color: #D1D1D1;
+}
+.pop-up-content :-ms-input-placeholder {
+    font-size: 19px;
+    color: #D1D1D1;
+}
+.pop-up-content ::placeholder {
+    font-size: 19px;
+    color: #D1D1D1;
+}
+
+.pop-up-content .pw {
+    margin-top:35px;
+}
+
+.sign_up_step .pop-up-content .pw {
+    margin:0 0 35px 0;
+}
+
+.sign_up_step .pop-up-content .email {
+    margin:35px 0;
+}
+
+.pop-up-content .pw:after, .pop-up-content .email:after, .pop-up-content .name:after {
+    display: block;
+    content:"";
+    width:20px;
+    height:21px;
+    position: absolute;
+    right: 20px;
+    top:14px;
+}
+
+.pop-up-content .email:after {
+    background:url("../assets/img/mail.svg") no-repeat;
+}
+
+.pop-up-content .pw:after {
+    background:url("../assets/img/lock.svg") no-repeat;
+}
+
+.pop-up-content .name:after {
+    background:url("../assets/img/name.svg") no-repeat;
+}
+
+.pop-up-content .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.pop-up-content .recover-box {
+    margin: 35px 0;
+}
+
+.pop-up-content .recover-box a {
+    font-size: 19px;
+    color: #005DFF;
+    text-decoration: none;
+}
+
+.pop-up-content .recover-box .flex {
+    font-size: 19px;
+    gap: 20px;
+}
+
+.cta {
+    padding:10px 35px;
+    background:#4589FF;
+    border-radius: 8px;
+    border:0;
+    font-size: 23px;
+    color:#fff;
+    cursor: pointer;
+    height: 47px;
+}
+
+.cta:hover, .sign-up:hover {
+    background:#005eff;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.4)
+}
+
+.guestbutton {
+    text-decoration: none;
+    border: 1px solid #647188;
+    background:#fff;
+    border-radius: 8px;
+    font-size: 23px;
+    padding:7px 35px;
+    color: #647188;
+    height: 47px;
+    box-sizing: border-box;
+}
+
+.guestbutton:hover {
+    border: 1px solid #4588ff;
+    color:#4588ff;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.4);
+}
+
+#success {
+    text-align: center;
+    color:#008000;
+}
+
+#success p.red {
+    color: #DC143C;
+}
+
+#successMsgEmail {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:#ffffffc9;
+    display: none;
+}
+
+#emailSuccess {
+    position: absolute;
+    font-size: 23px;
+    bottom: 50%;
+    left: 50%;
+    margin-left: -193px;
+    margin-bottom:-37px;
+    color: #fff;
+    width:386px;
+    height: 74px;
+    line-height: 74px;
+    border-radius: 8px;
+    text-align: center;
+    background:#4589FF url(../assets/img/sent.svg) no-repeat 10px 20px;
+    animation: animate-email-success ease-out 1000ms;
+    padding: 0 15px 0 65px;
+    box-sizing: border-box;
+}

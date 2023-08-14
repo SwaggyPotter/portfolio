@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JOIN - Summary</title>
+    <meta name="description" content="Groupwork - JOIN - Summary">
+    <link rel="icon" type="image/x-icon" href="assets\img\logo-join.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/inner-page.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/summary.css">
+    <link rel="stylesheet" href="css\summary-responsiv.css">
+    <link rel="stylesheet" href="css\handy-sidebar.css">
+</head>
+
+<body class="summary-page" onload="initBackend()">
+    <header class="header">
+        <div class="container">
+            <div class="center">
+                <div class="inner">
+                    <a href="summary.html" title="Summary"><img src="assets/img/logo-join-small.svg" width="47"
+                            height="58" alt="JOIN"></a>
+                    <div class="right-bar">
+                        <p>Kanban Project Management Tool</p>
+                        <a href="help.html" title="Need help?" class="help"><img src="assets/img/help.svg" width="31"
+                                height="31" alt="Help"></a>
+                        <div class="user-info">
+                            <span class="user-img" id="user-img" onclick="showLogOffBox();">
+                                <img src="assets/img/dummy.png" width="37" height="37" alt="">
+                            </span>
+                            <div class="more-details" id="more-details">
+                                <ul>
+                                    <li><a href="index.html">Log out</a></li>
+                                    <li><a href="legal_notice.html">Legal Notice</a></li>
+                                    <li><a href="help.html">Help</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main id="main" class="main">
+        <div class="container">
+            <div class="center">
+                <div class="inner reverse paddingTop">
+                    <div id="summary-content" class="content">
+                        <div id="center-content">
+                            <div id="greeting">
+                                <h2 id="greetingTime"><span id="username-input"></span></h2>
+                            </div>
+
+                            <div id="time-and-tasks">
+                                <a href="board.html">
+                                    <div id="taks-urgent">
+                                        <div>
+                                            <p id="task-urgent-emblem-number">
+                                                <img class="img-size" src="assets/img/task-urgent.svg" alt="img-tasks">
+                                                <span class="task-number-size" id="tasks-urgent-counter">0</span>
+                                            </p>
+                                            <p id="task-urgent-text" class="task-text-size">Tasks Urgent</p>
+
+                                        </div>
+                                        <hr id="hr-line-tasks-urgent">
+                                        <div class="center">
+                                            <p id="deadline-date"></p>
+                                            <p id="deadline-upcoming">Upcoming deadline</p>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="board.html">
+                                    <div id="tasks-to-to">
+                                        <p class="align-center"><img class="img-size" src="assets/img/board.svg"
+                                                alt=""><span class="task-number-size" id="tasks-to-do-counter">1</span>
+                                        </p>
+                                        <p class="task-text-size">Tasks To-do</p>
+                                    </div>
+                                </a>
+
+                            </div>
+
+                            <div id="tasks-and-status">
+                                <a href="board.html">
+                                    <div class="centern task-container">
+                                        <div class="center-tasks">
+                                            <img class="img-size" src="assets/img/board.svg" alt="pic">
+                                            <span class="task-number-size" id="task-in-board-counter">5</span>
+                                        </div>
+                                        <p class="task-line-height task-text-size task-color-center">Task in <br> Board
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="board.html">
+                                    <div class="centern task-container">
+                                        <div class="center-tasks">
+                                            <img class="img-size" src="assets/img/In Progress.svg" alt="pic">
+                                            <span class="task-number-size" id="task-in-progress">5</span>
+                                        </div>
+                                        <p class="task-line-height task-text-size task-color-center"><span>Task
+                                                in</span>
+                                            <span>Progress</span>
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="board.html">
+                                    <div class="centern task-container">
+                                        <div class="center-tasks">
+                                            <img class="img-size" src="assets/img/awaiting-feedback.svg" alt="pic">
+                                            <span class="task-number-size" id="task-awaiting-feedback">5</span>
+                                        </div>
+                                        <p class="task-line-height task-text-size task-color-center">
+                                            <span>Awaiting</span><span>Feedback</span>
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="board.html">
+                                    <div class="centern task-container">
+                                        <div class="center-tasks">
+                                            <img class="img-size" src="assets/img/done.svg" alt="pic">
+                                            <span class="task-number-size" id="task-done-counter">5</span>
+                                        </div>
+                                        <p class="task-line-height task-text-size task-color-center"><span>Task</span>
+                                            <span>done</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar">
+                        <div class="wrapper">
+                            <ul class="navigation" id="main-navigation">
+                                <li><a href="summary.html" title="Summary" class="active-menu"><span class="m-img"><img
+                                                src="assets/img/menu-summary.svg" width="22" height="22"
+                                                alt="Summary"></span><span>Summary</span></a></li>
+                                <li><a href="board.html" title="Board"><span class="m-img"><img
+                                                src="assets/img/menu-board.svg" width="22" height="26"
+                                                alt="Board"></span><span>Board</span></a></li>
+                                <li><a href="add_task.html" title="Add Task"><span class="m-img"><img
+                                                src="assets/img/menu-task.svg" width="30" height="30"
+                                                alt="Task"></span><span>Add Task</span></a></li>
+                                <li><a href="contacts.html" title="Contacts"><span class="m-img"><img
+                                                src="assets/img/menu-contact.svg" width="20" height="22"
+                                                alt="Contact"></span><span>Contacts</span></a></li>
+                            </ul>
+                            <ul class="navigation" id="secondary-navigation">
+                                <li><a href="legal_notice.html" title="Legal notice"><span class="m-img"><img
+                                                src="assets/img/menu-legal.svg" width="18" height="18"
+                                                alt="Legal notice"></span><span>Legal notice</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="greeting" id="full-screen-greeting">
+                        <div class="gretting-smartphone-container">
+                            <h2 id="good-morging-smartphone"><h1 id="username-input-smartphone"></h1></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/mini_backend.js"></script>
+    <!-- Insert dedicated JS script -->
+    <script src="js/main.js"></script>
+    <script src="js/summary.js"></script>
+</body>
+
+</html>

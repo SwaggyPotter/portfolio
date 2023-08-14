@@ -1,0 +1,345 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('img/backgrounds/cacti-7162265.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+}
+
+#centerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#canvas {
+    background-color: rgba(0, 0, 0, 0);
+    display: block;
+}
+
+#turnDeviceContainer {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(240, 248, 255, 0.315);
+    z-index: 2;
+}
+
+#turnDeviceIMG {
+    max-width: 50%;
+    max-height: 480px;
+}
+
+#startPic {
+    max-width: 720px;
+    max-height: 480px;
+    position: absolute;
+    display: block;
+}
+
+#startBTNContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+#startBTN {
+    width: 70px;
+}
+
+#tutorialContainer {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 136, 255, 0);
+    z-index: 2;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+
+#musicContainer {
+    right: 10%;
+    top: 10%;
+    position: absolute;
+    display: none;
+}
+
+#volIMG {
+    width: 30px;
+    margin-right: 20px;
+}
+
+#tutorialContainer span {
+    margin: 20px;
+}
+
+#tutorialContainer h5 {
+    margin-bottom: -10px;
+}
+
+#controlEmblemes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#controlEmblemes span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#controlEmblemes img {
+    margin-left: 10px;
+}
+
+#fullscreenBTN {
+    width: 50px;
+    z-index: 2;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+
+#handyControls {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    width: 90%;
+    z-index: 2;
+    display: none;
+}
+
+.upBtn {
+    margin-bottom: 50px;
+}
+
+.handyControlBTN {
+    width: 50px;
+    height: 50px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+}
+
+#startBTN:hover {
+    width: 70px;
+    cursor: pointer;
+}
+
+.startContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+/*Handy responsiv*/
+@media only screen and (max-width:720px) {
+    canvas {
+        width: 100%;
+    }
+
+    #startPic {
+        width: 100%;
+    }
+}
+
+/*Handy responsiv*/
+@media only screen and (max-height:480px) {
+    canvas {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    #startPic {
+        height: 100vh;
+    }
+}
+
+
+
+
+@media screen and (max-width: 1010px) {
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url('img/backgrounds/cacti-7162265.svg');
+        background-repeat: no-repeat;
+        background-size: 180%;
+        background-attachment: fixed;
+    }
+
+    #handyControls {
+        position: absolute;
+        left: 10px;
+        bottom: 0;
+        width: 90%;
+        z-index: 2;
+        display: none;
+    }
+
+    #throwBottleBTN {
+        position: absolute;
+        right: 0px;
+        height: 80px;
+        width: 70px;
+    }
+
+    #startBTN {
+        width: 70px;
+    }
+
+    #startBTNContainer {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+    }
+
+    #startBTN:hover {
+        width: 70px;
+        cursor: pointer;
+    }
+
+    #handyControlBTN {
+        z-index: 10;
+    }
+
+    #tutorialContainer {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url('img/backgrounds/cacti-7162265.svg');
+        background-repeat: no-repeat;
+        background-size: 300%;
+        background-attachment: fixed;
+    }
+
+
+    #tutorialContainer {
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(0, 136, 255, 0);
+        z-index: 2;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #tutorialContainer span {
+        margin: 10px;
+    }
+
+    #tutorialContainer h5 {
+        margin-bottom: -10px;
+    }
+
+    #startBTN {
+        width: 40px;
+    }
+
+    #startBTN:hover {
+        width: 40px;
+        cursor: pointer;
+    }
+
+    #tutorialContainer {
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 400px) {
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url('img/backgrounds/cacti-7162265.svg');
+        background-repeat: no-repeat;
+        background-size: 400%;
+        background-attachment: fixed;
+    }
+
+    #musicContainer {
+        right: 10%;
+        top: 15%;
+        position: absolute;
+        display: none;
+    }
+
+    #tutorialContainer {
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(0, 136, 255, 0);
+        z-index: 2;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #tutorialContainer span {
+        margin: 10px;
+    }
+
+    #tutorialContainer h5 {
+        margin-bottom: -10px;
+    }
+
+    #startBTN {
+        width: 40px;
+    }
+
+    #startBTN:hover {
+        width: 40px;
+        cursor: pointer;
+    }
+
+    #tutorialContainer {
+        display: none;
+    }
+}

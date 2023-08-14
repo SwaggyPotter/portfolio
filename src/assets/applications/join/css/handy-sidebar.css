@@ -1,0 +1,42 @@
+.handy-side-bar {
+    display: none;
+}
+
+@media screen and (min-width:350px) and (max-width:800px) {
+    .handy-side-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 70px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+
+    .handy-side-bar a {
+        text-decoration: none;
+    }
+
+    .symbol-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        color: #42526E;
+    }
+
+    .symbol-container:hover {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        background-color: #D2E3FF;
+        cursor: pointer;
+        height: 100%;
+    }
+}

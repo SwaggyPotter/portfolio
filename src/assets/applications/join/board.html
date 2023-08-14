@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JOIN - Board</title>
+    <meta name="description" content="Groupwork - JOIN - Board">
+    <link rel="icon" type="image/x-icon" href="assets\img\logo-join.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/inner-page.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/board.css">
+    <link rel="stylesheet" href="css/board-extension.css">
+    <link rel="stylesheet" href="css/board-add-task-template.css">
+    <link rel="stylesheet" href="css/board-add-task-responsiv.css">
+    <link rel="stylesheet" href="css/board-responsiv.css">
+    <script src="js/mini_backend.js"></script>
+    <script src="js/main.js"></script>
+    <script src="assets/templates/htmlTemplateBoard.js"></script>
+    <script src="assets/templates/htmlTemplateAdd_Task.js"></script>
+    <script src="js/add-task.js"></script>
+    <script src="js/add-task-extension.js"></script>
+    <script src="js/add-task-new-category.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/board_dragndrop.js"></script>
+    <script src="js/board_detail_card.js"></script>
+    <script src="js/board_edit.js"></script>
+    <script src="js/DragDropTouch.js"></script>
+</head>
+
+<body id="body" class="board-page" onload="initBoard(); includeHTML()">
+
+    <header class="header">
+        <div class="container">
+            <div class="center">
+                <div class="inner">
+                    <a href="summary.html" title="Summary"><img src="assets/img/logo-join-small.svg" width="47"
+                            height="58" alt="JOIN"></a>
+                    <div class="right-bar">
+                        <p>Kanban Project Management Tool</p>
+                        <a href="help.html" title="Need help?" class="help"><img src="assets/img/help.svg" width="31"
+                                height="31" alt="Help"></a>
+                        <div class="user-info">
+                            <span class="user-img" id="user-img" onclick="showLogOffBox();">
+                                <img src="assets/img/dummy.png" width="37" height="37" alt="">
+                            </span>
+                            <div class="more-details" id="more-details">
+                                <ul>
+                                    <li><a href="index.html">Log out</a></li>
+                                    <li><a href="legal_notice.html">Legal Notice</a></li>
+                                    <li><a href="help.html">Help</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main id="main" class="main topPadding">
+        <div class="container">
+            <div class="center">
+                <div class="inner reverse">
+                    <div class="content newHeightBoard">
+                        <div onclick="closeDetailCard()" class="details d-none" id="details">
+                            <div onclick="stopPropagation(event)" id="detail-popup" class="detail-popup"></div>
+                        </div>
+                        <div onclick="closeEdit()" class="details d-none" id="edit-task">
+                            <div onclick="stopPropagation(event)" id="edit-task-popup" class="detail-popup"></div>
+                        </div>
+                        <div class="details d-none" id="add-task-popup-container" onclick="closeAddTask()">
+                            <div id="add-task-popup" class="add-task-popup" onclick="stopPropagation(event)">
+                                <div class="header-add-task-popup">
+                                    <div id="addTask-Board-Container-Header">
+                                        <h2>Add Task</h2><span onclick="closeAddTask()">X</span>
+                                    </div>
+                                    <div w3-include-html="assets/templates/add_task_template.html"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper negativMargin">
+                            <div class="menu-bar">
+                                <div class="search-bar">
+                                    <input type="text" placeholder="Find task" id="search" onkeydown="filter()"
+                                        onkeyup="filter()">
+                                    <img src="assets/img/loupe.svg" alt="loupe">
+                                </div>
+                                <div class="add-task-btn">
+                                    <button onclick="openAddTaskPopup('toDo')">Add task +</button>
+                                </div>
+                            </div>
+                            <div class="status-bar">
+                                <div class="status">
+                                    <div class="status-headline">
+                                        <span>To do</span>
+                                        <img class="hoverAddPlus" src="assets/img/plus.svg" alt="add" onclick="openAddTaskPopup('toDo')">
+                                    </div>
+                                    <div class="task-container" id="to-do-container" ondrop="moveTo(event)"
+                                        ondragover="allowDrop(event)">
+                                        <!-- htmlTemplateTasksToDo -->
+                                    </div>
+                                </div>
+                                <div class="status">
+                                    <div class="status-headline">
+                                        <span>In progress</span>
+                                        <img class="hoverAddPlus" src="assets/img/plus.svg" alt="add"
+                                            onclick="openAddTaskPopup('inProgress')">
+                                    </div>
+                                    <div class="task-container" id="in-progress-container" ondrop="moveTo(event)"
+                                        ondragover="allowDrop(event)">
+                                        <!-- htmlTemplateTasksInProgress-->
+                                    </div>
+                                </div>
+                                <div class="status">
+                                    <div class="status-headline">
+                                        <span>Await feedback</span>
+                                        <img class="hoverAddPlus" src="assets/img/plus.svg" alt="add"
+                                            onclick="openAddTaskPopup('awaitFeedback')">
+                                    </div>
+                                    <div class="task-container" id="await-feedback-container" ondrop="moveTo(event)"
+                                        ondragover="allowDrop(event)">
+                                        <!-- htmlTemplateTasksAwaitFeedback -->
+                                    </div>
+                                </div>
+                                <div class="status">
+                                    <div class="status-headline">
+                                        <span>Done</span>
+                                        <img class="hoverAddPlus" src="assets/img/plus.svg" alt="add" onclick="openAddTaskPopup('done')">
+                                    </div>
+                                    <div class="task-container" id="done-container" ondrop="moveTo(event)"
+                                        ondragover="allowDrop(event)">
+                                        <!-- htmlTemplateTasksDone -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar padding-fix">
+                        <div class="wrapper">
+                            <ul class="navigation" id="main-navigation">
+                                <li><a href="summary.html" title="Summary"><span class="m-img"><img
+                                                src="assets/img/menu-summary.svg" width="22" height="22"
+                                                alt="Summary"></span><span>Summary</span></a></li>
+                                <li><a href="board.html" title="Board" class="active-menu"><span class="m-img"><img
+                                                src="assets/img/menu-board.svg" width="22" height="26"
+                                                alt="Board"></span><span>Board</span></a></li>
+                                <li><a href="add_task.html" title="Add Task"><span class="m-img"><img
+                                                src="assets/img/menu-task.svg" width="30" height="30"
+                                                alt="Task"></span><span>Add Task</span></a></li>
+                                <li><a href="contacts.html" title="Contacts"><span class="m-img"><img
+                                                src="assets/img/menu-contact.svg" width="20" height="22"
+                                                alt="Contact"></span><span>Contacts</span></a></li>
+                            </ul>
+                            <ul class="navigation" id="secondary-navigation">
+                                <li><a href="legal_notice.html" title="Legal notice"><span class="m-img"><img
+                                                src="assets/img/menu-legal.svg" width="18" height="18"
+                                                alt="Legal notice"></span><span>Legal notice</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

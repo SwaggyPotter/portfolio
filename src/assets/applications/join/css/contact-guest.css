@@ -1,0 +1,445 @@
+body {
+    overflow: hidden;
+}
+
+#contact-content {
+    display: flex;
+    height: 90vh;
+    overflow-y: scroll;
+    justify-content: unset !important;
+}
+
+#close-detail-arrow {
+    display: none;
+}
+
+.email-card-guest {
+    width: 453px;
+    padding: 100px 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.deleteContactLook {
+    position: absolute;
+    cursor: pointer;
+    left: 5%;
+    top: 5%;
+}
+
+.embleme-designe {
+    background-color: rgb(81, 255, 0);
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    color: white;
+    border: solid 2px white;
+    margin-right: 35px;
+    margin-left: 10px;
+}
+
+.add-contact-button {
+    position: absolute;
+    right: 48px;
+    bottom: 116px;
+    padding: 18px 10px 18px 10px;
+    width: 197px;
+    border-radius: 10px;
+    border: none;
+    background-color: #4589FF;
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.add-contact-button:hover {
+    position: absolute;
+    right: 48px;
+    bottom: 116px;
+    padding: 18px 10px 18px 10px;
+    width: 197px;
+    border-radius: 10px;
+    border: none;
+    background-color: #0f67ff;
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.contact-card-quest {
+    display: flex;
+    padding: 15px 25px 15px 25px;
+    align-items: center;
+    width: 357px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.contact-card-quest:hover {
+    display: flex;
+    padding: 15px 25px 15px 25px;
+    align-items: center;
+    background-color: #4589FF;
+    color: white;
+}
+
+.contact-container-name-email-designe {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-card-quest:hover .email-card-quest-designe {
+    color: white;
+}
+
+.email-card-quest-designe {
+    color: #4589FF;
+}
+
+/*Detail information designe*/
+#detail-information-screen {
+    padding: 58px 1865px;
+    position: fixed;
+    width: 100%;
+    transition: 125ms;
+}
+
+.overflow-container {
+    position: relative;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.detail-embleme {
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    background-color: orange;
+    font-size: 47px;
+    margin-right: 54px;
+}
+
+.name-and-embleme-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 21px;
+    padding-top: 45px;
+}
+
+.detail-name {
+    font-size: 38px;
+    margin-bottom: 13px;
+}
+
+.add-task-desgine {
+    color: #005DFF;
+}
+
+.contact-information-designe {
+    font-size: 23px;
+    margin-right: 85px;
+    margin-bottom: 21px;
+}
+
+.detail-email-designe {
+    display: flex;
+    flex-direction: column;
+}
+
+.email-mobile-designe {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.chosed-contact {
+    background-color: #005DFF;
+    color: white;
+}
+
+.chosed-contact .detail-name {
+    color: white;
+}
+
+.chosed-contact .email-card-quest-designe {
+    color: white;
+}
+
+.firstLetterSort {
+    margin-bottom: 25px;
+    margin-top: 25px;
+    width: 100%;
+}
+
+/*Window for edding the contact*/
+#edit-window {
+    position: absolute;
+    left: -50vw;
+    top: 0;
+    bottom: 0;
+    width: 50vw;
+    background-color: #005DFF;
+    z-index: 2;
+    border-radius: 0 35px 35px 0;
+    overflow: hidden;
+    transition: 525ms;
+}
+
+#close-container {
+    position: relative;
+}
+
+#close-edit-btn {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.edit-join-symbol-and-text {
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-join-symbol-and-text p {
+    font-size: 48px;
+    color: white;
+}
+
+.embleme-and-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: solid rgba(0, 0, 0, 0.103) 2px;
+    height: 69.6%;
+    padding: 0 79px;
+}
+
+.embleme-and-input form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.embleme-and-input form input {
+    border: none;
+    padding: 13px 21px 13px 21px;
+    height: 50px;
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px gray;
+}
+
+.input-container input {
+    border: none;
+    padding: 20px;
+}
+
+
+#cancel-btn {
+    padding: 18px 10px 18px 10px;
+    background-color: white;
+    width: 146px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: #647188;
+    border: solid #647188 1px;
+    margin-top: 55px;
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+#cancel-btn:hover {
+    padding: 18px 10px 18px 10px;
+    background-color: white;
+    width: 146px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: #647188;
+    border: solid #647188 1px;
+    margin-top: 55px;
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+    background-color: #d6d6d6;
+}
+
+#save-edit-btn {
+    padding: 18px 10px 18px 10px;
+    background-color: #4589FF;
+    width: 146px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+    margin-top: 55px;
+}
+
+#save-edit-btn:hover {
+    padding: 18px 10px 18px 10px;
+    background-color: #1a60e2;
+    width: 146px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+    margin-top: 55px;
+}
+
+.save-edit-btn {
+    padding: 18px 10px 18px 10px;
+    background-color: #4589FF;
+    width: 146px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+    margin-top: 55px;
+    cursor: pointer;
+}
+
+#save-add-btn {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#save-add-btn:hover {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #0f67ff;
+}
+
+.task-text {
+    font-weight: 400;
+    color: white;
+    font-size: 27px;
+}
+
+.embleme-edit {
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    background-color: orange;
+    font-size: 47px;
+}
+
+/*Add contact window*/
+#add-window {
+    position: absolute;
+    left: -50vw;
+    top: 0;
+    bottom: 0;
+    width: 50vw;
+    background-color: #4589FF;
+    z-index: 2;
+    border-radius: 0 35px 35px 0;
+    overflow: hidden;
+    transition: 525ms;
+}
+
+.close-add-btn {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-designe-add-contact {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.embleme-add {
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    background-color: rgb(167, 162, 154);
+    font-size: 47px;
+}
+
+/*Add task to contact-guest window*/
+
+
+.clickable {
+    cursor: pointer;
+}
+
+.sidebar {
+    width: 20%;
+}
+
+#close-detail-arrow {
+    position: fixed;
+    right: 60px;
+    top: 50px !important;
+    cursor: pointer;
+}
+
+#close-detail-arrow:hover {
+    position: fixed;
+    right: 60px;
+    top: 50px !important;
+    cursor: pointer;
+    background-color: #c1ccdd;
+    border-radius: 5px;
+}
+
+#warning-full-name {
+    position: fixed;
+    background-color: #bfc3c988;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.message-full-name {
+    background-color: #4589FF;
+    position: relative;
+    border-radius: 10px;
+    padding: 20px;
+}

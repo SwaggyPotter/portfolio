@@ -1,0 +1,96 @@
+@media(max-width: 1215px) {
+    .add-task-container {
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .execute-buttons {
+        justify-content: center;
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 1140px) {
+    .topPadding {
+        padding-top: 50px !important;
+    }
+}
+
+@media(max-width: 570px) {
+    .add-task-form {
+        width: 95vw;
+        padding-bottom: 300px;
+    }
+
+    .content {
+        margin-left: 6px;
+    }
+
+    .title {
+        width: 90%
+    }
+
+    .title input {
+        width: 90%
+    }
+
+    .select-category {
+        width: 90%;
+    }
+
+    .date-picker {
+        justify-content: flex-start;
+        width: 90%
+    }
+
+    .date-picker img {
+        margin-left: -10%;
+    }
+
+    .select-contacts-to-assign {
+        width: 90%;
+    }
+
+    .category-add-task {
+        justify-content: center;
+    }
+
+    .priority {
+        justify-content: space-around;
+    }
+
+    .priority button {
+        font-size: 12px;
+    }
+
+    .description {
+        justify-content: center;
+    }
+
+    .description textarea {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+
+    .subtasks {
+        justify-content: center;
+    }
+
+    .dropdown-check-list {
+        justify-content: space-around;
+    }
+
+    .execute-buttons button {
+        font-size: 19px;
+        padding: 6px;
+        margin-inline: 6px;
+    }
+}

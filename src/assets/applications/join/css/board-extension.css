@@ -1,0 +1,84 @@
+#addTask-Board-Container-Header span {
+    cursor: pointer;
+}
+
+.edit-task {
+    width: 100%;
+    margin-top: 12px;
+}
+
+.edit-task input {
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 5px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+
+.edit-task textarea {
+    margin-top: 12px;
+    font-size: 19px;
+    width: 95%;
+}
+
+.priority-edit {
+    display: flex;
+    justify-content: left;
+}
+
+.priority-edit button {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-right: 8px;
+    font-size: 19px;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+
+}
+
+.priority-edit button img {
+    margin-left: 16px;
+    margin-right: 8px;
+}
+
+.ok-btn {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #4589FF;
+    width: 20%;
+    border-radius: 6px;
+    padding: 12px;
+    transition: 225ms;
+}
+
+.ok-btn:hover {
+    cursor: pointer;
+    transition: 225ms;
+    border-radius: 16px;
+}
+
+.ok-btn button {
+    margin-right: 8px;
+    font-size: 19px;
+    background: #4589FF;
+    border: none;
+    color: white;
+}
+
+.ckeckbox-in-edit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+.newHeightBoard{
+    height: 80vh !important;
+}
