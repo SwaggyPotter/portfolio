@@ -13,6 +13,21 @@ form {
         border-style: none;
         border-radius: 10px;
         color: white;
+        cursor: pointer;
+        transition: 125ms;
+        margin-bottom: 0;
+        box-shadow: 6px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    button:hover {
+        background-color: #0400ff;
+        margin-top: 20px;
+        padding: 30px 60px;
+        border-style: none;
+        border-radius: 10px;
+        color: white;
+        transition: 125ms;
+        margin-bottom: -20px;
     }
 }
 
@@ -40,6 +55,11 @@ form {
     border-radius: 10px;
     color: white;
     background-color: #141D2F;
+    cursor: pointer;
+}
+
+.normalInput:hover {
+    border: solid #1CDAE6 2px;
 }
 
 #messageInput {
@@ -48,12 +68,44 @@ form {
     border: solid blue 2px;
     background-color: #141D2F;
     border-radius: 20px;
+    cursor: pointer;
+    text-align: start;
+}
+
+#messageInput:hover {
+    border: solid #1CDAE6 2px;
 }
 
 @media screen and (min-width:280px) and (max-width: 700px) {
     form {
         margin-top: 100px;
         margin-bottom: 200px;
+
+        button {
+            background-color: #1CDAE6;
+            margin-top: 20px;
+            padding: 20px 40px;
+            border-style: none;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            transition: 125ms;
+            margin-bottom: 0;
+            box-shadow: 6px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #1CDAE6;
+            margin-top: 20px;
+            padding: 20px 40px;
+            border-style: none;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            transition: 125ms;
+            margin-bottom: 0;
+            box-shadow: 6px 6px rgba(0, 0, 0, 0.1);
+        }
     }
 
     .form-container {
