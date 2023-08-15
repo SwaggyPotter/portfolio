@@ -1,4 +1,4 @@
-<div class="form-container">
+<div  class="form-container">
 
     <div>
         <div class="text-container">
@@ -9,12 +9,13 @@
         </div>
     </div>
 
-    <form action="">
-        <input class="normalInput" id="nameInput" type="text" placeholder="Your name">
-        <input class="normalInput" id="emailInput" type="text" placeholder="Your email">
-        <input id="messageInput" type="text" placeholder="Your message">
-        <button>Send message :)</button>
+    <form [formGroup]="form" action="javascript:void(0)" (submit)="send()">
+        <input formControlName="from_name" class="normalInput" id="nameInput" type="text" placeholder="Your name">
+        <input formControlName="from_email" class="normalInput" id="emailInput" type="text" placeholder="Your email">
+        <input formControlName="message" id="messageInput" type="text" placeholder="Your message">
+        <button type="submit">Send message :)</button>
     </form>
+
     <app-up-button class="absolut"></app-up-button>
 
 </div>
