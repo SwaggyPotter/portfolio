@@ -1,8 +1,15 @@
 .main-me-container {
 
     .icon-margin {
-        margin-left: 15px;
-        margin-right: 15px;
+        margin-left: 0px;
+        margin-right: 0px;
+        transition: 125ms;
+    }
+
+    .icon-margin:hover {
+        margin-left: 5px;
+        margin-right: 10px;
+        transition: 125ms;
     }
 
     .me-container {
@@ -85,14 +92,16 @@
         color: white;
         width: unset;
 
-        p {
+        a {
             margin-left: 45px;
+            text-decoration: none;
+            color: white;
         }
 
         .blueLine {
             position: absolute;
             left: 0;
-            top: 28.5px;
+            top: 12px;
         }
     }
 
@@ -176,7 +185,7 @@
             width: 100%;
             padding-left: unset;
 
-            p {
+            a {
                 display: none;
             }
 
@@ -273,7 +282,7 @@
             margin-top: 50px;
             padding-left: unset;
 
-            p {
+            a {
                 display: none;
             }
 

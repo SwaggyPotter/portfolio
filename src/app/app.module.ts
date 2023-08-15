@@ -12,6 +12,8 @@ import { ContactComponent } from './contact/contact.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FooterComponent } from './footer/footer.component';
 import { UpButtonComponent } from './up-button/up-button.component';
+import { ImpressumComponent } from './impressum/impressum.component';
+import { MySiteComponent } from './my-site/my-site.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { UpButtonComponent } from './up-button/up-button.component';
     ContactComponent,
     ContactFormComponent,
     FooterComponent,
-    UpButtonComponent
+    UpButtonComponent,
+    ImpressumComponent,
+    MySiteComponent,
   ],
   imports: [
     BrowserModule,

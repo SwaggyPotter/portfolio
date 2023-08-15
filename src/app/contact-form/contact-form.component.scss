@@ -31,6 +31,8 @@ form {
     }
 }
 
+
+
 .text-container {
     margin-left: 50px;
     margin-right: 50px;
@@ -39,12 +41,19 @@ form {
 .form-container {
     display: flex;
     color: white;
+    position: relative;
     background-image: url("/assets/img/blueBackground-footer.svg");
     background-repeat: no-repeat;
     background-position-x: left;
     background-position-y: 100px;
     padding-bottom: 20px;
     margin-right: 50px;
+
+    .absolut {
+        position: absolute;
+        right: 0;
+        bottom: 100px;
+    }
 }
 
 .normalInput {
@@ -117,7 +126,13 @@ form {
         background-position-y: 100px;
         padding-bottom: 20px;
         margin-right: unset;
-        padding-right: 50px !important;
+        padding-right: 20px !important;
+
+        .absolut {
+            position: absolute;
+            right: 15px;
+            bottom: 100px;
+        }
     }
 
     .normalInput {
@@ -148,7 +163,7 @@ form {
         display: flex;
         color: white;
         flex-direction: column;
-        padding-left: 50px;
+        padding-left: 20px;
         padding-right: 0;
         background-image: url("/assets/img/blueBackground-footer.svg");
         background-position-y: 40vh;
