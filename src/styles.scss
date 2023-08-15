@@ -3,6 +3,10 @@
     src: url("/assets/fonts/Poppins-Black.ttf");
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #141D2F;
     margin: 0;

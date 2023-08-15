@@ -24,6 +24,14 @@
         border-radius: 10px;
         padding: 10px 20px;
         color: white;
+        text-decoration: none;
+        transition: 125ms;
+    }
+
+    .live-test-btn:hover {
+        background-color: #1CDAE6;
+        cursor: pointer;
+        transition: 125ms;
     }
 
     .github-btn {
@@ -32,6 +40,13 @@
         border-radius: 10px;
         padding: 10px 20px;
         color: white;
+        transition: 125ms;
+        text-decoration: none;
+    }
+
+    .github-btn:hover {
+        background-color: #1CDAE6;
+        transition: 125ms;
     }
 
     .headline-container {

@@ -52,6 +52,30 @@
         width: 40vw;
         position: relative;
 
+        a {
+            color: white;
+            border-style: none;
+            background-color: aqua;
+            padding: 1vw 1.5vw;
+            border-radius: 1vw;
+            transition: 125ms;
+            font-size: 25px;
+            box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            margin-top: 1vw;
+        }
+
+        a:hover {
+            color: white;
+            border-style: none;
+            background-color: rgb(0, 17, 255);
+            padding: 1.5vw 3vw;
+            border-radius: 1vw;
+            cursor: pointer;
+            transition: 125ms;
+            margin-top: 0vw;
+        }
+
         .headline-button-text {
 
             h1 {
@@ -93,6 +117,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
+            a {
+                color: white;
+                border-style: none;
+                background-color: aqua;
+                padding: 3vw 7vw;
+                border-radius: 2vw;
+                box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+                text-decoration: none;
+                margin-top: 10vw;
+            }
         }
 
         .button-desktop {

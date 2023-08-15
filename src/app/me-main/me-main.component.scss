@@ -48,12 +48,26 @@
         display: flex;
         justify-content: center;
 
-        button {
+        a {
             color: white;
             border-style: none;
             background-color: aqua;
-            padding: 10px 20px;
-            border-radius: 10px;
+            padding: 1.5vw 3vw;
+            border-radius: 1vw;
+            transition: 125ms;
+            font-size: 25px;
+            box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: white;
+            border-style: none;
+            background-color: rgb(0, 17, 255);
+            padding: 2vw 4vw;
+            border-radius: 1vw;
+            cursor: pointer;
+            transition: 125ms;
         }
 
     }
@@ -83,6 +97,37 @@
     }
 
     @media screen and (min-width: 401px) and (max-width: 700px) {
+        .button-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            a {
+                color: white;
+                border-style: none;
+                background-color: aqua;
+                padding: 1.5vw 3vw;
+                border-radius: 1vw;
+                transition: 125ms;
+                font-size: 25px;
+                box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: white;
+                border-style: none;
+                background-color: aqua;
+                padding: 1.5vw 3vw;
+                border-radius: 1vw;
+                transition: 125ms;
+                font-size: 25px;
+                box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+                text-decoration: none;
+            }
+
+        }
+
         .background {
             width: 100%;
             margin-top: 0;
@@ -144,6 +189,37 @@
     }
 
     @media screen and (min-width: 280px) and (max-width: 400px) {
+        .button-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            a {
+                color: white;
+                border-style: none;
+                background-color: aqua;
+                padding: 1.5vw 3vw;
+                border-radius: 1vw;
+                transition: 125ms;
+                font-size: 25px;
+                box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: white;
+                border-style: none;
+                background-color: aqua;
+                padding: 1.5vw 3vw;
+                border-radius: 1vw;
+                transition: 125ms;
+                font-size: 25px;
+                box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+                text-decoration: none;
+            }
+
+        }
+
         .background {
             width: 100%;
             margin-top: 0;
@@ -196,7 +272,7 @@
             align-items: center;
             margin-top: 50px;
             padding-left: unset;
-            
+
             p {
                 display: none;
             }
