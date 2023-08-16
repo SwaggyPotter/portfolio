@@ -1,18 +1,30 @@
 header {
     width: 100%;
     color: white;
+    position: fixed;
+    z-index: 3;
+    background-color: #141D2F;
 
     .header-container {
         display: flex;
         justify-content: space-between;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin: 30px 50px 20px 50px;
+
+        h2{
+            margin: 0;
+        }
 
         div {
             display: flex;
 
-            p {
+            a {
                 margin-left: 50px;
+                text-decoration: none;
+                color: white;
+            }
+
+            a:hover{
+               color: #1CDAE6; 
             }
         }
     }
@@ -39,7 +51,7 @@ header {
             div {
                 display: flex;
 
-                p {
+                a {
                     margin-left: 50px;
                 }
             }
@@ -75,7 +87,7 @@ header {
             }
 
             .info-Box-hidden {
-                display: none; 
+                display: none;
             }
         }
     }
