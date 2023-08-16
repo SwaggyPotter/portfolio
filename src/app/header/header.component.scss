@@ -10,7 +10,7 @@ header {
         justify-content: space-between;
         margin: 30px 50px 20px 50px;
 
-        h2{
+        h2 {
             margin: 0;
         }
 
@@ -23,8 +23,8 @@ header {
                 color: white;
             }
 
-            a:hover{
-               color: #1CDAE6; 
+            a:hover {
+                color: #1CDAE6;
             }
         }
     }
@@ -84,6 +84,12 @@ header {
                 align-items: center;
                 flex-direction: column;
                 z-index: 2;
+
+                a {
+                    margin-left: 50px;
+                    text-decoration: none;
+                    color: white;
+                }
             }
 
             .info-Box-hidden {
