@@ -5,6 +5,10 @@
 
 html {
     scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 body {
@@ -12,4 +16,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: Poppins;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+    display: none;
 }
