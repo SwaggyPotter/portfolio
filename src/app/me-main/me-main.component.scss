@@ -1,5 +1,6 @@
 .main-me-container {
     padding-top: 200px;
+
     .icon-margin {
         margin-left: 0px;
         margin-right: 0px;
@@ -48,6 +49,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        .name {
+            font-weight: 700;
+        }
+
+        span {
+            font-weight: 300;
+            color: #4b47ff;
+        }
     }
 
     .button-container {
@@ -81,6 +91,7 @@
 
     .spin90deg {
         rotate: -90deg;
+        font-weight: 300;
     }
 
     .letsTalk-Container {
@@ -96,6 +107,7 @@
             margin-left: 45px;
             text-decoration: none;
             color: white;
+            font-weight: 300;
         }
 
         .blueLine {

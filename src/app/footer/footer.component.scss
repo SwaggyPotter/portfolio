@@ -10,6 +10,10 @@
     padding-top: 70px;
     padding-bottom: 70px;
 
+    h3{
+        font-weight: 300;
+    }
+
     .icon-container{
         img{
             margin-left: 15px;
@@ -19,11 +23,13 @@
 
     .impressum-handy {
         display: none;
+        font-weight: 300;
     }
 
     .impressum-desktop {
         display: inline;
         margin: 0;
+        font-weight: 300;
     }
 
     .name-impressum-container {
