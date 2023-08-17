@@ -15,6 +15,7 @@ export class ContactFormComponent {
     from_email: "",
     message: "",
   })
+ 
 
   constructor(private fb: FormBuilder) {
 
@@ -28,12 +29,7 @@ export class ContactFormComponent {
         from_email: this.form.value.from_email,
         message: this.form.value.message,
       });
-
-      alert('Message send')
       this.form.reset()
-    }
-    else {
-      alert('Nachricht konnte nicht zugestellt werden')
     }
   }
 }

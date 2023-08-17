@@ -3,17 +3,21 @@
     <div>
         <div class="text-container">
             <h3>Ein Problem zu lösen?</h3>
-            <p>
-                Gerne können sie mich über das Formular kontaktieren.
+            <p>Gerne können sie mich über das Formular kontaktieren.
                 Ich freue mich von ihnen zu hören</p>
             <p>Sie brauchen einen Front-End Developer? <b>Kontaktieren sie mich!</b></p>
         </div>
     </div>
 
     <form [formGroup]="form" action="javascript:void(0)" (submit)="send()">
-        <input formControlName="from_name" class="normalInput" id="nameInput" type="text" placeholder="Your name">
-        <input formControlName="from_email" class="normalInput" id="emailInput" type="text" placeholder="Your email">
-        <textarea formControlName="message" id="messageInput" type="text" placeholder="Your message"></textarea>
+        <input required formControlName="from_name" class="normalInput" id="nameInput" type="text"
+            placeholder="Your name"
+            [class.empty]="form.controls['from_name'].value === '' && form.controls['from_name'].touched">
+        <input required formControlName="from_email" class="normalInput" id="emailInput" type="email"
+            placeholder="Your email"
+            [class.empty]="form.controls['from_email'].value === '' && form.controls['from_email'].touched">
+        <textarea required formControlName="message" id="messageInput" placeholder="Your message"
+            [class.empty]="form.controls['message'].value === '' && form.controls['message'].touched"></textarea>
         <button type="submit">Nachricht senden :)</button>
     </form>
     <app-up-button class="absolut"></app-up-button>

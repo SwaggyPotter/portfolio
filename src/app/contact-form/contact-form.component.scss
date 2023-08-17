@@ -31,7 +31,13 @@ form {
     }
 }
 
+.normalInput.empty {
+    border-color: red;
+}
 
+#messageInput.empty {
+    border-color: red;
+}
 
 .text-container {
     margin-left: 50px;
