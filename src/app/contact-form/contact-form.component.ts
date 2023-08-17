@@ -1,35 +1,30 @@
 import { Component } from '@angular/core';
 import emailjs from '@emailjs/browser';
-import { FormGroup, FormControl } from '@angular/forms';
-import { FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss']
 })
-
 export class ContactFormComponent {
   form: FormGroup = this.fb.group({
-    from_name: "",
-    from_email: "",
-    message: "",
-  })
- 
+    from_name: ['', Validators.required],
+    from_email: ['', [Validators.required, Validators.email]],
+    message: ['', Validators.required]
+  });
 
-  constructor(private fb: FormBuilder) {
-
-  }
+  constructor(private fb: FormBuilder) {}
 
   async send() {
-    if (this.form.value.from_name.length != 0 && this.form.value.from_email.length != 0 && this.form.value.message.length != 0) {
-      emailjs.init('HXRHgLXNMAqXvgQza')
-      let response = await emailjs.send("service_gjpw7iv", "template_7extjmi", {
+    if (this.form.valid) {
+      emailjs.init('HXRHgLXNMAqXvgQza');
+      let response = await emailjs.send('service_gjpw7iv', 'template_7extjmi', {
         from_name: this.form.value.from_name,
         from_email: this.form.value.from_email,
-        message: this.form.value.message,
+        message: this.form.value.message
       });
-      this.form.reset()
+      this.form.reset();
     }
   }
 }
