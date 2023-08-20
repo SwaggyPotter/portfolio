@@ -19,7 +19,7 @@
             <h4>HTML | CSS | JavaScript</h4>
             <p>Ein Taskmanager-System inspiriert nach dem Kanban Model</p>
             <div class="button-container">
-                <a href="/assets/applications/join/index.html" class="live-test-btn">Live test</a>
+                <a (click)="changeInfoBool()" class="live-test-btn">Live test</a>
                 <a href="https://github.com/SwaggyPotter/Join" class="github-btn">Github</a>
             </div>
         </div>
@@ -50,5 +50,29 @@
                 <a href="https://github.com/SwaggyPotter/Projekt-Pokedex" class="github-btn">Github</a>
             </div>
         </div>
+    </div>
+</div>
+
+<div [ngClass]="info ? 'info-join' : 'info-join-hidden'">
+    <div>
+        <p>Für die Ordentliche verwendung von Join, wird die Browser-Erweiterung 'CORS' benötigt, da diese den austausch
+            zwischen Browser und Server ermöglicht</p>
+        <div class="extension-container">
+            <a
+                href="https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf">
+                Für Google Chrome und <br> Brave-Browser
+            </a>
+            <a
+                href="https://addons.mozilla.org/de/firefox/addon/access-control-allow-origin/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search">Für
+                Firefox
+            </a>
+        </div>
+
+        <div class="join-btn-container">
+            <a class="join-button" href="/assets/applications/join/index.html">weiter zu Join</a>
+        </div>
+
+        <div (click)="changeInfoBool()" class="backButton"><img src="/assets/img/Go-up-button.svg"
+                alt="zurück"><span>Zurück</span></div>
     </div>
 </div>

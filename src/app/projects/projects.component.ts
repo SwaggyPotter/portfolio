@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent {
+  info: boolean = true;
 
+  changeInfoBool() {
+    this.info = !this.info;
+  }
 }
