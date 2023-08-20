@@ -38,6 +38,32 @@ form {
     align-items: center;
     margin-bottom: 200px;
 
+    .input-text {
+        display: flex !important;
+        font-size: 10px;
+        font-weight: 200;
+        margin-top: -20px;
+    }
+
+    .input-text-hide {
+        display: none;
+        font-size: 10px;
+        font-weight: 200;
+        margin-top: -20px;
+    }
+
+    .input-text-field {
+        display: flex !important;
+        font-size: 10px;
+        font-weight: 200;
+    }
+
+    .input-text-field-hide {
+        display: none;
+        font-size: 10px;
+        font-weight: 200;
+    }
+
     button {
         background-color: #1CDAE6;
         margin-top: 20px;

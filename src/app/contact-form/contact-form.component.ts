@@ -16,6 +16,16 @@ export class ContactFormComponent {
 
   constructor(private fb: FormBuilder) { }
   sended: boolean = false;
+  invalidEmail: boolean = false;
+
+  checkEmail() {
+    if (this.form.get('from_email')?.errors) {
+      this.invalidEmail = true;
+    }
+    else {
+      this.invalidEmail = false;
+    }
+  }
 
   emailSend() {
     this.sended = true;
@@ -34,6 +44,9 @@ export class ContactFormComponent {
       });
       this.emailSend()
       this.form.reset();
+    }
+    if (this.form.get('from_email')?.errors) {
+      this.invalidEmail = true;
     }
   }
 }
