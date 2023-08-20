@@ -1,3 +1,35 @@
+.email-send-container-hidden {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(128, 128, 128, 0.301);
+    z-index: 5;
+    color: white;
+    font-size: 35px;
+    transition: 1s;
+}
+
+.email-send-container-show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(128, 128, 128, 0.301);
+    z-index: 5;
+    color: white;
+    font-size: 35px;
+    transition: 1s;
+}
+
 form {
     width: 100%;
     display: flex;

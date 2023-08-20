@@ -14,7 +14,15 @@ export class ContactFormComponent {
     message: ['', Validators.required]
   });
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder) { }
+  sended: boolean = false;
+
+  emailSend() {
+    this.sended = true;
+    setTimeout(() => {
+      this.sended = false;
+    }, 2000)
+  }
 
   async send() {
     if (this.form.valid) {
@@ -24,6 +32,7 @@ export class ContactFormComponent {
         from_email: this.form.value.from_email,
         message: this.form.value.message
       });
+      this.emailSend()
       this.form.reset();
     }
   }
