@@ -15,10 +15,10 @@
         </div>
 
         <div [ngClass]="show ? 'info-Box' : 'info-Box-hidden'">
-            <a href="#about-me-container">About me</a>
-            <a href="#skill-container">Skills</a>
-            <a href="#project-container">Portfolio</a>
-            <a href="#contact-form">Contact</a>
+            <a (click)="changeToFalse()" href="#about-me-container">About me</a>
+            <a (click)="changeToFalse()" href="#skill-container">Skills</a>
+            <a (click)="changeToFalse()" href="#project-container">Portfolio</a>
+            <a (click)="changeToFalse()" href="#contact-form">Contact</a>
         </div>
     </div>
 </header>

@@ -10,8 +10,11 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   show = false;
 
+  changeToFalse() {
+    this.show = false;
+  }
+
   showInfo() {
     this.show = !this.show;
-    console.log(this.show)
   }
 }

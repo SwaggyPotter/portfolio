@@ -1,5 +1,6 @@
 .main-me-container {
     padding-top: 200px;
+    margin-bottom: 50px;
 
     .icon-margin {
         margin-left: 0px;
@@ -20,7 +21,7 @@
     .blueBackground {
         position: absolute;
         left: 0px;
-        top: 100px;
+        top: 50px;
         z-index: -1;
         width: 50vw;
     }
@@ -34,7 +35,7 @@
 
     .background {
         width: 100%;
-        margin-top: -30%;
+        margin-top: -15%;
         background-repeat: no-repeat;
         background-size: 50%;
         background-position-y: 250px;
@@ -146,16 +147,15 @@
                 box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
                 text-decoration: none;
             }
-
         }
 
         .background {
             width: 100%;
-            margin-top: 0;
+            margin-top: -30%;
             background-repeat: no-repeat;
             background-size: 50%;
             background-position-y: 250px;
-            content: url('/assets/img/new-profile-picture-mobile.svg');
+            content: url('/assets/img/bilder-probe/bild-1-probe-handy.svg');
         }
 
         .blueBackground {
@@ -247,7 +247,7 @@
             background-repeat: no-repeat;
             background-size: 50%;
             background-position-y: 250px;
-            content: url('/assets/img/new-profile-picture-mobile.svg');
+            content: url('/assets/img/bilder-probe/bild-1-probe-handy.svg');
         }
 
         .icon-margin {
