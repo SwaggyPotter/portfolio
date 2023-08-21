@@ -187,3 +187,20 @@ async function includeHTML() {
         }
     }
 }
+
+
+function setFullscreen(x){
+    if(x == 1){
+        document.getElementById('img1').style.display = 'flex'
+    }
+    if(x == 2){
+        document.getElementById('img2').style.display = 'flex'
+    }
+    if(x == 3){
+        document.getElementById('img3').style.display = 'flex'
+    }
+}
+
+function finish(){
+    document.getElementById('overlayContainer').style.display = 'none';
+}

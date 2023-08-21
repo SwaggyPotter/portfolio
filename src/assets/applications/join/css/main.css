@@ -1,6 +1,6 @@
 * {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
 
 :focus {
@@ -9,16 +9,107 @@
 
 body {
     font-family: 'PT Sans', sans-serif;
-    font-weight: 400; /* 700 == BOLD */
+    font-weight: 400;
+    /* 700 == BOLD */
 }
 
-.container > .center {
+.container>.center {
     max-width: 1440px;
-    margin:0 auto;
+    margin: 0 auto;
     padding: 50px;
 }
+
 @media(max-width: 640px) {
-    .container > .center {
-    padding: 20px;
+    .container>.center {
+        padding: 20px;
     }
+}
+
+.overlay-container {
+    position: absolute;
+    background-color: rgba(128, 128, 128, 0.801);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.gif-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    position: relative;
+}
+
+.tut-pic {
+    width: 200px;
+    margin-top: 5px;
+}
+
+.little-tut-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 125ms;
+}
+
+.little-tut-container:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    transition: 125ms;
+}
+
+.fullscreen-img {
+    display: flex;
+    width: 50%;
+}
+
+.imgContainer {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.404);
+}
+
+.finishBTN {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 125ms;
+}
+
+.finishBTN:hover {
+    transform: scale(1.2);
+    transition: 125ms;
+}
+
+.mainFinishBTN {
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    margin-top: 55px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 125ms;
+}
+
+.mainFinishBTN:hover {
+    transform: scale(1.2);
+    transition: 125ms;
 }
