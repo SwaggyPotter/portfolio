@@ -100,7 +100,7 @@
         display: flex;
         align-items: center;
         margin-top: -15vw;
-        padding-left: 150px;
+        padding-left: 55px;
         color: white;
         width: unset;
 
@@ -117,7 +117,7 @@
             top: 12px;
         }
 
-        .xing-logo{
+        .xing-logo {
             width: 25px;
         }
     }
@@ -151,6 +151,11 @@
                 box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
                 text-decoration: none;
             }
+        }
+
+
+        #contact-link {
+            display: none;
         }
 
         .background {
@@ -202,13 +207,17 @@
             padding-left: unset;
 
             a {
-                display: none;
+                display: flex;
             }
 
             .blueLine {
                 position: absolute;
                 left: 0;
                 top: 13px;
+            }
+
+            .github-icon {
+                margin-left: 0 !important;
             }
         }
     }
@@ -218,6 +227,7 @@
             width: 100%;
             display: flex;
             justify-content: center;
+
 
             a {
                 color: white;
@@ -299,7 +309,7 @@
             padding-left: unset;
 
             a {
-                display: none;
+                margin-left: 15px;
             }
 
             .blueLine {
@@ -307,6 +317,15 @@
                 left: 0;
                 top: 13px;
             }
+
+            .github-icon {
+                margin-left: 0 !important;
+            }
         }
+
+        #contact-link {
+            display: none !important;
+        }
+
     }
 }
