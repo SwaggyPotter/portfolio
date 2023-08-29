@@ -20,6 +20,16 @@
     <link rel="stylesheet" href="css/board-add-task-template.css">
     <link rel="stylesheet" href="css/board-add-task-responsiv.css">
     <link rel="stylesheet" href="css/board-responsiv.css">
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-analytics-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-app-check-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-functions-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-installations-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-storage-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-database-compat.js"></script>
+    <script type="module" src="js/index.js"></script>
     <script src="js/mini_backend.js"></script>
     <script src="js/main.js"></script>
     <script src="assets/templates/htmlTemplateBoard.js"></script>
@@ -32,10 +42,18 @@
     <script src="js/board_detail_card.js"></script>
     <script src="js/board_edit.js"></script>
     <script src="js/DragDropTouch.js"></script>
+    <script>
+        // Verzögere die Ausführung der onload-Aktion um 1000 Millisekunden (1 Sekunde)
+        window.onload = function () {
+            setTimeout(function () {
+                initBoard();
+                includeHTML()
+            }, 1000);
+        };
+    </script>
 </head>
 
-<body id="body" class="board-page" onload="initBoard(); includeHTML()">
-
+<body id="body" class="board-page">
     <header class="header">
         <div class="container">
             <div class="center">
@@ -99,7 +117,8 @@
                                 <div class="status">
                                     <div class="status-headline">
                                         <span>To do</span>
-                                        <img class="hoverAddPlus" src="assets/img/plus.svg" alt="add" onclick="openAddTaskPopup('toDo')">
+                                        <img class="hoverAddPlus" src="assets/img/plus.svg" alt="add"
+                                            onclick="openAddTaskPopup('toDo')">
                                     </div>
                                     <div class="task-container" id="to-do-container" ondrop="moveTo(event)"
                                         ondragover="allowDrop(event)">
@@ -131,7 +150,8 @@
                                 <div class="status">
                                     <div class="status-headline">
                                         <span>Done</span>
-                                        <img class="hoverAddPlus" src="assets/img/plus.svg" alt="add" onclick="openAddTaskPopup('done')">
+                                        <img class="hoverAddPlus" src="assets/img/plus.svg" alt="add"
+                                            onclick="openAddTaskPopup('done')">
                                     </div>
                                     <div class="task-container" id="done-container" ondrop="moveTo(event)"
                                         ondragover="allowDrop(event)">

@@ -100,13 +100,9 @@ function addTaskWithTimeOut() {
  * @param {number} i 
  */
 async function deleteContact(i) {
-    await backend.setItem('contacts', JSON.stringify(sortedContacts))
-    sortedContacts = JSON.parse(backend.getItem('contacts')) || [];
-    await backend.deleteItem('contacts');
+    window.deleteContactByEmail(sortedContacts[i]['email'])
     sortedContacts.splice(i, 1)
-    await backend.setItem('contacts', JSON.stringify(sortedContacts));
     letterCounter = [];
-    addContactToBackend()
     renderTheQuestContacts()
     closeDetail()
 }

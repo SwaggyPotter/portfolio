@@ -17,12 +17,22 @@
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/contact-guest.css">
     <link rel="stylesheet" href="css/contacts-extension.css">
-
     <link rel="stylesheet" href="css\handy-sidebar.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/board-add-task-template.css">
     <link rel="stylesheet" href="css/contact-guest-add-task.css">
     <link rel="stylesheet" href="css\contact-guest-responsiv.css">
+
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-analytics-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-app-check-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-functions-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-installations-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-storage-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-database-compat.js"></script>
+    <script type="module" src="js/index.js"></script>
     <script src="js/mini_backend.js"></script>
     <!-- Insert dedicated JS script -->
     <script src="js/main.js"></script>
@@ -30,11 +40,11 @@
     <script src="js/add-task.js"></script>
     <script src="js/add-task-extension.js"></script>
     <script src="js/board.js"></script>
-    <script src="assets/templates/htmlTemplateAdd_Task.js"></script>
+
     <!--Javascript by Jörg Betz-->
 </head>
 
-<body class="contacts-page" onload="initBackend(); ">
+<body class="contacts-page">
     <header class="header">
         <div class="container">
             <div class="center">
@@ -259,6 +269,7 @@
     <script src="assets/templates/contact_Template.js"></script>
     <script src="js/contact_guest_extension.js"></script>
     <script src="js/contact_guest.js"></script>
+    <script src="assets/templates/htmlTemplateAdd_Task.js"></script>
 </body>
 
 </html>

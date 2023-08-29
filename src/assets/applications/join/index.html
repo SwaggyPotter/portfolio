@@ -16,46 +16,20 @@
     <link rel="stylesheet" href="css/start-page.css">
     <link rel="stylesheet" href="css/start-page-responsive.css">
     <link rel="stylesheet" href="css/animations.css">
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-analytics-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-app-check-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-functions-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-installations-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-storage-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-database-compat.js"></script>
+    <script type="module" src="js/index.js"></script>
+    
 </head>
 
-<body class="start-page index" onload="initBackend()">
-
-    <div class="overlay-container" id="overlayContainer">
-        <p>Willkommen bei Join</p>
-        <p>Für die ordentliche verwendung von Join müssen Sie CORS noch aktivieren falls nicht bereits geschen.</p>
-
-        <div class="gif-container">
-            <div onclick="setFullscreen(1)" class="little-tut-container">
-                <p>Chrome</p>
-                <img class="tut-pic" src="assets/img/chrome-cors.gif" alt="">
-            </div>
-            <div onclick="setFullscreen(2)" class="little-tut-container">
-                <p>Firefox</p>
-                <img class="tut-pic" src="assets/img/firefox-cors.gif" alt="">
-            </div>
-            <div onclick="setFullscreen(3)" class="little-tut-container">
-                <p>Opera</p>
-                <img class="tut-pic" src="assets/img/opera-cors.gif" alt="">
-            </div>
-        </div>
-
-        <div class="imgContainer" id="img1">
-            <img class="fullscreen-img" src="assets/img/chrome-cors.gif" alt="">
-            <p onclick="finish()" class="finishBTN">Erledigt!</p>
-        </div>
-        <div class="imgContainer" id="img2">
-            <img class="fullscreen-img" src="assets/img/firefox-cors.gif" alt="">
-            <p onclick="finish()" class="finishBTN">Erledigt!</p>
-        </div>
-        <div class="imgContainer" id="img3">
-            <img class="fullscreen-img" src="assets/img/opera-cors.gif" alt="">
-            <p onclick="finish()" class="finishBTN">Erledigt!</p>
-        </div>
-
-        <p onclick="finish()" class="mainFinishBTN">Erledigt</p>
-    </div>
-
-
+<body class="start-page index">
     <div class="intro" id="intro"></div>
     <div class="container">
         <div class="center">
@@ -104,6 +78,7 @@
     <script src="js/mini_backend.js"></script>
     <script src="js/sign_up.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 
 </html>

@@ -1,17 +1,26 @@
 let contacts = []
 let sortedContacts = sortContactsAndSave(contacts);
 let contactsTransform;
-
+const firstData = [];
+const Contacts = parseContactData(firstData);
 
 /**
  * load the contacts from the backend
  */
 async function loadContactFromBackEnd() {
-    setTimeout(() => {
-        contactsTransform = backend.getItem('contacts') || []
-        sortedContacts = JSON.parse(contactsTransform) || []
+    setTimeout(async () => {
+        sortedContacts = parseContactData(window.FirebaseContacts) || []
         renderTheQuestContacts();
     }, 1000)
+}
+
+/**
+ * @param {array} jsonStrings array with strings
+ * @returns an objekt
+ */
+function parseContactData(jsonStrings) {
+    const contacts = jsonStrings.map(jsonString => JSON.parse(jsonString));
+    return contacts;
 }
 
 
@@ -130,7 +139,7 @@ function saveTheEdit(x) {
         document.getElementById(`edit-input-field`).style.borderColor = 'black';
         firstAndSecondNameUpdate(document.getElementById(`nameInputEdit${x}`).value, x)
         closeEdit();
-        addContactToBackend()
+        window.updateContactByEmail(sortedContacts[x]['email'], { name: sortedContacts[x]['name'], email: sortedContacts[x]['email'], tel: sortedContacts[x]['tel'] })
         renderTheQuestContacts();
         showDetail(x);
     }
@@ -322,7 +331,7 @@ function addNewContact() {
         let newContact = { "name": `${nameAdd[0]}`, "second-name": `${nameAdd[1]}`, "email": `${emailAdd}`, "tel": `${telephoneAdd}` }
         sortedContacts.push(newContact)
         letterCounter = [];
-        addContactToBackend()
+        window.addStringToArray(newContact);
         renderTheQuestContacts()
         clearTheAddInput();
         closeAdd();
@@ -330,14 +339,6 @@ function addNewContact() {
     else {
         openWarning()
     }
-}
-
-
-/**
- * Upload the name to the backend
- */
-async function addContactToBackend() {
-    await backend.setItem('contacts', JSON.stringify(sortedContacts))
 }
 
 

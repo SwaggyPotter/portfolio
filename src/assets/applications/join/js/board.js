@@ -287,3 +287,5 @@ function closeAddTask() {
     document.getElementById('body').style.overflow = 'visible';
     temporaryPersons = []
 }
+
+

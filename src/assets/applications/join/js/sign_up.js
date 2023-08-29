@@ -6,15 +6,15 @@ function login() {
     let email = document.getElementById("login-mail");
     let password = document.getElementById("login-password");
     let allUsersAsArray = getUsersAsArray();
-    if(allUsersAsArray != null) { // If users exists in the backend
+    if (allUsersAsArray != null) { // If users exists in the backend
         let userToReset = allUsersAsArray.filter((user) => user.email == email.value);
         let userCanLogin = loginValidation(userToReset, email, password, 1);
         let incorrectUserDetail = loginValidation(userToReset, email, password, 2);
-        if(userCanLogin) {
+        if (userCanLogin) {
             let redir = `summary.html?name=${userCanLogin.name}`;
             localStorage.setItem('username', userCanLogin.name);
             window.location.href = redir;
-        } else if(incorrectUserDetail) {
+        } else if (incorrectUserDetail) {
             printErrorMessage("Credentials incorrect!");
             emptyValues(email, password);
         } else {
@@ -37,7 +37,7 @@ function login() {
  * @returns {*}
  */
 function loginValidation(userToReset, email, password, param) {
-    switch(param) {
+    switch (param) {
         case 1:
             return userToReset.find(u => u.email == email.value && u.password == password.value);
             break;
@@ -57,20 +57,21 @@ async function register() {
     let name = document.getElementById("signup-name");
     let email = document.getElementById("signup-mail");
     let password = document.getElementById("signup-password");
-    getSavedUsersFromBackend();
-    let allUsersAsArray = getUsersAsArray();
+    let allUsersAsArray = window.FireUser;
 
-    if(allUsersAsArray != null) {
+    if (allUsersAsArray != null) {
         let userAlreadyExists = allUsersAsArray.some(obj => obj.email === email.value);
-        if(userAlreadyExists) {
+        if (userAlreadyExists) {
             printErrorMessage("User already exists!");
             emptyValues(email, password);
         } else {
-            await pushToUsersArray(users, name, email, password);
+            let newUser = { "name": name.value, "email": email.value, "password": password.value }
+            await window.addNewUser(newUser);
         }
 
     } else {
-        await pushToUsersArray(users, name, email, password);
+        let newUser = { "name": name.value, "email": email.value, "password": password.value }
+        await window.addNewUser(newUser);
     }
 }
 
@@ -89,10 +90,10 @@ async function pushToUsersArray(users, name, email, password) {
         email: email.value,
         password: password.value
     });
-    if(users) {
+    if (users) {
         await saveUsersToBackend();
         printSuccessMessage("You have registered successfully");
-        setTimeout(function() {window.location.href = "index.html";}, 1000)
+        setTimeout(function () { window.location.href = "index.html"; }, 1000)
     }
 }
 
@@ -106,7 +107,7 @@ async function pushToUsersArray(users, name, email, password) {
 function printErrorMessage(msg) {
     let errorMessage = document.getElementById("success");
     errorMessage.innerHTML = `<p class="red">${msg}</p>`;
-    setTimeout(()=>{errorMessage.innerHTML = "";},3000);
+    setTimeout(() => { errorMessage.innerHTML = ""; }, 3000);
 }
 
 
@@ -117,9 +118,9 @@ function printErrorMessage(msg) {
 
 function printSuccessMessage(success) {
     let successMsg = document.getElementById("success");
-    if(success) {
+    if (success) {
         successMsg.innerHTML = "<p>" + success + "</p>";
-        setTimeout(()=>{successMsg.innerHTML = "";},3000);
+        setTimeout(() => { successMsg.innerHTML = ""; }, 3000);
     }
 }
 
@@ -130,12 +131,12 @@ function printSuccessMessage(success) {
 
 function recoverPassword() {
     let email = document.getElementById("password-reset-email");
-    let allUsersAsArray = getUsersAsArray();
-    if(email && allUsersAsArray != null) {
+    let allUsersAsArray = window.FireUser;
+    if (email && allUsersAsArray != null) {
         let userExists = allUsersAsArray.find(u => u.email == email.value);
-        if(userExists) {
+        if (userExists) {
             startPwChangeAnimation(email);
-            setTimeout(function() {
+            setTimeout(function () {
                 redirectToPwChange(email.value);
             }, 3000)
         } else {
@@ -182,10 +183,10 @@ function validatePermission() {
     let email = getUrlParameters("email");
     let userExists = allUsersAsArray.some(obj => obj.email === email);
 
-    if(!email || !userExists) {
+    if (!email || !userExists) {
         printErrorMessage("Not allowed or your email does not exists!");
         readOnlyPwInputs();
-        setTimeout(function() {
+        setTimeout(function () {
             window.location.href = "index.html";
         }, 3000)
     }
@@ -199,7 +200,7 @@ function validatePermission() {
 function userCanReset() {
     let email = getUrlParameters("email");
     let checked = checkPasswordIdentity(email);
-    if(checked) {
+    if (checked) {
         finalResetPw(email, checked[1]);
     } else {
         printErrorMessage("The passwords do not match, please retry!");
@@ -218,7 +219,7 @@ function checkPasswordIdentity(email) {
     let allUsersAsArray = getUsersAsArray();
     let emailIdentity = allUsersAsArray.find(u => u.email == email);
 
-    if(emailIdentity && firstPwField.value == secondPwField.value) {
+    if (emailIdentity && firstPwField.value == secondPwField.value) {
         return [true, firstPwField.value];
     } else {
         return false;

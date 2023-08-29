@@ -182,16 +182,10 @@ function checkForZero() {
  * load the tasks and push it into the array for the summary screen
  */
 async function loadTasksFromForSummary() {
-    await downloadFromServer();
-    loadTasksFromBackend();
-    let taskstringToDo = backend.getItem('tasksToDo');
-    let taskstringInProgress = backend.getItem('tasksInProgress');
-    let taskstringAwaitFeedback = backend.getItem('tasksAwaitFeedback');
-    let taskstringDone = backend.getItem('tasksDone');
-    tasksToDo = JSON.parse(taskstringToDo) || [];
-    tasksInProgress = JSON.parse(taskstringInProgress) || [];
-    tasksAwaitFeedback = JSON.parse(taskstringAwaitFeedback) || [];
-    tasksDone = JSON.parse(taskstringDone) || [];
+    tasksToDo = JSON.parse(window.FirebaseTodo) || [];
+    tasksInProgress = JSON.parse(window.FirebaseProgData) || [];
+    tasksAwaitFeedback = JSON.parse(window.DirebaseAwaitData) || [];
+    tasksDone = JSON.parse(window.FirebaseDone) || [];
     setTheNumbersInHtml()
     checkForUrgentTasks()
     loadTasksDates()
@@ -301,7 +295,9 @@ function checkMonthName(M) {
 }
 
 
-loadTasksFromForSummary()
-getUsernameFromLocalStorage()
-loadUserNameForGreeting()
-greetingOnSmartDevice()
+setTimeout(() => {
+    loadTasksFromForSummary()
+    getUsernameFromLocalStorage()
+    loadUserNameForGreeting()
+    greetingOnSmartDevice()
+}, 1000)

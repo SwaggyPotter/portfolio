@@ -94,7 +94,7 @@ async function addTask() {
     let dueDate = document.getElementById('due-date').value;
     getSubTasks();
     await pushTask(title, text, dueDate);
-    window.location.href = "board.html";
+    //window.location.href = "board.html";
 }
 
 
@@ -119,6 +119,7 @@ async function pushTask(title, text, dueDate) {
         alreadyDone: []
     };
     getCheckboxes()
+
     await saveNewTaskinFolder(data);
 }
 
@@ -143,18 +144,21 @@ async function saveNewTaskinFolder(data) {
     switch (containerToAdd) {
         case ('toDo'):
             tasksToDo.push(data);
+            window.addNewTask(data, 'tasksToDo')
             break;
         case ('inProgress'):
             tasksInProgress.push(data);
+            window.addNewTask(data, 'tasksInProgress')
             break;
         case ('awaitFeedback'):
             tasksAwaitFeedback.push(data);
+            window.addNewTask(data, 'tasksAwaitFeedback')
             break;
         case ('done'):
             tasksDone.push(data);
+            window.addNewTask(data, 'tasksDone')
             break;
     }
-    await saveTasksToBackend();
 }
 
 
@@ -267,6 +271,8 @@ function getAssignedTo() {
         }
     }
     checkEmptyAssignedTo(assignedTo);
+    renderBoard();
+    closeAddTask()
 }
 
 

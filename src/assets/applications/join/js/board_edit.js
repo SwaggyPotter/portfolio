@@ -270,6 +270,9 @@ function closeEditExtension(taskStatus, x, checkboxChecked, taskType) {
         removedInitials = removeArrayContent(taskType[x]['initials'], removeInitials);
         taskType[x]['initials'] = removedInitials;
     }
+    console.log(taskType[x])
+    console.log(window.FirebaseTodo)
+    window.updateTask(x, taskType, `${taskStatus}`)
     clearArray()
 }
 
@@ -310,7 +313,6 @@ function loadInitials(x) {
  */
 function closeEditedCard() {
     document.getElementById('edit-task').classList.add('d-none');
-    saveTasksToBackend();
     renderBoard();
 }
 
@@ -361,7 +363,6 @@ function changePriority(taskStatus, x, symbol, level) {
             changePriorityExtension(taskStatus, x, symbol, level, tasksDone)
             break;
     }
-    saveTasksToBackend();
 }
 
 

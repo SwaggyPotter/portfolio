@@ -1,0 +1,23 @@
+{
+  "name": "join_firebase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SwaggyPotter/join_firebase.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SwaggyPotter/join_firebase/issues"
+  },
+  "homepage": "https://github.com/SwaggyPotter/join_firebase#readme",
+  "dependencies": {
+    "firebase": "^10.3.0"
+  }
+}

@@ -21,7 +21,11 @@
         </div>
         <div class="due-date">
             <span>Due date</span>
-            <div class="date-picker" id="date-picker"></div>
+            <div class="date-picker" id="date-picker">
+                <input type="date" id="due-date" name="trip-start" value=""
+                    onfocus="this.showPicker()" required>
+                <img src="assets/img/calendar.svg">
+            </div>
         </div>
         <div class="category-add-task">
             <span>Category</span>

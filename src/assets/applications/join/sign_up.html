@@ -1,8 +1,10 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JOIN - Sign Up</title>
     <meta name="description" content="Groupwork - JOIN - Sign Up">
@@ -14,7 +16,9 @@
     <link rel="stylesheet" href="css/start-page.css">
     <link rel="stylesheet" href="css/start-page-responsive.css">
     <link rel="stylesheet" href="css/animations.css">
+
 </head>
+
 <body class="start-page blue_bg sign_up_step" onload="initBackend();">
     <div class="container">
         <div class="center">
@@ -31,14 +35,18 @@
                 <div class="pop-up">
                     <div class="center">
                         <h1><span>Sign up</span>
-                            <a href="index.html" class="back" title="Go Back"><img src="assets/img/arrow-back.svg" width="24" height="24" alt=""></a>
+                            <a href="index.html" class="back" title="Go Back"><img src="assets/img/arrow-back.svg"
+                                    width="24" height="24" alt=""></a>
                         </h1>
                         <div id="success"></div>
                         <div class="pop-up-content">
                             <form onsubmit="register(); return false;" name="user_form">
-                                <div class="input name"><input type="text" id="signup-name" placeholder="Name" required></div>
-                                <div class="input email"><input type="email" id="signup-mail" placeholder="Email" required></div>
-                                <div class="input pw"><input type="password" id="signup-password" placeholder="Password" minlength="8" required></div>
+                                <div class="input name"><input type="text" id="signup-name" placeholder="Name" required>
+                                </div>
+                                <div class="input email"><input type="email" id="signup-mail" placeholder="Email"
+                                        required></div>
+                                <div class="input pw"><input type="password" id="signup-password" placeholder="Password"
+                                        minlength="8" required></div>
                                 <div class="login-box flex">
                                     <button id="login-button" class="cta">Sign up</button>
                                 </div>
@@ -49,8 +57,19 @@
             </div>
         </div>
     </div>
-<script src="js/mini_backend.js"></script>
-<script src="js/sign_up.js"></script>
-<script src="js/main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-analytics-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-app-check-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-functions-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-installations-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-storage-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-database-compat.js"></script>
+    <script type="module" src="js/index.js"></script>
+    <script src="js/mini_backend.js"></script>
+    <script src="js/sign_up.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>

@@ -17,6 +17,16 @@
     <link rel="stylesheet" href="css/add-task.css">
     <link rel="stylesheet" href="css/add-task-responsiv.css">
     <link rel="stylesheet" href="css/inner-page.css">
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-analytics-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-app-check-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-functions-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-installations-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-storage-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-database-compat.js"></script>
+    <script type="module" src="js/index.js"></script>
     <script src="js/mini_backend.js"></script>
     <script src="assets/templates/htmlTemplateAdd_Task.js"></script>
     <script src="js/add-task.js"></script>
@@ -24,10 +34,18 @@
     <script src="js/add-task-new-category.js"></script>
     <script src="js/board.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        function initializeAfterDelay() {
+            setTimeout(function () {
+                initAddTask();
+                includeHTML();
+            }, 1000);
+        }
+    </script>
     <!-- Insert dedicated JS script -->
 </head>
 
-<body class="task-page" onload="initAddTask(); includeHTML()">
+<body class="task-page" onload="initializeAfterDelay()">
     <header class="header">
         <div class="container">
             <div class="center">

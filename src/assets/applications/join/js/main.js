@@ -17,15 +17,11 @@ let categories = [];
  * this function loads the tasks from backend
  * 
  */
-function loadTasksFromBackend() {
-    let taskstringToDo = backend.getItem('tasksToDo');
-    let taskstringInProgress = backend.getItem('tasksInProgress');
-    let taskstringAwaitFeedback = backend.getItem('tasksAwaitFeedback');
-    let taskstringDone = backend.getItem('tasksDone');
-    tasksToDo = JSON.parse(taskstringToDo) || [];
-    tasksInProgress = JSON.parse(taskstringInProgress) || [];
-    tasksAwaitFeedback = JSON.parse(taskstringAwaitFeedback) || [];
-    tasksDone = JSON.parse(taskstringDone) || [];    
+async function loadTasksFromBackend() {
+    tasksToDo = JSON.parse(window.FirebaseTodo) || [];
+    tasksInProgress = JSON.parse(window.FirebaseProgData) || [];
+    tasksAwaitFeedback = JSON.parse(window.DirebaseAwaitData) || [];
+    tasksDone = JSON.parse(window.FirebaseDone) || [];
 }
 
 
@@ -34,8 +30,19 @@ function loadTasksFromBackend() {
  * 
  */
 function loadContactsFromBackend() {
-    contacts = JSON.parse(backend.getItem('contacts'));
+    contacts = parseContactData(window.FirebaseContacts);
 }
+
+/**
+ * 
+ * @param {array} jsonStrings array with strings
+ * @returns an objekt
+ */
+function parseContactData(jsonStrings) {
+    const contacts = jsonStrings.map(jsonString => JSON.parse(jsonString));
+    return contacts;
+}
+
 
 
 /**
@@ -43,21 +50,12 @@ function loadContactsFromBackend() {
  * 
  */
 function loadCategoriesFromBackend() {
-    categoriesBackground = JSON.parse(backend.getItem('categoriesBackground')) || [];
-    categoryColors = JSON.parse(backend.getItem('categoryColors')) || [];
-    categories = JSON.parse(backend.getItem('categories')) || [];
+    categoriesBackground = JSON.parse(window.FireCategoryBackground) || [];
+    categoryColors = JSON.parse(window.FireCategoryColors) || [];
+    categories = JSON.parse(window.FireCategory) || [];
 }
 
 
-/**
- * This function is used to INIT the backend.
- *
- * @returns {JSON} - Will return a JSON of all saved elements
- */
-
-async function initBackend() {
-    await downloadFromServer();
-}
 
 
 /**
@@ -65,11 +63,16 @@ async function initBackend() {
  * 
  */
 async function initBoard() {
-    await downloadFromServer();
-    loadTasksFromBackend();
-    loadContactsFromBackend();
-    loadCategoriesFromBackend();
+    loadTasksFromBackend(); //firebased
+    loadContactsFromBackend(); //firebased
+    loadCategoriesFromBackend(); // firebased
     renderBoard();
+}
+
+
+async function getData() {
+    // ... (dein Code, um die Daten abzurufen)
+    // handleTaskTodoData(taskTodoData);  // Bereits in onSnapshot enthalten
 }
 
 
@@ -78,11 +81,10 @@ async function initBoard() {
  * 
  */
 async function initAddTask() {
-    await downloadFromServer();
     loadTasksFromBackend();
     loadContactsFromBackend();
     loadCategoriesFromBackend();
-    renderDueDate();
+    //renderDueDate();
     containerToAdd = 'toDo';
 }
 
@@ -133,9 +135,8 @@ async function includeHTML() {
  */
 
 function getUsersAsArray() {
-    return JSON.parse(backend.getItem("registeredUsers"));
+    return window.FireUser;
 }
-
 
 /**
  * This function is used to reset the values of the passed input fields
@@ -186,21 +187,4 @@ async function includeHTML() {
             element.innerHTML = 'Page not found';
         }
     }
-}
-
-
-function setFullscreen(x){
-    if(x == 1){
-        document.getElementById('img1').style.display = 'flex'
-    }
-    if(x == 2){
-        document.getElementById('img2').style.display = 'flex'
-    }
-    if(x == 3){
-        document.getElementById('img3').style.display = 'flex'
-    }
-}
-
-function finish(){
-    document.getElementById('overlayContainer').style.display = 'none';
 }
