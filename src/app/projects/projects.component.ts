@@ -8,7 +8,4 @@ import { Component } from '@angular/core';
 export class ProjectsComponent {
   info: boolean = false;
 
-  changeInfoBool() {
-    this.info = !this.info;
-  }
 }
