@@ -3,15 +3,13 @@
     margin-bottom: 50px;
 
     .icon-margin {
-        margin-left: 0px;
-        margin-right: 0px;
         transition: 125ms;
+        transform: scale(1);
     }
 
     .icon-margin:hover {
-        margin-left: 5px;
-        margin-right: 10px;
         transition: 125ms;
+        transform: scale(1.5);
     }
 
     .me-container {
@@ -120,6 +118,13 @@
 
         .xing-logo {
             width: 25px;
+            transition: 125ms;
+            transform: scale(1);
+        }
+
+        .xing-logo:hover {
+            transition: 125ms;
+            transform: scale(1.5);
         }
     }
 
