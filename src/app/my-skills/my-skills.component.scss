@@ -1,6 +1,13 @@
+.bigContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .skill-section {
     padding-top: 15vw;
     display: flex;
+    justify-content: center;
     flex-direction: row-reverse;
     position: relative;
 
@@ -18,7 +25,7 @@
         padding: 10px 10px;
         color: white;
         border-style: none;
-
+        font-size: 1vw;
     }
 
     .button-mobile {
@@ -27,13 +34,14 @@
 }
 
 .skills-container {
-   padding-left: 50px;
+    padding-left: 1vw;
+    text-align: center;
 
     img {
-        margin-left: 50px;
-        margin-right: 50px;
-        width: 55px;
-        height: 150px;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        width: 5vw;
+        height: 5vw;
     }
 }
 
@@ -43,18 +51,20 @@
     flex-direction: row-reverse;
     align-items: center;
     color: white;
+    max-width: 1440px;
 
     .btn-text-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 40vw;
+        width: 30vw;
         position: relative;
         padding-right: 50px;
 
-        p{
+        p {
             font-weight: 300;
+            font-size: 1vw;
         }
 
         a {
@@ -64,7 +74,7 @@
             padding: 1vw 1.5vw;
             border-radius: 1vw;
             transition: 125ms;
-            font-size: 25px;
+            font-size: 1vw;
             box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
             text-decoration: none;
             margin-top: 1vw;
@@ -84,7 +94,7 @@
         .headline-button-text {
 
             h1 {
-                font-size: 50px;
+                font-size: 2vw;
             }
 
             img {
@@ -115,6 +125,7 @@
             justify-content: center;
             align-items: center;
             margin-top: 50px;
+            font-size: 1vw;
         }
 
         .mobile-button-container {

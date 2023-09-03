@@ -5,11 +5,13 @@
     .icon-margin {
         transition: 125ms;
         transform: scale(1);
+        width: 1.5vw;
     }
 
     .icon-margin:hover {
         transition: 125ms;
         transform: scale(1.5);
+        width: 1.5vw;
     }
 
     .me-container {
@@ -72,7 +74,7 @@
             padding: 1.5vw 3vw;
             border-radius: 1vw;
             transition: 125ms;
-            font-size: 25px;
+            font-size: 1vw;
             box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
             text-decoration: none;
         }
@@ -117,7 +119,7 @@
         }
 
         .xing-logo {
-            width: 25px;
+            width: 1vw;
             transition: 125ms;
             transform: scale(1);
         }
@@ -126,6 +128,10 @@
             transition: 125ms;
             transform: scale(1.5);
         }
+    }
+
+    #contact-link {
+        font-size: 1vw;
     }
 
     @media screen and (min-width: 401px) and (max-width: 700px) {

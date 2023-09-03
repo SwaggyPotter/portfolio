@@ -4,25 +4,32 @@ header {
     position: fixed;
     z-index: 3;
     background-color: #141D2F;
+    display: flex;
+    justify-content: center;
 
     .header-container {
         display: flex;
         justify-content: space-between;
         margin: 30px 100px 30px 100px;
+        width: 100%;
+        max-width: 1440px;
 
         h2 {
             margin: 0;
+            font-size: 1.5vw;
         }
 
         div {
             display: flex;
             align-items: center;
             justify-content: center;
+
             a {
                 margin-left: 50px;
                 text-decoration: none;
                 color: white;
                 font-weight: 300;
+                font-size: 1.5vw;
             }
 
             a:hover {
@@ -37,12 +44,13 @@ header {
 }
 
 
-
 @media screen and (min-width: 279px) and (max-width: 700px) {
 
     header {
         width: 100%;
         color: white;
+        display: unset;
+        justify-content: center;
 
         .header-container {
             display: none;

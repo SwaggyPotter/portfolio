@@ -40,34 +40,34 @@ form {
 
     .input-text {
         display: flex !important;
-        font-size: 10px;
+        font-size: 1vw;
         font-weight: 200;
         margin-top: -20px;
     }
 
     .input-text-hide {
         display: none;
-        font-size: 10px;
+        font-size: 1vw;
         font-weight: 200;
         margin-top: -20px;
     }
 
     .input-text-field {
         display: flex !important;
-        font-size: 10px;
+        font-size: 1vw;
         font-weight: 200;
     }
 
     .input-text-field-hide {
         display: none;
-        font-size: 10px;
+        font-size: 1vw;
         font-weight: 200;
     }
 
     button {
         background-color: #1CDAE6;
         margin-top: 20px;
-        padding: 20px 40px;
+        padding: 1vw 4vw;
         border-style: none;
         border-radius: 10px;
         color: white;
@@ -75,17 +75,11 @@ form {
         transition: 125ms;
         margin-bottom: 0;
         box-shadow: 6px 6px rgba(0, 0, 0, 0.1);
+        font-size: 1vw;
     }
 
     button:hover {
         background-color: #0400ff;
-        margin-top: 20px;
-        padding: 30px 60px;
-        border-style: none;
-        border-radius: 10px;
-        color: white;
-        transition: 125ms;
-        margin-bottom: -20px;
     }
 }
 
@@ -101,6 +95,7 @@ form {
     margin-left: 100px;
     margin-right: 50px;
     font-weight: 300;
+    font-size: 1vw;
 }
 
 .form-container {
@@ -122,14 +117,15 @@ form {
 }
 
 .normalInput {
-    width: 500px;
-    padding: 10px;
+    width: 30vw;
+    padding: 1vw;
     margin-bottom: 20px;
     border: solid blue 2px;
     border-radius: 10px;
     color: white;
     background-color: #141D2F;
     cursor: pointer;
+    font-size: 1vw;
 }
 
 .normalInput:hover {
@@ -137,13 +133,14 @@ form {
 }
 
 #messageInput {
-    height: 200px;
-    width: 515px;
+    height: 10vw;
+    width: 32vw;
     border: solid blue 2px;
     background-color: #141D2F;
     border-radius: 15px;
     cursor: pointer;
     color: white;
+    font-size: 1vw;
 }
 
 #messageInput:hover {

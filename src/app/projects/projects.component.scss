@@ -79,6 +79,7 @@
         padding-left: 15px;
         padding-right: 15px;
         font-weight: 300;
+        font-size: 1vw;
     }
 
     .join-project-container {
@@ -249,7 +250,7 @@
 
         h1 {
             padding: 20px;
-            font-size: 65px !important;
+            font-size: 4vw !important;
         }
     }
 
@@ -264,6 +265,7 @@
             text-align: left !important;
             width: 50%;
             padding-right: 50px;
+            font-size: 1vw !important;
         }
 
         img {
@@ -276,10 +278,12 @@
             justify-content: center;
             align-items: center;
             color: blue;
+            font-size: 2vw !important;
         }
 
         h4 {
             color: deepskyblue;
+            font-size: 1vw !important;
         }
 
         .button-container {
@@ -303,6 +307,7 @@
             width: 50%;
             display: flex;
             flex-direction: column;
+            font-size: 1vw !important;
 
             p {
                 text-align: right;
@@ -320,6 +325,7 @@
             flex-direction: row-reverse;
             justify-content: unset !important;
             color: blue;
+            font-size: 2vw !important;
         }
 
         h4 {
@@ -327,6 +333,7 @@
             color: deepskyblue;
             flex-direction: row-reverse;
             justify-content: unset !important;
+            font-size: 1vw !important;
         }
 
         .button-container {
@@ -348,6 +355,7 @@
             text-align: left !important;
             width: 50%;
             padding-right: 50px;
+            font-size: 1vw !important;
         }
 
         img {
@@ -361,10 +369,12 @@
             justify-content: center;
             align-items: center;
             color: blue;
+            font-size: 2vw !important;
         }
 
         h4 {
             color: deepskyblue;
+            font-size: 1vw !important;
         }
 
         .button-container {
