@@ -108,7 +108,7 @@
 
 }
 
-@media screen and (min-width:280px) and (max-width: 700px) {
+@media screen and (min-width:280px) and (max-width: 900px) {
     .skill-section {
         margin-top: 20vw;
         display: flex;
@@ -125,7 +125,7 @@
             justify-content: center;
             align-items: center;
             margin-top: 50px;
-            font-size: 1vw;
+            font-size: 15px;
         }
 
         .mobile-button-container {
@@ -170,10 +170,15 @@
     .btn-text-container {
         text-align: right;
         padding-right: 50px;
+
+        p {
+            font-size: 15px !important;
+        }
+
     }
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:900px) {
     .btn-text-container {
         display: flex;
         flex-direction: column;
@@ -183,10 +188,11 @@
         position: relative;
         padding-left: 50px;
 
+
         .headline-button-text {
 
             h1 {
-                font-size: 50px;
+                font-size: 50px !important;
                 text-align: right;
             }
 

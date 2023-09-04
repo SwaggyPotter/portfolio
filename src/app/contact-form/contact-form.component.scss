@@ -147,7 +147,7 @@ form {
     border: solid #1CDAE6 2px;
 }
 
-@media screen and (min-width:280px) and (max-width: 700px) {
+@media screen and (min-width:280px) and (max-width: 900px) {
     form {
         margin-top: 100px;
         margin-bottom: 200px;
@@ -163,6 +163,7 @@ form {
             transition: 125ms;
             margin-bottom: 0;
             box-shadow: 6px 6px rgba(0, 0, 0, 0.1);
+            font-size: 15px;
         }
 
         button:hover {
@@ -177,6 +178,13 @@ form {
             margin-bottom: 0;
             box-shadow: 6px 6px rgba(0, 0, 0, 0.1);
         }
+    }
+
+    .text-container {
+        margin-left: 100px;
+        margin-right: 50px;
+        font-weight: 300;
+        font-size: 15px;
     }
 
     .form-container {
@@ -205,6 +213,7 @@ form {
         border-radius: 10px;
         color: white;
         background-color: #141D2F;
+        font-size: 15px;
     }
 
     #messageInput {
@@ -215,6 +224,33 @@ form {
         border-radius: 10px;
         color: white;
         background-color: #141D2F;
+        font-size: 15px;
+    }
+
+    .input-text {
+        display: flex !important;
+        font-size: 15px !important;
+        font-weight: 200;
+        margin-top: -20px;
+    }
+
+    .input-text-hide {
+        display: none;
+        font-size: 15px !important;
+        font-weight: 200;
+        margin-top: -20px;
+    }
+
+    .input-text-field {
+        display: flex !important;
+        font-size: 15px;
+        font-weight: 200;
+    }
+
+    .input-text-field-hide {
+        display: none;
+        font-size: 15px !important;
+        font-weight: 200;
     }
 }
 

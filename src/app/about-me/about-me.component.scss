@@ -25,7 +25,7 @@
 
         div {
             display: flex;
-            
+
             img {
                 margin-right: 20px;
             }
@@ -45,7 +45,7 @@
     }
 }
 
-@media screen and (min-width: 280px) and (max-width: 700px) {
+@media screen and (min-width: 280px) and (max-width: 900px) {
 
     .about-me-container {
         padding-top: 25vw !important;
@@ -58,7 +58,7 @@
 
         h1 {
             padding-left: unset;
-            font-size: 2vw;
+            font-size: 45px;
         }
     }
 
@@ -76,6 +76,7 @@
         display: unset !important;
         flex-direction: unset !important;
         padding-left: 0 !important;
+        font-size: 15px !important;
 
         div {
             display: flex;
@@ -99,7 +100,7 @@
 
         h1 {
             padding-left: unset;
-            font-size: 2vw;
+            font-size: 45px;
         }
     }
 }

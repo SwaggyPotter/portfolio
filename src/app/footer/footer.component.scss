@@ -61,7 +61,7 @@
     }
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:900px) {
     .footer-container {
         color: white;
         display: flex;
@@ -71,6 +71,11 @@
         border-top: solid #1CDAE6;
         z-index: 2;
         background-color: #141D2F;
+
+        h3 {
+            font-weight: 300;
+            font-size: 20px;
+        }
 
         .impressum-handy {
             display: inline;
@@ -83,6 +88,40 @@
         a {
             text-decoration: none;
             color: white;
+        }
+    }
+
+    .name-impressum-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 15px !important;
+
+        h1 {
+            margin: 0;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .icon-container {
+        img {
+            margin: 15px;
+            transition: 125ms;
+            width: 20px !important;
+        }
+
+        img:hover {
+            transition: 125ms;
+            transform: scale(1.5);
+            margin: 15px;
+        }
+
+        .xing-logo {
+            width: 20px !important;
         }
     }
 }

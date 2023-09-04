@@ -134,7 +134,73 @@
         font-size: 1vw;
     }
 
+    @media screen and (min-width: 701px) and (max-width:900px) {
+        .icon-margin {
+            transition: 125ms;
+            transform: scale(1);
+            width: 30px;
+        }
+
+        .xing-logo {
+            width: 30px !important;
+            transition: 125ms;
+            transform: scale(1);
+        }
+
+        #contact-link {
+            font-size: 15px;
+        }
+
+        .button-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            a {
+                color: white;
+                border-style: none;
+                background-color: aqua;
+                padding: 1.5vw 3vw;
+                border-radius: 1vw;
+                transition: 125ms;
+                font-size: 25px;
+                box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: white;
+                border-style: none;
+                background-color: aqua;
+                padding: 1.5vw 3vw;
+                border-radius: 1vw;
+                transition: 125ms;
+                font-size: 25px;
+                box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+                text-decoration: none;
+            }
+        }
+    }
+
     @media screen and (min-width: 401px) and (max-width: 700px) {
+
+        .icon-margin {
+            transition: 125ms;
+            transform: scale(1);
+            width: 20px;
+        }
+
+        .xing-logo {
+            width: 20px !important;
+            transition: 125ms;
+            transform: scale(1);
+        }
+
+        .xing-logo:hover {
+            transition: 125ms;
+            transform: scale(1.5);
+        }
+
         .button-container {
             width: 100%;
             display: flex;
@@ -235,6 +301,23 @@
     }
 
     @media screen and (min-width: 280px) and (max-width: 400px) {
+        .icon-margin {
+            transition: 125ms;
+            transform: scale(1);
+            width: 20px;
+        }
+
+        .xing-logo {
+            width: 20px !important;
+            transition: 125ms;
+            transform: scale(1);
+        }
+
+        .xing-logo:hover {
+            transition: 125ms;
+            transform: scale(1.5);
+        }
+
         .button-container {
             width: 100%;
             display: flex;
@@ -339,6 +422,5 @@
         #contact-link {
             display: none !important;
         }
-
     }
 }
