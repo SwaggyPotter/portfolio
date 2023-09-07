@@ -9,29 +9,29 @@
         </div>
     </div>
 
-    <form [formGroup]="form" action="javascript:void(0)" (submit)="send()">
+    <form autocomplete="off" ngNativeValidate [formGroup]="form" action="javascript:void(0)" (submit)="send()">
         <input required formControlName="from_name" class="normalInput" id="nameInput" type="text"
             placeholder="Your name"
             [class.empty]="form.controls['from_name'].value === '' && form.controls['from_name'].touched">
-        <span class="input-text-hide"
-            [class.input-text]="form.controls['from_name'].value === '' && form.controls['from_name'].touched">Bitte
-            Namen eintragen</span>
-        <input (keydown)="checkEmail()" (keyup)="checkEmail()" required formControlName="from_email" class="normalInput"
-            id="emailInput" type="email" placeholder="Your email"
+
+
+        <input required formControlName="from_email" class="normalInput" id="emailInput" type="email"
+            placeholder="Your email"
             [class.empty]="form.controls['from_email'].value === '' && form.controls['from_email'].touched">
-        <span [ngClass]="invalidEmail ? 'input-text'  : 'input-text-hide' " class="input-text-hide"
-            [class.input-text]="form.controls['from_email'].value === '' && form.controls['from_email'].touched">Bitte
-            eine valide email eingeben</span>
+
+
         <textarea required formControlName="message" id="messageInput" placeholder="Your message"
             [class.empty]="form.controls['message'].value === '' && form.controls['message'].touched"></textarea>
-        <span class="input-text-field-hide"
-            [class.input-text-field]="form.controls['message'].value === '' && form.controls['message'].touched">Textfeld
-            ist
-            frei</span>
+
         <button type="submit">Nachricht senden :)</button>
+
     </form>
     <app-up-button class="absolut"></app-up-button>
 
+</div>
+
+<div [ngClass]="loading ? 'loadingContainerShow' : 'loadingContainer'">
+    <img class="loadingImg" src="assets/img/loading-gif.gif" alt="" srcset="">
 </div>
 
 <div [ngClass]="sended ? 'email-send-container-show' : 'email-send-container-hidden'">

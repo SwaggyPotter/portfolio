@@ -16,16 +16,7 @@ export class ContactFormComponent {
 
   constructor(private fb: FormBuilder) { }
   sended: boolean = false;
-  invalidEmail: boolean = false;
-
-  checkEmail() {
-    if (this.form.get('from_email')?.errors) {
-      this.invalidEmail = true;
-    }
-    else {
-      this.invalidEmail = false;
-    }
-  }
+  loading: boolean = false
 
   emailSend() {
     this.sended = true;
@@ -36,6 +27,7 @@ export class ContactFormComponent {
 
   async send() {
     if (this.form.valid) {
+      this.loading = true;
       emailjs.init('HXRHgLXNMAqXvgQza');
       let response = await emailjs.send('service_gjpw7iv', 'template_7extjmi', {
         from_name: this.form.value.from_name,
@@ -44,9 +36,7 @@ export class ContactFormComponent {
       });
       this.emailSend()
       this.form.reset();
-    }
-    if (this.form.get('from_email')?.errors) {
-      this.invalidEmail = true;
+      this.loading = false;
     }
   }
 }

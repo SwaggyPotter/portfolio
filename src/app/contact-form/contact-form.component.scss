@@ -30,6 +30,37 @@
     transition: 1s;
 }
 
+
+.loadingContainer{
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(128, 128, 128, 0.164);
+    z-index: 100;
+}
+
+
+.loadingContainerShow{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(128, 128, 128, 0.164);
+}
+
+.loadingImg{
+    width: 5vw;
+}
+
 form {
     width: 100%;
     display: flex;
@@ -147,6 +178,7 @@ form {
     border: solid #1CDAE6 2px;
 }
 
+
 @media screen and (min-width:280px) and (max-width: 900px) {
     form {
         margin-top: 100px;
@@ -253,7 +285,6 @@ form {
         font-weight: 200;
     }
 }
-
 
 
 @media screen and (max-width:870px) {
