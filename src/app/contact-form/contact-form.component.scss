@@ -31,7 +31,7 @@
 }
 
 
-.loadingContainer{
+.loadingContainer {
     position: fixed;
     display: none;
     justify-content: center;
@@ -45,7 +45,7 @@
 }
 
 
-.loadingContainerShow{
+.loadingContainerShow {
     position: fixed;
     display: flex;
     justify-content: center;
@@ -57,12 +57,12 @@
     background-color: rgba(128, 128, 128, 0.164);
 }
 
-.loadingImg{
+.loadingImg {
     width: 5vw;
 }
 
 form {
-    width: 100%;
+    width: 30vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -147,9 +147,16 @@ form {
     }
 }
 
+
+.formContainerWidth {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .normalInput {
-    width: 30vw;
-    padding: 1vw;
+    width: 100%;
+    padding: 10px;
     margin-bottom: 20px;
     border: solid blue 2px;
     border-radius: 10px;
@@ -164,8 +171,9 @@ form {
 }
 
 #messageInput {
+    padding: 10px;
     height: 10vw;
-    width: 32vw;
+    width: 100%;
     border: solid blue 2px;
     background-color: #141D2F;
     border-radius: 15px;
@@ -183,6 +191,7 @@ form {
     form {
         margin-top: 100px;
         margin-bottom: 200px;
+        width: 60%;
 
         button {
             background-color: #1CDAE6;
