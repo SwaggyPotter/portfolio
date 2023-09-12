@@ -1,5 +1,5 @@
 .main-me-container {
-    padding-top: 150px;
+    padding-top: 200px;
     margin-bottom: 50px;
 
     .icon-margin {
@@ -25,7 +25,7 @@
             overflow-y: hidden;
             overflow-x: hidden;
             width: 100%;
-
+           
             img {
                 width: 2800px;
             }
@@ -150,62 +150,6 @@
         font-size: 1vw;
     }
 
-    @media screen and (min-width: 701px) and (max-width:1079px) {
-        .me-container {
-            position: relative;
-            min-width: 100vw;
-            max-width: 100%;
-            display: block;
-
-            .background {
-                overflow-y: hidden;
-                overflow-x: hidden;
-                width: 100%;
-
-                img {
-                    width: 2000px;
-                }
-            }
-        }
-    }
-
-    @media screen and (min-width: 701px) and (max-width:1300px) {
-        .text-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-right: 0px;
-
-            .name {
-                font-weight: 700;
-            }
-
-            span {
-                font-weight: 300;
-                color: #4b47ff;
-            }
-        }
-    }
-
-    @media screen and (min-width: 701px) and (max-width:800px) {
-        .me-container {
-            position: relative;
-            min-width: 100vw;
-            max-width: 100%;
-            display: block;
-
-            .background {
-                overflow-y: hidden;
-                overflow-x: hidden;
-                width: 100%;
-
-                img {
-                    width: 1500px;
-                }
-            }
-        }
-    }
-
     @media screen and (min-width: 701px) and (max-width:900px) {
         .icon-margin {
             transition: 125ms;
@@ -310,6 +254,9 @@
         .background {
             width: 100%;
             margin-top: -30%;
+            background-repeat: no-repeat;
+            background-size: 50%;
+            background-position-y: 250px;
             content: url('/assets/img/bilder-probe/21.8-profile-mobile.svg');
         }
 
@@ -328,12 +275,12 @@
         }
 
         .name-container {
-            position: absolute;
+            position: relative;
             top: unset;
             right: unset;
             font-size: 5vw;
             width: 100%;
-            margin-top: 490px;
+            margin-top: -50vw;
         }
 
         .text-container {
@@ -345,14 +292,13 @@
         }
 
         .letsTalk-Container {
-            position: absolute;
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
             margin-top: 50px;
             width: 100%;
             padding-left: unset;
-            bottom: 50px;
 
             a {
                 display: flex;
@@ -367,40 +313,6 @@
             .github-icon {
                 margin-left: 0 !important;
             }
-        }
-    }
-
-    @media screen and (min-width: 480px) and (max-width: 700px) {
-        .background {
-            width: 100%;
-            margin-top: -5%;
-            content: url('/assets/img/bilder-probe/mobile-pic-extendet.svg');
-        }
-    }
-
-    @media screen and (min-width: 640px) and (max-width: 700px) {
-        .text-container {
-            font-size: 30px;
-        }
-
-        .name-container {
-            position: absolute;
-            top: unset;
-            right: unset;
-            font-size: 7vw;
-            width: 100%;
-            margin-top: 540px;
-        }
-
-        .letsTalk-Container {
-            position: absolute;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 50px;
-            padding-left: unset;
-            bottom: 25px;
         }
     }
 
@@ -457,8 +369,10 @@
         .background {
             width: 100%;
             margin-top: 0;
+            background-repeat: no-repeat;
+            background-size: 50%;
+            background-position-y: 250px;
             content: url('/assets/img/bilder-probe/21.8-profile-mobile.svg');
-            margin-top: -100px;
         }
 
         .icon-margin {
@@ -481,12 +395,12 @@
         }
 
         .name-container {
-            position: absolute;
+            position: relative;
             top: unset;
             right: unset;
-            font-size: 7vw;
+            font-size: 5vw;
             width: 100%;
-            margin-top: 450px;
+            margin-top: -50vw;
         }
 
         .text-container {
@@ -498,14 +412,13 @@
         }
 
         .letsTalk-Container {
-            position: absolute;
+            position: relative;
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             margin-top: 50px;
             padding-left: unset;
-            bottom: 50px;
 
             a {
                 margin-left: 15px;
