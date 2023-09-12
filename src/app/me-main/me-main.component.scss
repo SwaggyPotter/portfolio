@@ -16,6 +16,7 @@
 
     .me-container {
         position: relative;
+<<<<<<< HEAD
         min-width: 100vw;
         max-width: 100%;
         display: block;
@@ -29,6 +30,8 @@
                 width: 2800px;
             }
         }
+=======
+>>>>>>> parent of 2962e5c (wir kommen den ganzen langsamm näher)
     }
 
     .blueBackground {
@@ -36,7 +39,7 @@
         left: 0px;
         top: 50px;
         z-index: -1;
-
+        width: 50vw;
     }
 
     .name-container {
@@ -46,7 +49,13 @@
         font-size: 4vw;
     }
 
-
+    .background {
+        width: 100%;
+        margin-top: -15%;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position-y: 250px;
+    }
 
     .name-container {
         color: white;
@@ -103,12 +112,11 @@
         font-weight: 300;
     }
 
-
     .letsTalk-Container {
-        position: absolute;
-        bottom: 0;
+        position: relative;
         display: flex;
         align-items: center;
+        margin-top: -15vw;
         padding-left: 55px;
         color: white;
         width: unset;
