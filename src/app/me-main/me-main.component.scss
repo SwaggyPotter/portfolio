@@ -1,94 +1,88 @@
 .main-me-container {
-    padding-top: 200px;
     margin-bottom: 50px;
+    height: 100vh;
 
     .icon-margin {
         transition: 125ms;
         transform: scale(1);
-        width: 1.5vw;
+        width: 20px;
     }
 
     .icon-margin:hover {
         transition: 125ms;
         transform: scale(1.5);
-        width: 1.5vw;
+        width: 20px;
     }
 
     .me-container {
         position: relative;
-    }
+        padding-top: 25vh;
 
-    .blueBackground {
-        position: absolute;
-        left: 0px;
-        top: 50px;
-        z-index: -1;
-        width: 50vw;
-    }
-
-    .name-container {
-        position: absolute;
-        top: 10%;
-        right: 50px;
-        font-size: 4vw;
-    }
-
-    .background {
-        width: 100%;
-        margin-top: -15%;
-        background-repeat: no-repeat;
-        background-size: 50%;
-        background-position-y: 250px;
-    }
-
-    .name-container {
-        color: white;
-        flex-direction: column;
-    }
-
-    .text-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-right: 50px;
-
-        .name {
-            font-weight: 700;
+        .blueBackground {
+            position: absolute;
+            left: 0px;
+            top: 50px;
+            z-index: -1;
+            width: 50vw;
         }
 
-        span {
-            font-weight: 300;
-            color: #4b47ff;
-        }
-    }
-
-    .button-container {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-
-        a {
+        .name-container {
+            position: absolute;
+            top: 35vh;
+            right: 50px;
+            font-size: 4vw;
             color: white;
-            border-style: none;
-            background-color: aqua;
-            padding: 1.5vw 3vw;
-            border-radius: 1vw;
-            transition: 125ms;
-            font-size: 1vw;
-            box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
-            text-decoration: none;
+            flex-direction: column;
         }
 
-        a:hover {
-            color: white;
-            border-style: none;
-            background-color: rgb(0, 17, 255);
-            padding: 2vw 4vw;
-            border-radius: 1vw;
-            cursor: pointer;
-            transition: 125ms;
+        .background {
+            width: 100%;
         }
 
+        .text-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-right: 50px;
+
+            .name {
+                font-weight: 700;
+            }
+
+            span {
+                font-weight: 300;
+                color: #4b47ff;
+            }
+        }
+
+        .button-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            a {
+                color: white;
+                border-style: none;
+                background-color: aqua;
+                padding: 1.5vw 3vw;
+                border-radius: 1vw;
+                transition: 125ms;
+                font-size: 1vw;
+                box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: white;
+                border-style: none;
+                background-color: rgb(0, 17, 255);
+                padding: 2vw 4vw;
+                border-radius: 1vw;
+                cursor: pointer;
+                transition: 125ms;
+            }
+
+        }
     }
 
     .spin90deg {
@@ -97,13 +91,14 @@
     }
 
     .letsTalk-Container {
-        position: relative;
+        position: absolute;
         display: flex;
         align-items: center;
         margin-top: -15vw;
         padding-left: 55px;
         color: white;
         width: unset;
+        bottom: 2vh;
 
         a {
             margin-left: 45px;
@@ -119,7 +114,7 @@
         }
 
         .xing-logo {
-            width: 1vw;
+            width: 20px;
             transition: 125ms;
             transform: scale(1);
         }
@@ -135,14 +130,44 @@
     }
 
     @media screen and (min-width: 701px) and (max-width:900px) {
+
+        .background {
+            content: url('/assets/img/bilder-probe/tablet-horizontal-try.svg');
+            width: 100%;
+            margin-top: -15vh;
+            background-repeat: no-repeat;
+            background-size: 50%;
+            background-position-y: 250px;
+        }
+
+
+        .name-container {
+            position: relative;
+            top: unset;
+            right: unset !important;
+            font-size: 5vw !important;
+            width: 100%;
+            margin-top: 20vh;
+
+            .text-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 0;
+                padding-right: 0;
+            }
+        }
+
+
+
         .icon-margin {
             transition: 125ms;
             transform: scale(1);
-            width: 30px;
+            width: 20px;
         }
 
         .xing-logo {
-            width: 30px !important;
+            width: 20px !important;
             transition: 125ms;
             transform: scale(1);
         }
@@ -160,10 +185,10 @@
                 color: white;
                 border-style: none;
                 background-color: aqua;
-                padding: 1.5vw 3vw;
+                padding: 20px 40px !important;
                 border-radius: 1vw;
                 transition: 125ms;
-                font-size: 25px;
+                font-size: 25px !important;
                 box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
                 text-decoration: none;
             }
@@ -210,10 +235,10 @@
                 color: white;
                 border-style: none;
                 background-color: aqua;
-                padding: 1.5vw 3vw;
+                padding: 15px 25px !important;
                 border-radius: 1vw;
                 transition: 125ms;
-                font-size: 25px;
+                font-size: 15px !important;
                 box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
                 text-decoration: none;
             }
@@ -235,15 +260,6 @@
             display: none;
         }
 
-        .background {
-            width: 100%;
-            margin-top: -30%;
-            background-repeat: no-repeat;
-            background-size: 50%;
-            background-position-y: 250px;
-            content: url('/assets/img/bilder-probe/21.8-profile-mobile.svg');
-        }
-
         .blueBackground {
             position: absolute;
             left: 0;
@@ -255,34 +271,43 @@
         .me-container {
             position: relative;
             display: flex;
-            flex-direction: column
+            flex-direction: column;
+
+            .background {
+                width: 100%;
+                margin-top: -10vh;
+                content: url('/assets/img/bilder-probe/newMobileTry.svg');
+            }
+
+            .name-container {
+                position: absolute;
+                top: unset;
+                right: unset;
+                font-size: 5vw;
+                width: 100%;
+                margin-top: 40vh;
+
+                .text-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 0;
+                    padding-right: 0;
+                }
+            }
+
         }
 
-        .name-container {
-            position: relative;
-            top: unset;
-            right: unset;
-            font-size: 5vw;
-            width: 100%;
-            margin-top: -50vw;
-        }
-
-        .text-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 0;
-            padding-right: 0;
-        }
 
         .letsTalk-Container {
-            position: relative;
+            position: absolute;
             display: flex;
             justify-content: center;
             align-items: center;
             margin-top: 50px;
             width: 100%;
             padding-left: unset;
+            bottom: 50px;
 
             a {
                 display: flex;
@@ -301,6 +326,7 @@
     }
 
     @media screen and (min-width: 280px) and (max-width: 400px) {
+
         .icon-margin {
             transition: 125ms;
             transform: scale(1);
@@ -328,10 +354,10 @@
                 color: white;
                 border-style: none;
                 background-color: aqua;
-                padding: 1.5vw 3vw;
+                padding: 10px 15px !important;
                 border-radius: 1vw;
                 transition: 125ms;
-                font-size: 25px;
+                font-size: 15px !important;
                 box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
                 text-decoration: none;
             }
@@ -352,11 +378,11 @@
 
         .background {
             width: 100%;
-            margin-top: 0;
+            margin-top: -5vh;
             background-repeat: no-repeat;
             background-size: 50%;
             background-position-y: 250px;
-            content: url('/assets/img/bilder-probe/21.8-profile-mobile.svg');
+            content: url('/assets/img/bilder-probe/newMobileTry.svg');
         }
 
         .icon-margin {
@@ -379,12 +405,12 @@
         }
 
         .name-container {
-            position: relative;
+            position: absolute;
             top: unset;
-            right: unset;
-            font-size: 5vw;
+            right: unset !important;
+            font-size: 5vw !important;
             width: 100%;
-            margin-top: -50vw;
+            margin-top: 25vh;
         }
 
         .text-container {
@@ -392,17 +418,18 @@
             justify-content: center;
             align-items: center;
             margin-top: 0;
-            padding-right: 0;
+            padding-right: 0 !important;
         }
 
         .letsTalk-Container {
-            position: relative;
+            position: absolute;
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             margin-top: 50px;
             padding-left: unset;
+            bottom: 50px;
 
             a {
                 margin-left: 15px;
