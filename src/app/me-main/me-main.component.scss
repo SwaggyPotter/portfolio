@@ -140,6 +140,11 @@
             background-position-y: 250px;
         }
 
+        .blueBackground {
+            left: 25vw !important;
+            top: 135px !important;
+        }
+
 
         .name-container {
             position: relative;
@@ -262,10 +267,10 @@
 
         .blueBackground {
             position: absolute;
-            left: 0;
-            top: 0;
+            left: 8vw !important;
+            top: 14vh !important;
             z-index: -1;
-            width: 100%;
+            width: 87vw !important;
         }
 
         .me-container {
@@ -392,10 +397,10 @@
 
         .blueBackground {
             position: absolute;
-            left: 0;
-            top: 0;
+            left: 8vw !important;
+            top: 14vh !important;
             z-index: -1;
-            width: 100%;
+            width: 87vw !important;
         }
 
         .me-container {
