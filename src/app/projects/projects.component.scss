@@ -235,7 +235,7 @@
 /*Desktop Version*/
 
 @media screen and (min-width: 900px) {
-    .centerContainer{
+    .centerContainer {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -277,7 +277,7 @@
         }
 
         img {
-            width: 50vw !important;
+            width: 50% !important;
         }
 
         h3 {
@@ -310,7 +310,7 @@
         align-items: center;
         width: 100%;
         max-width: 2160px;
-       
+
         padding: unset !important;
 
         .content-text {
@@ -326,7 +326,7 @@
         }
 
         img {
-            width: 80% !important;
+            width: 50% !important;
             transform: scale(0.7);
         }
 
@@ -372,7 +372,7 @@
         }
 
         img {
-            width: 80% !important;
+            width: 50% !important;
         }
 
 
@@ -507,3 +507,4 @@
         }
     }
 }
+

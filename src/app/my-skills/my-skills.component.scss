@@ -1,14 +1,35 @@
+@media screen and (min-width:1440px) {
+    .btn-text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 30vw;
+        position: relative;
+        padding-right: 0 !important;
+    }
+
+    .button-container-wraper{
+        width: 50% !important;
+    }
+
+    .skills-container {
+        padding-left: 0 !important;
+        text-align: unset !important;
+        width: 50%!important;
+        img {
+            margin-left: 1vw;
+            margin-right: 1vw;
+            width: 5vw;
+            height: 5vw;
+        }
+    }
+}
+
 .bigContainer {
     width: 100%;
     display: flex;
     justify-content: center;
-}
-
-.skill-section {
-    padding-top: 15vw;
-    display: flex;
-    justify-content: center;
-    flex-direction: row-reverse;
     position: relative;
 
     .blueBackground {
@@ -17,6 +38,18 @@
         left: 0;
         width: 30vw;
     }
+}
+
+.skill-section {
+    padding-top: 15vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+
+
 
     .button-desktop {
         display: flex;
