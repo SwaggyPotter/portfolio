@@ -1,41 +1,41 @@
-<div class="form-container">
-
-    <div>
-        <div class="text-container">
-            <h3>Solving a Problem?</h3>
-            <p>Feel free to reach out to me through the form.
-                I look forward to hearing from you.</p>
-            <p>Need a Front-End Developer? <b>Contact me!</b></p>
+<div class="overlayContainer">
+    <div class="form-container">
+        <div>
+            <div class="text-container">
+                <h3>Solving a Problem?</h3>
+                <p>Feel free to reach out to me through the form.
+                    I look forward to hearing from you.</p>
+                <p>Need a Front-End Developer? <b>Contact me!</b></p>
+            </div>
         </div>
+
+        <div class="formContainerWidth">
+            <form autocomplete="off" ngNativeValidate [formGroup]="form" action="javascript:void(0)" (submit)="send()">
+                <input required formControlName="from_name" class="normalInput" id="nameInput" type="text"
+                    placeholder="Your name"
+                    [class.empty]="form.controls['from_name'].value === '' && form.controls['from_name'].touched">
+
+
+                <input required formControlName="from_email" class="normalInput" id="emailInput" type="email"
+                    placeholder="Your email"
+                    [class.empty]="form.controls['from_email'].value === '' && form.controls['from_email'].touched">
+
+
+                <textarea required formControlName="message" id="messageInput" placeholder="Your message"
+                    [class.empty]="form.controls['message'].value === '' && form.controls['message'].touched"></textarea>
+
+                <button type="submit">Nachricht senden :)</button>
+
+            </form>
+        </div>
+        <app-up-button class="absolut"></app-up-button>
     </div>
 
-    <div class="formContainerWidth">
-        <form autocomplete="off" ngNativeValidate [formGroup]="form" action="javascript:void(0)" (submit)="send()">
-            <input required formControlName="from_name" class="normalInput" id="nameInput" type="text"
-                placeholder="Your name"
-                [class.empty]="form.controls['from_name'].value === '' && form.controls['from_name'].touched">
-
-
-            <input required formControlName="from_email" class="normalInput" id="emailInput" type="email"
-                placeholder="Your email"
-                [class.empty]="form.controls['from_email'].value === '' && form.controls['from_email'].touched">
-
-
-            <textarea required formControlName="message" id="messageInput" placeholder="Your message"
-                [class.empty]="form.controls['message'].value === '' && form.controls['message'].touched"></textarea>
-
-            <button type="submit">Nachricht senden :)</button>
-
-        </form>
+    <div [ngClass]="loading ? 'loadingContainerShow' : 'loadingContainer'">
+        <img class="loadingImg" src="assets/img/loading-gif.gif" alt="" srcset="">
     </div>
-    <app-up-button class="absolut"></app-up-button>
 
-</div>
-
-<div [ngClass]="loading ? 'loadingContainerShow' : 'loadingContainer'">
-    <img class="loadingImg" src="assets/img/loading-gif.gif" alt="" srcset="">
-</div>
-
-<div [ngClass]="sended ? 'email-send-container-show' : 'email-send-container-hidden'">
-    <p>Email versendet!</p>
+    <div [ngClass]="sended ? 'email-send-container-show' : 'email-send-container-hidden'">
+        <p>Email versendet!</p>
+    </div>
 </div>

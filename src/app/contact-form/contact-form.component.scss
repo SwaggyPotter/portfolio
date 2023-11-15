@@ -123,22 +123,16 @@ form {
 }
 
 .text-container {
-    margin-left: 100px;
-    margin-right: 50px;
     font-weight: 300;
     font-size: 1vw;
+    width: 70%;
 }
 
 .form-container {
     display: flex;
     color: white;
-    position: relative;
-    background-image: url("/assets/img/blueBackground-footer.svg");
-    background-repeat: no-repeat;
-    background-position-x: left;
-    background-position-y: 100px;
     padding-bottom: 20px;
-    margin-right: 50px;
+    max-width: 1440px;
 
     .absolut {
         position: absolute;
@@ -147,9 +141,21 @@ form {
     }
 }
 
+.overlayContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    background-image: url("/assets/img/blueBackground-footer.svg");
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: 100px;
+}
+
 
 .formContainerWidth {
-    width: 100%;
+    width: 50%;
     display: flex;
     justify-content: center;
 }
@@ -185,6 +191,8 @@ form {
 #messageInput:hover {
     border: solid #1CDAE6 2px;
 }
+
+
 
 
 @media screen and (min-width:280px) and (max-width: 900px) {
