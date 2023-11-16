@@ -132,7 +132,10 @@ form {
     display: flex;
     color: white;
     padding-bottom: 20px;
+    width: 100%;
     max-width: 1440px;
+    margin: 100px;
+    margin-bottom: 0;
 
     .absolut {
         position: absolute;
