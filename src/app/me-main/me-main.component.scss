@@ -1,3 +1,21 @@
+@media screen and (min-width:2860px) {
+    .background {
+        content: url('/assets/img/bilder-probe/large-monitor-pic.png') !important;
+        margin-top: 0 !important;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .text-container {
+        font-size: 3vw !important;
+
+    }
+
+    .name-container {
+        right: 15vw !important;
+    }
+}
+
 .main-me-container {
     margin-bottom: 50px;
     height: 100vh;
@@ -28,7 +46,7 @@
 
         .name-container {
             position: absolute;
-            top: 35vh;
+            top: 22vh;
             right: 50px;
             font-size: 4vw;
             color: white;
