@@ -234,6 +234,8 @@
 
 /*Desktop Version*/
 
+
+
 @media screen and (min-width: 900px) {
     .centerContainer {
         width: 100%;
@@ -483,6 +485,76 @@
     }
 }
 
+@media screen and (min-width: 1440px) {
+    .underHeadline-container {
+        font-size: 25px !important;
+    }
+
+    .join-project-container {
+        .content-text {
+            font-size: 25px !important;
+        }
+
+        h4 {
+            color: deepskyblue;
+            font-size: 25px !important;
+        }
+
+        h3 {
+            width: 100%;
+            display: unset !important;
+            justify-content: center;
+            align-items: center;
+            color: blue;
+            font-size: 45px !important;
+        }
+    }
+
+
+    .polo-loco-container {
+        .content-text {
+            font-size: 25px !important;
+        }
+
+        h4 {
+            color: deepskyblue;
+            font-size: 25px !important;
+        }
+
+        h3 {
+            font-size: 45px !important;
+            justify-content: unset !important;
+
+
+        }
+    }
+
+
+    .Pokedex-container {
+        .content-text {
+            font-size: 25px !important;
+        }
+
+        h4 {
+            color: deepskyblue;
+            font-size: 25px !important;
+        }
+
+        h3 {
+            width: 100%;
+            display: unset !important;
+            justify-content: center;
+            align-items: center;
+            color: blue;
+            font-size: 45px !important;
+        }
+    }
+
+
+}
+
+
+
 .info-join-hidden {
     display: none;
     position: fixed;
@@ -507,4 +579,3 @@
         }
     }
 }
-

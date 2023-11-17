@@ -1,3 +1,9 @@
+@media screen and (min-width: 1440px) {
+    .text-container {
+        font-size: 25px !important;
+    }
+}
+
 .email-send-container-hidden {
     display: none;
     justify-content: center;
@@ -62,7 +68,7 @@
 }
 
 form {
-    width: 30vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;

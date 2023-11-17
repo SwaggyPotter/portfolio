@@ -1,27 +1,24 @@
 @media screen and (min-width:1440px) {
     .btn-text-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 30vw;
-        position: relative;
         padding-right: 0 !important;
+
+        p {
+            font-size: 25px !important;
+        }
     }
 
-    .button-container-wraper{
+    .button-container-wraper {
         width: 50% !important;
     }
 
     .skills-container {
         padding-left: 0 !important;
         text-align: unset !important;
-        width: 50%!important;
+        width: 50% !important;
+
         img {
-            margin-left: 1vw;
-            margin-right: 1vw;
-            width: 5vw;
-            height: 5vw;
+            width: 70px !important;
+            height: 140px !important;
         }
     }
 }
