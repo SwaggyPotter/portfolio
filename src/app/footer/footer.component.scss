@@ -1,3 +1,22 @@
+@media screen and (min-width:1440px) {
+    .footer-container {
+        
+        .icon-container {
+            img {
+                width: 35px !important;
+            }
+
+            .xing-logo {
+                width: 35px !important;
+            }
+        }
+    }
+
+    .name-impressum-container {
+        font-size: 20px !important;
+    }
+}
+
 .footer-container {
     color: white;
     display: flex;
