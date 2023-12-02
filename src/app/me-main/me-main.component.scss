@@ -1,6 +1,6 @@
 @media screen and (min-width:2860px) {
     .background {
-        content: url('/assets/img/bilder-probe/large-monitor-pic.png') !important;
+        content: url('/assets/img/large-monitor-pic.png') !important;
         margin-top: 0 !important;
     }
 }
@@ -150,7 +150,7 @@
     @media screen and (min-width: 701px) and (max-width:900px) {
 
         .background {
-            content: url('/assets/img/bilder-probe/tablet-horizontal-try.svg');
+            content: url('/assets/img/tablet-horizontal-try.svg');
             width: 100%;
             margin-top: -15vh;
             background-repeat: no-repeat;
@@ -299,7 +299,7 @@
             .background {
                 width: 100%;
                 margin-top: -10vh;
-                content: url('/assets/img/bilder-probe/newMobileTry.svg');
+                content: url('/assets/img/newMobileTry.svg');
             }
 
             .name-container {
@@ -405,7 +405,7 @@
             background-repeat: no-repeat;
             background-size: 50%;
             background-position-y: 250px;
-            content: url('/assets/img/bilder-probe/newMobileTry.svg');
+            content: url('/assets/img/newMobileTry.svg');
         }
 
         .icon-margin {
