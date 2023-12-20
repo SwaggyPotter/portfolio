@@ -90,7 +90,8 @@
         width: unset;
         justify-content: center !important;
         align-items: center;
-        padding: 50px;
+        padding: 0 !important;
+        margin: 15px !important;
 
         .little-about-me-container{
             width: unset !important;
@@ -98,7 +99,7 @@
 
         h1 {
             padding-left: unset;
-            font-size: 45px;
+            font-size: 45px !important;
         }
     }
 
