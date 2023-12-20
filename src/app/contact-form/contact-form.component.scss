@@ -205,6 +205,12 @@ form {
 
 
 @media screen and (min-width:280px) and (max-width: 900px) {
+    .formContainerWidth {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
     form {
         margin-top: 100px;
         margin-bottom: 200px;
@@ -253,7 +259,7 @@ form {
         background-position-x: left;
         background-position-y: 100px;
         padding-bottom: 20px;
-        margin-right: unset;
+        margin-right: 100px;
         padding-right: 20px !important;
 
         .absolut {

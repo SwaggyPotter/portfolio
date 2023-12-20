@@ -3,7 +3,7 @@
 
         .text-container {
             font-size: 25px !important;
-      
+
 
         }
 
@@ -80,6 +80,7 @@
 
 @media screen and (max-width: 1435px) and (min-width: 900px) {}
 
+
 @media screen and (min-width: 280px) and (max-width: 900px) {
 
     .about-me-container {
@@ -87,9 +88,13 @@
         color: white;
         display: flex;
         width: unset;
-        justify-content: space-between;
+        justify-content: center !important;
         align-items: center;
         padding: 50px;
+
+        .little-about-me-container{
+            width: unset !important;
+        }
 
         h1 {
             padding-left: unset;
