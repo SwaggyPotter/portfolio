@@ -15,6 +15,7 @@ import { UpButtonComponent } from './up-button/up-button.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { MySiteComponent } from './my-site/my-site.component';
 import { FormsModule } from '@angular/forms';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 @NgModule({
@@ -38,7 +39,9 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
