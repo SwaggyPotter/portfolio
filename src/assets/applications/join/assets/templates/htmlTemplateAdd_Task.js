@@ -9,7 +9,7 @@ function htmlTemplateSubtasks(newtaskSubtask, i) {
 
 function htmlTemplateListAssignedTo(i) {
     return `
-    <li><input onclick="savePersonTemorary(1)" class="checkbox-contacts" type="checkbox" /> ${contacts[i]['name']} ${contacts[i]['second-name']}</li>
+    <li onclick="savePersonTemorary(1, ${i})" class="contactItem"><input id="checkBoxNbr${i}" class="checkbox-contacts" type="checkbox"/> ${contacts[i]['name']} ${contacts[i]['second-name']}</li>
     `;
 }
 
@@ -41,9 +41,9 @@ function istNameImArray(vollerName, array) {
 
 function htmlTemplateCategory(categoryToRender, ellipseToRender, i) {
     return `
-        <div class="category-row">
+        <div onclick="setCheckBoxCheckt(${i}); teporaryAdd(${i})" class="category-row clickable">
             <div>
-                <div><input onclick="teporaryAdd(${i})" class="messageCheckbox" type="checkbox"/> ${categoryToRender}</div>
+                <div><input id="checkBox${i}" class="messageCheckbox" type="checkbox"/> ${categoryToRender}</div>
             </div>
             <img src="${ellipseToRender}">
         </div>

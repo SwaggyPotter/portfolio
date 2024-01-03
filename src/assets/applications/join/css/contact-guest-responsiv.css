@@ -11,12 +11,13 @@
         width: 100%;
         transition: 125ms;
         background-color: rgb(255, 255, 255);
+        z-index: 3;
     }
 
     .name-and-embleme-container {
         display: flex;
         align-items: center;
-        margin-top: 25px;
+        margin-top: 80px;
         margin-bottom: 0;
     }
 
@@ -365,6 +366,7 @@
         width: 100%;
         transition: 125ms;
         background-color: rgb(255, 255, 255);
+        z-index: 3;
     }
 
     .email-card-guest {

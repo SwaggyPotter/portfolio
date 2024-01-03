@@ -9,9 +9,9 @@ const Contacts = parseContactData(firstData);
  */
 async function loadContactFromBackEnd() {
     setTimeout(async () => {
-        sortedContacts = parseContactData(window.FirebaseContacts) || []
+        sortedContacts = await parseContactData(window.FirebaseContacts) || []
         renderTheQuestContacts();
-    }, 1000)
+    }, 4000)
 }
 
 /**
@@ -99,6 +99,7 @@ function openEdit(o) {
     closeAdd()
 }
 
+
 /**
  * Close the detail window
  */
@@ -125,6 +126,7 @@ function fillEditInput(x) {
     document.getElementById(`emailInputEdit${x}`).value = `${sortedContacts[x]['email']}`
     document.getElementById(`phoneInputEdit${x}`).value = `${sortedContacts[x]['tel']}`
 }
+
 
 /**
  * Save the changes of the choosen contact
@@ -366,6 +368,8 @@ function closeAddTaskContact() {
  */
 function openAddTask() {
     open++
+    renderDueDate()
+    containerToAdd = 'toDo'
     if (window.innerWidth > 600 && open == 1) {
         document.getElementById('add-task-to-contact-container').style.width = '600px'
         document.getElementById('task-add-btn').style.position = 'inherit';

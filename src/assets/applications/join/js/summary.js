@@ -20,7 +20,6 @@ function getUsernameFromLocalStorage() {
  */
 function getTimeOfDay() {
     let currentHour = new Date().getHours();
-
     if (currentHour >= 6 && currentHour < 12) {
         return "Morning";
     } else if (currentHour >= 12 && currentHour < 18) {

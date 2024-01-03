@@ -8,6 +8,8 @@ let teporaryCategory = [];
 let temporaryPersons = []
 let id1 = 'checkbox-contacts'
 let id2 = 'checkbox-contacts-two'
+let categoryOpenClose = false;
+containerToAdd = 'toDo'
 
 /**
  * clear the array's after closing the edit window
@@ -53,7 +55,14 @@ function sortNamesByFirstLetter(names) {
  * 
  * @param {number} k 
  */
-function savePersonTemorary(k) {
+function savePersonTemorary(k, checkboxId) {
+    let checked = document.getElementById(`checkBoxNbr${checkboxId}`).checked
+    if (checked == true) {
+        document.getElementById(`checkBoxNbr${checkboxId}`).checked = false
+    }
+    else if (checked == false) {
+        document.getElementById(`checkBoxNbr${checkboxId}`).checked = true
+    }
     if (k == 1) {
         saveExtension(id1)
     }
@@ -77,10 +86,22 @@ function saveExtension(id) {
             temporaryPersons.push(contacts[i]['name'] + ' ' + contacts[i]['second-name']);
         }
         if (!inputElements[i].checked && istNameImArray(contacts[i]['name'] + ' ' + contacts[i]['second-name'], temporaryPersons) == true) {
-            temporaryPersons = removeStringFromArray(temporaryPersons, contacts[i]['name'] + ' ' + contacts[i]['second-name'], temporaryPersons)
+            temporaryPersons = removeValueFromArray(temporaryPersons, contacts[i]['name'] + ' ' + contacts[i]['second-name'])
         }
     }
     sortNamesByFirstLetter(temporaryPersons)
+}
+
+
+/**
+ * Remove an item from an array and give back the array without the element
+ * @param {array} array 
+ * @param {any} valueToRemove 
+ * @returns a new array without the given element
+ */
+function removeValueFromArray(array, valueToRemove) {
+    const newArray = array.filter(item => item !== valueToRemove);
+    return newArray;
 }
 
 
@@ -94,7 +115,26 @@ async function addTask() {
     let dueDate = document.getElementById('due-date').value;
     getSubTasks();
     await pushTask(title, text, dueDate);
-    //window.location.href = "board.html";
+}
+
+
+/**
+ * this function registers the people who are assigned to the new task
+ * 
+ */
+function getAssignedTo() {
+    assignedTo = [];
+    initials = [];
+    let inputElements = document.getElementsByClassName('checkbox-contacts');
+    for (let i = 0; inputElements[i]; ++i) {
+        if (inputElements[i].checked) {
+            assignedTo.push(contacts[i]['name'] + ' ' + contacts[i]['second-name']);
+            initials.push(contacts[i]['name'].charAt(0) + contacts[i]['second-name'].charAt(0));
+        }
+    }
+    checkEmptyAssignedTo(assignedTo);
+    renderBoard();
+    closeAddTask();
 }
 
 
@@ -231,13 +271,97 @@ function teporaryAdd(i) {
     for (let i = 0; inputElements[i]; ++i) {
         if (istNameImArray(categories[i], teporaryCategory) == true && inputElements[i].checked) {
         }
-        if (inputElements[i].checked && istNameImArray(categories[i], teporaryCategory) == false) {
+        if (inputElements[i].checked && istNameImArray(categories[i], teporaryCategory) == false && document.getElementById(`checkBox${i}`).disabled == false) {
             teporaryCategory.push(categories[i]);
         }
         if (!inputElements[i].checked && istNameImArray(categories[i], teporaryCategory) == true) {
-            teporaryCategory = removeStringFromArray(teporaryCategory, categories[i], teporaryCategory)
+            teporaryCategory = removeValueFromArray(teporaryCategory, categories[i])
         }
     }
+}
+
+
+/**
+ * With clicking on the field, the checkbox of the choosen category is checked
+ * @param {number} x number of the category from the html document
+ */
+function setCheckBoxCheckt(x) {
+    if (document.getElementById(`checkBox${x}`).checked == true) {
+        document.getElementById(`checkBox${x}`).checked = false;
+    }
+    else if (document.getElementById(`checkBox${x}`).checked == false && document.getElementById(`checkBox${x}`).disabled == false) {
+        document.getElementById(`checkBox${x}`).checked = true;
+    }
+    checkDisable(x)
+}
+
+
+/**
+ * Set the other non choosen categorys on disable or enable if no other category is choosen
+ * @param {number} x number of the category from the html document
+ */
+function checkDisable(x) {
+    if (document.getElementById(`checkBox${x}`).disabled == true) { }
+    else {
+        for (i = 0; i < categories.length; i++) {
+            if (document.getElementById(`checkBox${x}`).checked == true) {
+                for (i = 0; i < categories.length; i++) {
+                    if (document.getElementById(`checkBox${i}`).checked == false) {
+                        document.getElementById(`checkBox${i}`).disabled = true;
+                    }
+                }
+            }
+            else if (document.getElementById(`checkBox${x}`).checked == false) {
+                for (i = 0; i < categories.length; i++) {
+                    if (document.getElementById(`checkBox${i}`).checked == false) {
+                        document.getElementById(`checkBox${i}`).disabled = false;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/**
+ * show the choosen categorys, if you dont choose one the inner html is empty
+ */
+function showCategorys() {
+    if (teporaryCategory.length < 1) {
+        document.getElementById('showCaseCategory').innerHTML = ``;
+    }
+    else {
+        document.getElementById('showCaseCategory').innerHTML = `<span class="categoryBackground">${teporaryCategory}</span>`;
+    }
+}
+
+
+/**
+ * this function opens the category list
+ * 
+ */
+function openTaskCategory() {
+    document.getElementById('list-task-category').classList.toggle('d-none');
+    showCategorys()
+    document.getElementById('showCaseCategory').classList.add('d-none')
+    if (categoryOpenClose == false) {
+        categoryOpenClose = true
+        document.getElementById('showCaseCategory').classList.add('d-none')
+    }
+    else if (categoryOpenClose == true) {
+        categoryOpenClose = false
+        document.getElementById('showCaseCategory').classList.remove('d-none')
+    }
+}
+
+
+/**
+ * Close the add category drop down
+ */
+function closeAddCategory() {
+    showCategorys()
+    categoryOpenClose = false
+    document.getElementById('showCaseCategory').classList.remove('d-none')
 }
 
 
@@ -253,26 +377,6 @@ function checkEmptyCategory(category) {
     } else {
         addTask();
     }
-}
-
-
-/**
- * this function registers the people who are assigned to the new task
- * 
- */
-function getAssignedTo() {
-    assignedTo = [];
-    initials = [];
-    let inputElements = document.getElementsByClassName('checkbox-contacts');
-    for (let i = 0; inputElements[i]; ++i) {
-        if (inputElements[i].checked) {
-            assignedTo.push(contacts[i]['name'] + ' ' + contacts[i]['second-name']);
-            initials.push(contacts[i]['name'].charAt(0) + contacts[i]['second-name'].charAt(0));
-        }
-    }
-    checkEmptyAssignedTo(assignedTo);
-    renderBoard();
-    closeAddTask()
 }
 
 
@@ -318,6 +422,7 @@ function getSubTasks() {
 }
 
 
+let openClose = false;
 /**
  * this function opens the name list container 
  * 
@@ -325,23 +430,21 @@ function getSubTasks() {
 function openContactsToAssign() {
     document.getElementById('list-assigned-to').classList.toggle('d-none');
     if (document.getElementById('list-assigned-to-two')) {
-        document.getElementById('list-assigned-to-two').classList.toggle('d-none')
+        document.getElementById('list-assigned-to-two').classList.toggle('d-none');
+    }
+    if (openClose == true) {
+        openClose = false;
+        document.getElementById('choosenContactContainer').style.display = 'inline';
+    }
+    else if (openClose == false) {
+        openClose = true
+        document.getElementById('choosenContactContainer').style.display = 'none';
     }
 }
 
 
 /**
- * this function opens the category list
- * 
- */
-function openTaskCategory() {
-    document.getElementById('list-task-category').classList.toggle('d-none');
-}
-
-
-/**
  * this function renders the assigned to list
- * 
  */
 function renderListAssignedTo() {
     if (temporaryPersons.length === 0) {
@@ -351,10 +454,67 @@ function renderListAssignedTo() {
             content.innerHTML +=
                 htmlTemplateListAssignedTo(i);
     }
-    else if (temporaryPersons.lenght > 0) {
+    if (openClose == false) {
+        let choosenUser = document.getElementById('choosenContactContainer');
+        choosenUser.innerHTML = '';
+        for (let i = 0; i < contacts.length; i++)
+            if (temporaryPersons[i] != undefined) {
+                choosenUser.innerHTML += `<p class="choosenUser">${temporaryPersons[i]}</p>`
+            }
+    }
+    else if (temporaryPersons.lenght > 0) { }
+}
 
+
+/**
+ * close the dropdown if you click on any other in the form
+ */
+function closeDropdown(x) {
+    if (x == 'contacts') {
+        document.getElementById('list-task-category').classList.add('d-none');
+        closeAddCategory()
+    }
+    if (x == 'category') {
+        closeTheContactList()
+    }
+    if (x == 'datePicker') {
+        closeTheContactList()
+        closeAddCategory()
+        document.getElementById('list-task-category').classList.add('d-none');
+    }
+    if (x == 'prio') {
+        closeTheContactList()
+        closeAddCategory()
+        document.getElementById('list-task-category').classList.add('d-none');
+    }
+    if (x == 'clear') {
+        closeTheContactList()
+        closeAddCategory()
+        document.getElementById('list-task-category').classList.add('d-none');
+    }
+    if (x == 'subTask') {
+        closeTheContactList()
+        closeAddCategory()
+        document.getElementById('list-task-category').classList.add('d-none');
+    }
+    if (x == 'input') {
+        closeTheContactList()
+        closeAddCategory()
+        document.getElementById('list-task-category').classList.add('d-none');
     }
 }
+
+
+/**
+ * close the contact list and show the choosen contacts
+ */
+function closeTheContactList() {
+    document.getElementById('list-assigned-to').classList.add('d-none');
+    openClose = false
+    document.getElementById('choosenContactContainer').style.display = 'inline';
+    renderListAssignedTo()
+}
+
 
 /**
  * render the contact list if you click on an task to edit
@@ -407,4 +567,34 @@ function renderSubtasks() {
         nbOfSubtasks++;
     }
     content.value = '';
+}
+
+
+/**
+ * seconds function for adding a task
+ */
+function secondAddTask() {
+    containerToAdd = 'toDo'
+    secondgetAssignedTo();
+    addTask();
+    setTimeout(() => {
+        window.location.href = 'board.html';
+    }, 500)
+}
+
+
+/**
+ * seconds function for adding a task
+ */
+function secondgetAssignedTo() {
+    assignedTo = [];
+    initials = [];
+    let inputElements = document.getElementsByClassName('checkbox-contacts');
+    for (let i = 0; inputElements[i]; ++i) {
+        if (inputElements[i].checked) {
+            assignedTo.push(contacts[i]['name'] + ' ' + contacts[i]['second-name']);
+            initials.push(contacts[i]['name'].charAt(0) + contacts[i]['second-name'].charAt(0));
+        }
+    }
+    checkEmptyAssignedTo(assignedTo);
 }

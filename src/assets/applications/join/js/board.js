@@ -8,10 +8,26 @@ let bgColor;
  * 
  */
 function renderBoard() {
-    renderAllTasks(tasksToDo)
-    renderAllTasks(tasksInProgress)
-    renderAllTasks(tasksAwaitFeedback)
-    renderAllTasks(tasksDone)
+    renderAllTasks(tasksToDo);
+    renderAllTasks(tasksInProgress);
+    renderAllTasks(tasksAwaitFeedback);
+    renderAllTasks(tasksDone);
+    resetDummyPosition();
+}
+
+
+/**
+ * Reset the dummy and hide it after placing an task
+ */
+function resetDummyPosition() {
+    document.getElementById('done-container').style.marginTop = '0px'
+    document.getElementById('await-feedback-container').style.marginTop = '0px'
+    document.getElementById('in-progress-container').style.marginTop = '0px'
+    document.getElementById('to-do-container').style.marginTop = '0px'
+    document.getElementById('doneContainer').style.display = 'none'
+    document.getElementById('inProgressContainer').style.display = 'none'
+    document.getElementById('awaitContainer').style.display = 'none'
+    document.getElementById('todoContainer').style.display = 'none'
 }
 
 
@@ -56,6 +72,7 @@ function giveBackTheId(tasktype) {
     }
 }
 
+
 /**
  * this function sets the background color for the category
  * 
@@ -78,6 +95,7 @@ function getCategoryColor(category) {
 function renderAllTasks(tasktype) {
     let taskContainer = document.getElementById(`${giveBackTheTaskTheme(tasktype)}`);
     taskContainer.innerHTML = '';
+    setAllDummys(taskContainer, tasktype);
     for (let i = 0; i < tasktype.length; i++) {
         let category = tasktype[i]['category'];
         getCategoryColor(`${category}`);
@@ -86,6 +104,26 @@ function renderAllTasks(tasktype) {
         taskContainer.innerHTML +=
             htmlTemplateTasks(i, widthProgressBar, nbDone, tasktype);
         renderSelectedPerson(i, tasktype);
+    }
+}
+
+/**
+ * Set the dummys after redering the board wirth the task
+ * @param {*} taskContainer 
+ * @param {*} tasktype 
+ */
+function setAllDummys(taskContainer, tasktype) {
+    if (giveBackTheTaskTheme(tasktype) == 'to-do-container') {
+        taskContainer.innerHTML += `<div class="dummy" id="todoContainer"></div>`
+    }
+    if (giveBackTheTaskTheme(tasktype) == 'in-progress-container') {
+        taskContainer.innerHTML += `<div class="dummy" id="inProgressContainer"></div>`
+    }
+    if (giveBackTheTaskTheme(tasktype) == 'await-feedback-container') {
+        taskContainer.innerHTML += `<div class="dummy" id="awaitContainer"></div>`
+    }
+    if (giveBackTheTaskTheme(tasktype) == 'done-container') {
+        taskContainer.innerHTML += `<div class="dummy" id="doneContainer"></div>`
     }
 }
 
@@ -198,7 +236,6 @@ function filterToDo(search) {
         }
     }
 }
-
 
 
 /**

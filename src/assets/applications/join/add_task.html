@@ -40,6 +40,10 @@
                 initAddTask();
                 includeHTML();
             }, 1000);
+            setTimeout(() => {
+                renderDueDate();
+                containerToAdd = 'toDo'
+            }, 2000)
         }
     </script>
     <!-- Insert dedicated JS script -->
@@ -79,7 +83,8 @@
                 <div class="inner reverse">
                     <div class="content topPadding">
                         <div class="wrapper bg1">
-                            <div class="contentCenter" w3-include-html="assets/templates/add_task_template.html"></div>
+                            <div class="contentCenter"
+                                w3-include-html="assets/templates/add_task_template._noBoard.html"></div>
                         </div>
                     </div>
                     <div class="sidebar">

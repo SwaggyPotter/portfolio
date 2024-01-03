@@ -2,6 +2,16 @@
     background-color: white;
 }
 
+.contactItem:hover {
+    background-color: rgba(128, 128, 128, 0.123);
+    cursor: pointer;
+}
+
+.items {
+    list-style-type: none;
+}
+
+
 #add-task-to-contact-container h1 {
     margin-left: 20px;
     margin-top: 20px;
@@ -53,7 +63,7 @@
     border: none;
     background-color: #4589FF;
     color: white;
-    padding: 30px 20px !important; 
+    padding: 30px 20px !important;
     z-index: 10;
 }
 
@@ -61,7 +71,7 @@
     border: none;
     background-color: #1e59be;
     color: white;
-    padding: 30px 20px !important; 
+    padding: 30px 20px !important;
 }
 
 .headline-add-task-container {

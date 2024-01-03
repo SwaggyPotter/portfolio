@@ -1,15 +1,91 @@
 let currentDraggedElement;
 let taskStatus;
 let movedTask;
-
+let srcCounter = 0;
+let taskSrc;
 
 /**
  * this function allows to drop an element
  * 
  * @param {Event} ev 
  */
-function allowDrop(ev) {
+function allowDrop(ev, taskID) {
     ev.preventDefault();
+    if (srcCounter === 0) {
+        srcCounter++
+        taskSrc = taskID;
+    }
+    if (ev['toElement']['id'] == 'to-do-container' && taskSrc != 'to-do-container') {
+        showTodoDummy();
+    }
+    if (ev['toElement']['id'] == 'await-feedback-container' && taskSrc != 'await-feedback-container') {
+        showAwaitFeedbackDummy()
+    }
+    if (ev['toElement']['id'] == 'in-progress-container' && taskSrc != 'in-progress-container') {
+        showinProgressDummy()
+    }
+    if (ev['toElement']['id'] == 'done-container' && taskSrc != 'done-container') {
+        showDoneDummy()
+    }
+}
+
+
+/**
+ * Show the todo placeholder
+ */
+function showTodoDummy() {
+    document.getElementById('to-do-container').style.marginTop = '200px'
+    document.getElementById('todoContainer').style.display = 'flex'
+    document.getElementById('await-feedback-container').style.marginTop = '0px'
+    document.getElementById('awaitContainer').style.display = 'none'
+    document.getElementById('in-progress-container').style.marginTop = '0px'
+    document.getElementById('inProgressContainer').style.display = 'none'
+    document.getElementById('done-container').style.marginTop = '0px'
+    document.getElementById('doneContainer').style.display = 'none'
+}
+
+/**
+ * Show the await feedback placeholder
+ */
+function showAwaitFeedbackDummy() {
+    document.getElementById('to-do-container').style.marginTop = '0px'
+    document.getElementById('todoContainer').style.display = 'none'
+    document.getElementById('await-feedback-container').style.marginTop = '200px'
+    document.getElementById('awaitContainer').style.display = 'flex'
+    document.getElementById('in-progress-container').style.marginTop = '0px'
+    document.getElementById('inProgressContainer').style.display = 'none'
+    document.getElementById('done-container').style.marginTop = '0px'
+    document.getElementById('doneContainer').style.display = 'none'
+}
+
+
+/**
+ * Show the in progress placeholder
+ */
+function showinProgressDummy() {
+    document.getElementById('to-do-container').style.marginTop = '0px'
+    document.getElementById('todoContainer').style.display = 'none'
+    document.getElementById('await-feedback-container').style.marginTop = '0px'
+    document.getElementById('awaitContainer').style.display = 'none'
+    document.getElementById('in-progress-container').style.marginTop = '200px'
+    document.getElementById('inProgressContainer').style.display = 'flex'
+    document.getElementById('done-container').style.marginTop = '0px'
+    document.getElementById('doneContainer').style.display = 'none'
+}
+
+
+/**
+ * Show the done placeholder
+ */
+function showDoneDummy() {
+    document.getElementById('to-do-container').style.marginTop = '0px'
+    document.getElementById('todoContainer').style.display = 'none'
+    document.getElementById('await-feedback-container').style.marginTop = '0px'
+    document.getElementById('awaitContainer').style.display = 'none'
+    document.getElementById('in-progress-container').style.marginTop = '0px'
+    document.getElementById('inProgressContainer').style.display = 'none'
+    document.getElementById('done-container').style.marginTop = '200px'
+    document.getElementById('doneContainer').style.display = 'flex'
 }
 
 
@@ -18,11 +94,16 @@ function allowDrop(ev) {
  * 
  * @param {string} container 
  */
-function moveTo(container) {
-    const isGoodValue = val => val && val !== '-' && val !== 'N/A'; /* check for empty arrays*/
-    target = container['currentTarget']['id'];
-    changeTaskPosition(isGoodValue)
-    moveTarget(currentDraggedElement)
+function moveTo(container, item) {
+    if (item != taskSrc) {
+        const isGoodValue = val => val && val !== '-' && val !== 'N/A'; /* check for empty arrays*/
+        target = container['currentTarget']['id'];
+        changeTaskPosition(isGoodValue)
+        moveTarget(currentDraggedElement)
+    } else {
+        console.log('Nönönönönön')
+    }
+
 }
 
 
@@ -74,46 +155,46 @@ function changeTaskPositionExtension(isGoodValue, taskTypeString, taskType) {
 function moveTarget(currentDraggedElement) {
     if (target == 'to-do-container') {
         if (currentDraggedElement == 'tasksToDo') {
-            console.log('Nicht verschieben!')
         }
         else {
             tasksToDo.push(currentTask);
-            window.removeTask(movedTask, `${currentDraggedElement}`, currentTask)
-            window.addNewTask(currentTask, 'tasksToDo')
+            window.removeTask(movedTask, `${currentDraggedElement}`, currentTask);
+            window.addNewTask(currentTask, 'tasksToDo');
+            srcCounter = 0;
             renderBoard();
         }
     }
     if (target == 'in-progress-container') {
         if (currentDraggedElement == 'tasksInProgress') {
-            console.log('Nicht verschieben!')
         }
         else {
             tasksInProgress.push(currentTask);
-            window.addNewTask(currentTask, 'tasksInProgress')
-            window.removeTask(movedTask, `${currentDraggedElement}`, currentTask)
+            window.addNewTask(currentTask, 'tasksInProgress');
+            window.removeTask(movedTask, `${currentDraggedElement}`, currentTask);
+            srcCounter = 0;
             renderBoard();
         }
     }
     if (target == 'await-feedback-container') {
         if (currentDraggedElement == 'tasksAwaitFeedback') {
-            console.log(currentDraggedElement)
         }
         else {
             tasksAwaitFeedback.push(currentTask);
-            window.addNewTask(currentTask, 'tasksAwaitFeedback')
-            window.removeTask(movedTask, `${currentDraggedElement}`, currentTask)
+            window.addNewTask(currentTask, 'tasksAwaitFeedback');
+            window.removeTask(movedTask, `${currentDraggedElement}`, currentTask);
+            srcCounter = 0;
             renderBoard();
         }
 
     }
     if (target == 'done-container') {
         if (currentDraggedElement == 'tasksDone') {
-            console.log('Nicht verschieben!')
         }
         else {
             tasksDone.push(currentTask);
-            window.addNewTask(currentTask, 'tasksDone')
-            window.removeTask(movedTask, `${currentDraggedElement}`, currentTask)
+            window.addNewTask(currentTask, 'tasksDone');
+            window.removeTask(movedTask, `${currentDraggedElement}`, currentTask);
+            srcCounter = 0;
             renderBoard();
         }
 
@@ -130,4 +211,5 @@ function moveTarget(currentDraggedElement) {
 function startDragging(i, taskStatus) {
     movedTask = i;
     currentDraggedElement = taskStatus;
+    console.log(taskStatus)
 }

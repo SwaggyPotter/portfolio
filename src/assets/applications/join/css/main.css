@@ -1,6 +1,6 @@
 * {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
 
 :focus {
@@ -9,16 +9,36 @@
 
 body {
     font-family: 'PT Sans', sans-serif;
-    font-weight: 400; /* 700 == BOLD */
+    font-weight: 400;
+    /* 700 == BOLD */
 }
 
-.container > .center {
+.clickable:hover {
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.253);
+}
+
+#showCaseCategory {
+    border-radius: 5px;
+    width: 100%;
+}
+
+.categoryBackground {
+    padding: 10px;
+    width: 95%;
+    display: flex;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.container>.center {
     max-width: 1440px;
-    margin:0 auto;
+    margin: 0 auto;
     padding: 50px;
 }
+
 @media(max-width: 640px) {
-    .container > .center {
-    padding: 20px;
+    .container>.center {
+        padding: 20px;
     }
 }

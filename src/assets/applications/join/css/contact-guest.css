@@ -2,11 +2,37 @@ body {
     overflow: hidden;
 }
 
+.choosenUser {
+    padding: 10px 15px !important;
+    background-color: rgba(128, 128, 128, 0.171);
+    margin-right: 12px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
 #contact-content {
     display: flex;
     height: 90vh;
     overflow-y: scroll;
     justify-content: unset !important;
+}
+
+.clickable:hover {
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.253);
+}
+
+#showCaseCategory {
+    border-radius: 5px;
+    width: 100%;
+}
+
+.categoryBackground {
+    padding: 10px;
+    width: 95%;
+    display: flex;
+    margin-top: 10px;
+    border-radius: 5px;
 }
 
 #close-detail-arrow {

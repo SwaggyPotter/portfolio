@@ -120,9 +120,13 @@
                                         <img class="hoverAddPlus" src="assets/img/plus.svg" alt="add"
                                             onclick="openAddTaskPopup('toDo')">
                                     </div>
-                                    <div class="task-container" id="to-do-container" ondrop="moveTo(event)"
-                                        ondragover="allowDrop(event)">
+                                    <div class="task-container" id="to-do-container"
+                                        ondrop="moveTo(event, 'to-do-container')"
+                                        ondragover="allowDrop(event, 'to-do-container')">
                                         <!-- htmlTemplateTasksToDo -->
+                                        <div class="" id="todoContainer">
+
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="status">
@@ -131,9 +135,13 @@
                                         <img class="hoverAddPlus" src="assets/img/plus.svg" alt="add"
                                             onclick="openAddTaskPopup('inProgress')">
                                     </div>
-                                    <div class="task-container" id="in-progress-container" ondrop="moveTo(event)"
-                                        ondragover="allowDrop(event)">
+                                    <div class="task-container" id="in-progress-container"
+                                        ondrop="moveTo(event, 'in-progress-container')"
+                                        ondragover="allowDrop(event, 'in-progress-container')">
                                         <!-- htmlTemplateTasksInProgress-->
+                                        <div class="dummy" id="inProgressContainer">
+
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="status">
@@ -142,9 +150,13 @@
                                         <img class="hoverAddPlus" src="assets/img/plus.svg" alt="add"
                                             onclick="openAddTaskPopup('awaitFeedback')">
                                     </div>
-                                    <div class="task-container" id="await-feedback-container" ondrop="moveTo(event)"
-                                        ondragover="allowDrop(event)">
+                                    <div class="task-container" id="await-feedback-container"
+                                        ondrop="moveTo(event,'await-feedback-container')"
+                                        ondragover="allowDrop(event,'await-feedback-container')">
                                         <!-- htmlTemplateTasksAwaitFeedback -->
+                                        <div class="dummy" id="awaitContainer">
+
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="status">
@@ -153,9 +165,13 @@
                                         <img class="hoverAddPlus" src="assets/img/plus.svg" alt="add"
                                             onclick="openAddTaskPopup('done')">
                                     </div>
-                                    <div class="task-container" id="done-container" ondrop="moveTo(event)"
-                                        ondragover="allowDrop(event)">
+                                    <div class="task-container" id="done-container"
+                                        ondrop="moveTo(event, 'done-container')"
+                                        ondragover="allowDrop(event, 'done-container')">
                                         <!-- htmlTemplateTasksDone -->
+                                        <div class="dummy" id="doneContainer">
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>

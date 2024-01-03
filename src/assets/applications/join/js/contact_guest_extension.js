@@ -86,11 +86,10 @@ function showAddPopUp() {
  * Handle the popup time
  */
 function addTaskWithTimeOut() {
-    getAssignedTo()
-    closeAddTaskContact()
-    showAddPopUp()
+    closeAddTaskContact();
+    showAddPopUp();
     setTimeout(() => {
-        addTask()
+        secondAddTask();
     }, 2000)
 }
 

@@ -68,7 +68,6 @@ async function register() {
             let newUser = { "name": name.value, "email": email.value, "password": password.value }
             await window.addNewUser(newUser);
         }
-
     } else {
         let newUser = { "name": name.value, "email": email.value, "password": password.value }
         await window.addNewUser(newUser);
@@ -115,7 +114,6 @@ function printErrorMessage(msg) {
  * This function prints a success message
  * @param success - URL parameter "success"
  */
-
 function printSuccessMessage(success) {
     let successMsg = document.getElementById("success");
     if (success) {
@@ -153,7 +151,6 @@ function recoverPassword() {
  * This function starts the animation that the email was sent. Manipulation of several elements
  * @param email - Get the element of the email input field
  */
-
 function startPwChangeAnimation(email) {
     let formElement = document.getElementById("forgot-pw-form");
     let popup = document.getElementById("emailSuccess");
@@ -167,7 +164,6 @@ function startPwChangeAnimation(email) {
 /**
  * This function is redirecting to the page to recreate the password
  */
-
 function redirectToPwChange(email) {
     let formElement = document.getElementById("forgot-pw-form");
     formElement.submit();
@@ -177,7 +173,6 @@ function redirectToPwChange(email) {
 /**
  * This functions checks if you are allowed to stay on the page (checks also if email exists)
  */
-
 function validatePermission() {
     let allUsersAsArray = getUsersAsArray();
     let email = getUrlParameters("email");
@@ -196,7 +191,6 @@ function validatePermission() {
 /**
  * This function is used to check if the user can reset the PW or not
  */
-
 function userCanReset() {
     let email = getUrlParameters("email");
     let checked = checkPasswordIdentity(email);
@@ -212,7 +206,6 @@ function userCanReset() {
  * This function is used to check IF the user was found and the insert PWs are the same
  * @param email - The value of the parameter of the URL (The email address)
  */
-
 function checkPasswordIdentity(email) {
     let firstPwField = document.getElementById("new-password");
     let secondPwField = document.getElementById("confirm-password");
@@ -232,7 +225,6 @@ function checkPasswordIdentity(email) {
  * @param email - The email address for resetting the pw
  * @param newPw - The value of the new PW
  */
-
 async function finalResetPw(email, newPw) {
     getSavedUsersFromBackend();
     let userToReset = users.filter((user) => user.email == email);
@@ -245,7 +237,6 @@ async function finalResetPw(email, newPw) {
 /**
  * This function is used to set the PW inputs to read only
  */
-
 function readOnlyPwInputs() {
     let pwInput01 = document.getElementById("new-password");
     let pwInput02 = document.getElementById("confirm-password");
