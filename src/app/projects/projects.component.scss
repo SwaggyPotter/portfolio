@@ -68,7 +68,6 @@
         }
     }
 
-
     .underHeadline-container {
         width: unset;
         display: flex;
@@ -232,10 +231,8 @@
     }
 }
 
+
 /*Desktop Version*/
-
-
-
 @media screen and (min-width: 900px) {
     .centerContainer {
         width: 100%;
@@ -261,7 +258,6 @@
             font-size: 4vw !important;
         }
     }
-
 
     .join-project-container {
         display: flex;
@@ -376,7 +372,6 @@
         img {
             width: 50% !important;
         }
-
 
         h3 {
             width: 100%;
@@ -524,8 +519,6 @@
         h3 {
             font-size: 45px !important;
             justify-content: unset !important;
-
-
         }
     }
 
@@ -552,8 +545,6 @@
 
 
 }
-
-
 
 .info-join-hidden {
     display: none;
