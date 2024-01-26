@@ -8,7 +8,7 @@
                 <p class="name">Tim Mellentin <br><span>Frontend Developer</span></p>
             </div>
             <div class="button-container">
-                <a (click)="onClick('contact-form')"  >Let's talk!</a>
+                <a (click)="onClick('contact-form')">Let's talk!</a>
             </div>
         </div>
     </div>
@@ -29,6 +29,6 @@
             <img class="xing-logo" src="assets/img/xing-logo_clipdrop-background-removal.png" alt="">
         </a>
 
-        <a id="contact-link" href="#contact">timmellentin@freenet.de</a>
+        <a id="contact-link" (click)="onClick('contact-form')">timmellentin@freenet.de</a>
     </div>
 </div>

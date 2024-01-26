@@ -2,9 +2,9 @@
     <div id="header-container" class="header-container">
         <h2>Tim</h2>
         <div>
-            <a href="#about-me-container">About me</a>
-            <a href="#skill-container">Skills</a>
-            <a href="#project-container">Portfolio</a>
+            <a (click)="onClick('about-me-container')">About me</a>
+            <a (click)="onClick('skill-container')">Skills</a>
+            <a (click)="onClick('project-container')">Portfolio</a>
         </div>
     </div>
 
@@ -15,10 +15,10 @@
         </div>
 
         <div [ngClass]="show ? 'info-Box' : 'info-Box-hidden'">
-            <a (click)="changeToFalse()" href="#about-me-container">About me</a>
-            <a (click)="changeToFalse()" href="#skill-container">Skills</a>
-            <a (click)="changeToFalse()" href="#project-container">Portfolio</a>
-            <a (click)="changeToFalse()" href="#contact-form">Contact</a>
+            <a (click)="changeToFalse(); onClick('about-me-container')">About me</a>
+            <a (click)="changeToFalse(); onClick('skill-container')">Skills</a>
+            <a (click)="changeToFalse(); onClick('project-container')">Portfolio</a>
+            <a (click)="changeToFalse(); onClick('contact-form')">Contact</a>
         </div>
     </div>
 </header>
